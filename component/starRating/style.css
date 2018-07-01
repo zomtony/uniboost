@@ -1,0 +1,43 @@
+
+
+.rate{
+	width:225px; height: 40px;
+
+	background-color:  #f6f6f6;
+	margin:auto;
+	margin-bottom:0px;
+}
+.rate .rate-btn{
+	width: 45px; height:40px;
+	float: left;
+	background: url(/component/starRating/img/rate-btn.png) no-repeat;
+	cursor: pointer;
+}
+.rate .rate-btn:hover, .rate  .rate-btn-hover, .rate  .rate-btn-active{
+	background: url(/component/starRating/img/rate-btn-hover.png) no-repeat;
+}
+
+.result-container{
+	height: 24px;
+	width:120px;
+	position: relative;
+	border-radius: 10rem;
+	background-color: rgb(226, 243, 247);
+}
+.rate-stars{
+	width: 120px; height: 24px;
+	background: url(/component/starRating/img/rate-stars.png) no-repeat;
+	position: absolute;
+	background-size: 120px 24px;
+}
+.rate-bg{
+	margin-top:3px;
+	margin-left:4px;
+	height: 18px;
+	background-color: rgb(255, 230, 0);
+	position: absolute;
+}
+
+.rate-font-size{
+	font-size: 8px;
+}

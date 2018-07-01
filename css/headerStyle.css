@@ -1,0 +1,116 @@
+.titleFont{
+    font-size: 35px;
+    margin:0px;
+    padding-top:0px;
+    padding-left:0px;
+}
+.logo1{
+    width:150px;
+    margin-top:6px;
+}
+.logo2{
+    width:26px;
+    margin-top:6px;
+    margin-left:4px;
+}
+.logo3{
+    width:150px;
+    margin-top:24px;
+    margin-left:4px;
+}
+.navElementPosition{
+    padding-top:5px;
+}
+
+.theme-backcolor{
+    background-color:#fabe65;
+}
+
+.theme-backcolor2{
+    background-color:rgb(255, 238, 203);
+}
+
+
+.theme-backcolor1{
+    background-color: #fcf9f4;
+}
+
+.theme-button{
+    background-color: #FFAD27;   
+}
+
+.text-color{
+    color:#ffffff;
+}
+
+.button-a-padding-margin-zero{
+    margin:0px;
+    padding:0px;
+}
+
+.button-upload-post-button{
+    background-color:#FFAD27;
+    color:#ffffff;
+}
+
+.button-add-course-button{
+    background-color:#FF7345;
+    color:#ffffff;
+}
+.logo-color{
+    filter: brightness(0) invert(1);
+}
+
+.logo-color1{
+    filter: saturate(100);
+}
+
+.main-pg-list-bg{
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+}
+
+.main-pg-list-bg:hover{
+
+    background-color: rgb(243, 218, 169); 
+}
+
+.main-pg-list-bg1{
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+}
+.main-pg-list-bg1:hover{
+    background-color: #dbdbda; 
+}
+
+.button-bg {
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+}
+
+.button-bg:hover {
+    background-color: #79C625; 
+    color: #ffffff;
+}
+
+.button-course {
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+}
+
+.button-course:hover {
+    background-color: #f8470c; 
+    color: #ffffff;
+}
+
+/*--------------user profile -----------------*/
+.userprofile-button-bg{
+    background-color: #FF9560;
+    color:#ffffff;
+}
+.userprofile-button-bg:hover{
+    -webkit-transition-duration: 0.6s; /* Safari */
+    transition-duration: 0.6s;
+    background-color: #fd7a38; 
+    color:#ffffff;
+}
