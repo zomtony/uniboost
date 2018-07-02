@@ -2,7 +2,7 @@
 
 <script src="/post/js/JavaScript.js" type="text/javascript"></script>
 
-<form name='uploadPost' action='php/uploadStudentPost.php' enctype='multipart/form-data' method='POST' class='body-margin'>
+<form name='uploadPost' action='php/uploadStudentPost.php' enctype='multipart/form-data' method='POST' class='body-margin' onsubmit="return checkTutorPostInput()">
     <div class="container padding-smaill theme-backcolor2 padding-bottom-m">
         <?php
             if(isset($_SESSION['accountb'])){
@@ -76,23 +76,32 @@
                                 <div class='col-md-12 form-group margin-position-top'>
                                     <label class='col-sm-1 label-position padding-small'>期望价格</label>                                              
                                     <div class='col-sm-5 padding-small'>
-                                        <input type='' name='expectedPricef' id='expectedPricef' placeholder='' class='form-control label-style1 table-center'  value=''>
+                                        <input type='number' step='.01' name='expectedPricef' id='expectedPricef' placeholder='' class='form-control label-style1 table-center'  value=''>
                                     </div>
                                 </div> 
                             </div>
-                            <div class='row margin--position-top'>
-                                <div class='col-md-12 form-group margin-position-top'>
-                                    <label class='col-sm-1 label-position padding-small'>所在学校</label>                                              
-                                    <div class='col-sm-5 padding-small'>
-                                        <input type='' name='schoolf' id='schoolf' placeholder='' class='form-control label-style1 table-center'  value=''>
-                                    </div>
-                                </div> 
-                            </div>
+
                             <div class='row margin--position-top'>
                                 <div class='col-md-12 form-group margin-position-top'>
                                     <label class='col-sm-1 label-position padding-small'>所需课号</label>                                              
                                     <div class='col-sm-5 padding-small'>
                                         <input type='' name='expectedCoursef' id='expectedCoursef' placeholder='' class='form-control label-style1 table-center'  value=''>
+                                    </div>
+                                </div> 
+                            </div>
+
+                            <div class='row margin--position-top'>
+                                <div class='col-md-12 form-group margin-position-top'>
+                                    <label class='col-sm-1 label-position padding-small'>所在学校</label>                                              
+                                    <div class='col-sm-5 padding-small'>
+                                        <select class='form-control form-rounded-select' name='schoolf' id='chooseSchool'>
+                                            <option value='selected'>--选择学校--</option>
+                                            <option value='Langara'>Langara</option>
+                                            <option value='UBC'>UBC</option>
+                                            <option value='SFU'>SFU</option>
+                                            <option value='CC'>CC</option>
+                                            <option value='AC'>AC</option>
+                                        </select>
                                     </div>
                                 </div> 
                             </div>

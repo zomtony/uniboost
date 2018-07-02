@@ -5,7 +5,7 @@
             echo    "<div class='result-container'>
                         <div class='rate-bg' style='width:" . $ratePre . "%'></div>
                         <div class='rate-stars'></div>
-                        <p class='rating-padding rate-font-size'>(" .  $rateTimes . ")</p>
+                        <p class='rating-padding rate-font-size' style='margin-left: 4px; font-size: 12px;'>(" .  $rateTimes . ")</p>
                     </div>";
         }
 

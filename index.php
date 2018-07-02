@@ -29,9 +29,22 @@
             <a class="right carousel-control" href="#myCarousel" data-slide="next"><i class="glyphicon glyphicon-chevron-right"></i></a>
         </div> 
         <!-- Alter width and notice how this behaves -->
-        <div class="row">
-            <div class="col-lg-8 padding-left-zero">                                      
-                <form class="navbar-form" role="search" action="index.php" method="POST">
+        <div class="row" style="padding-top: 12px; padding-bottom: 4px">
+            <div class="TimeFontAlign padding-right-zero" style="float: right;">   
+                
+                <?php                   
+                        if(isset($_SESSION['accountb'])){
+                            echo "<a href='/post/tutor/tutorPost.php'><button type='button' class='btn btn-margin btn-float btn-margin theme-button text-color'>发帖教学生</button></a>";
+                        }else{
+                            echo "<a href='signin_out_up/signin.php?info=请登陆先，然后再发老师帖。'><button type='button' class='btn btn-margin btn-float btn-margin theme-button text-color'>发帖教学生</button></a>";    
+                        }
+                ?> 
+                <a href='/post/student/studentPost.php'><button type="button" class="btn btn-margin btn-margin theme-button text-color" style="margin-left: 4px;">发帖找老师</button></a>
+
+            </div>
+
+            <div class="col-lg-8 padding-small">                                      
+                <form class="navbar-form padding-small" role="search" action="index.php" method="POST">
 
                     <select class="form-control" name="choosePostType" id="choosePostType">
                         <option value="teacher">只看老师</option>
@@ -42,6 +55,8 @@
                         <option value="Langara">Langara</option>
                         <option value="UBC">UBC</option>
                         <option value="SFU">SFU</option>
+                        <option value="CC">CC</option>
+                        <option value="AV">AC</option>
                     </select>
  
                     <div class="input-group">                           
@@ -51,19 +66,6 @@
                             </div>
                     </div>
                 </form> 
-            </div>
- 
-            <div class="col-lg-4 TimeFontAlign padding-right-zero">   
-                
-                <?php                   
-                        if(isset($_SESSION['accountb'])){
-                            echo "<a href='/post/tutor/tutorPost.php'><button type='button' class='btn btn-margin btn-float btn-margin theme-button text-color'>发帖教学生</button></a>";
-                        }else{
-                            echo "<a href='signin_out_up/signin.php?info=请登陆先，然后再发老师帖。'><button type='button' class='btn btn-margin btn-float btn-margin theme-button text-color'>发帖教学生</button></a>";    
-                        }
-                ?> 
-                <a href='/post/student/studentPost.php'><button type="button" class="btn btn-margin btn-margin theme-button text-color">发帖找老师</button></a>
-
             </div>
         </div>
 

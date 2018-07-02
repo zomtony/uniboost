@@ -123,7 +123,8 @@ body{
     transform: scale(1.05);
 }
 .padding-left-zero{
-    padding-left:0px;
+	padding-left:0px;
+	padding-right:0px;
 }
 /*---- end -------*/
 
@@ -204,10 +205,10 @@ a:active {
 /*-- button font style end--*/
 
 /*-- search bar style --*/
-.navbar-form{
-	margin-top:5px;
+.navbar-form {
+	margin-top: 5px;
 	margin-bottom: 5px;
-	padding-left:0px;
+	padding-left: 0px;
 }
 
 /*-- search bar style end --*/
@@ -361,6 +362,9 @@ a:active {
 /*--------------------    tutor post    -------------------*/
 .form-rounded {
 	border-radius: 1rem;
+}
+.form-rounded-select {
+    border-radius: 4rem;
 }
 
 .button-bg{

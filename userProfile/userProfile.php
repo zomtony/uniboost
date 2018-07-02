@@ -16,7 +16,8 @@
         $rateValue = $result['averageRateScore'];
 		$ratePre = ($rateValue/5-4/120)*100;
 		$rateTimes = $result['rateNumber'];
-        
+        $_SESSION['tutorPostAccount'] = $result['userAccount'];
+
         echo    "<div id='userProfile' class='theme-backcolor2'>  
                     <div class='row myprofild-padding-top'>
                         <div class='col-lg-1'></div>

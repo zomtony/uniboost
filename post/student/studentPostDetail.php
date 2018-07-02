@@ -23,8 +23,8 @@
                         <div class='col-lg-1 padding-small'></div>
                         <div class='col-lg-3 padding-small'>";   
                         
-                        if($result['userAccount'] == 'Guest'){
-        echo                "<img class='rounded profile-img-size' src=''alt='userpic'/>";  
+                        if($result['userAccount'] == 'Guest' || $result['userAccount'] == NULL){
+        echo                "<img class='rounded profile-img-size' src='/img/defaultHQPohotId.jpg' alt='photoId'/>";  
                         }else{
         echo                "<img class='rounded profile-img-size' src='data:image/jpeg;base64," . base64_encode($result['userHQPhotoId']) . "'alt='userpic'/>";    
                         }                                                    							
