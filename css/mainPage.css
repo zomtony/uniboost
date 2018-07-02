@@ -1,0 +1,505 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900');
+
+body{
+	margin:auto;
+	font-family: "Arial","Microsoft YaHei","黑体","宋体",sans-serif;
+}
+/* ----------------for index change the carousel size according the px-----------------------*/
+.carousel-control     		 { width:  4%; }
+.carousel-control.left,.carousel-control.right {margin:auto;background-image:none;}
+@media (max-width: 767px) {
+	.imgSize{
+		width: 50%;
+	}
+	.carousel-inner .active.left { left: -100%; }
+	.carousel-inner .next        { left:  100%; }
+	.carousel-inner .prev		 { left: -100%; }
+	.active > div { display:none; }
+	.active > div:first-child { display:block; }
+	.active > div:first-child + div{ display:block; }
+	.fSize {font-size: 8px;}
+	.phoneBgColor{
+		background-color: #fff5e6;
+	}
+
+	.avaliabletime-margin-top{
+		margin-top:5px;
+	}
+	.intro-margin-left{
+		margin-left:10px;
+	}
+
+	.logo1{
+		width:110px;
+		margin-top:10px;
+		margin-left:0px;
+		padding-right:0px;
+		
+	}
+	.logo2{
+		width:26px;
+		margin-top:6px;
+		padding-right:0px;
+		padding-left:0px;
+	}
+	.logo3{
+		width:110px;
+		margin-top:15;
+		padding-left:0px;
+	}
+
+	.padding-zero-logo{
+		padding:0px;
+	}
+
+}
+
+
+@media (min-width: 767px) and (max-width: 992px ) {
+	.carousel-inner .active.left { left: -50%; }
+	.carousel-inner .next        { left:  50%; }
+	.carousel-inner .prev		 { left: -50%; }
+	.active > div { display:none; }
+	.active > div:first-child { display:block; }
+	.active > div:first-child + div { display:block; }
+	
+}
+@media (min-width: 992px ) {
+	.carousel-inner .active.left { left: -16.7%; }
+	.carousel-inner .next        { left:  16.7%; }
+	.carousel-inner .prev		 { left: -16.7%; }
+	.container {width:80%;}
+}
+
+@media (max-width: 1200px ) {
+	.table-center{
+		text-align: center;
+		margin:auto;	
+	}
+	
+}
+
+@media (min-width: 1200px) and (max-width: 1430px ) {
+	.section-padding-left{
+		padding-left: 32px;	
+	}
+
+}
+
+.rollImagePosition{
+	padding:5px;
+	background-color:#fff;
+    position: relative;
+}
+
+.carousel .item .item-footer {
+
+    position: absolute;
+    z-index: 10;
+    bottom: 0;
+    background-color: rgb(255,255,255,0.7);
+    width: 100%;
+    height:40px;
+    text-align: center;
+
+}
+
+.carousel .item .item-footer{
+    padding-top:10px;
+}
+
+/* ----------------end change the carousel size according the px-----------------------*/
+
+/*---- new zoom -------*/
+.img-box{
+    overflow: hidden; 
+}
+.img-zoom{
+    width: 100%;
+    height: 100%;
+    transition: all 1s;
+}
+.img-zoom:hover{
+    transform: scale(1.05);
+}
+.padding-left-zero{
+	padding-left:0px;
+	padding-right:0px;
+}
+/*---- end -------*/
+
+
+/*--for main page row col position and size--*/
+.search-button-padding{
+	padding-right:3px;
+}
+
+.row{
+	margin:0px;
+}
+
+.Width{
+	width: 60px;
+	height: 60px;
+}
+
+.img-size{
+	width:100%;
+	height: 100%;
+}
+
+.eliminatePadding{
+	Padding:0;
+}
+.TimeFontAlign{
+	text-align: right;
+}
+
+.row-padding{
+	padding-top:1px;
+	padding-bottom:1px;
+}
+
+
+.studentPost-hidden{
+	display: none;
+}
+/* --end * --/
+
+
+/*-- a tag link style --*/
+a {
+    color: #000000;
+}
+
+a:link {
+    text-decoration: none;
+}
+
+a:visited {
+    text-decoration: none;
+}
+
+a:hover {
+	background-color: #ffcc80;
+    border-color: #ffcc80;
+    text-decoration: underline;
+}
+
+a:active {
+    text-decoration: underline;
+}
+/*-- a tag link style end--*/
+
+/*-- button font style --*/
+.btn{
+	font-family: "Sans serif typefaces", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+.btn-margin{
+	margin-top:6px;
+	margin-bottom: 6px;
+}
+
+
+/*-- button font style end--*/
+
+/*-- search bar style --*/
+.navbar-form {
+	margin-top: 5px;
+	margin-bottom: 5px;
+	padding-left: 0px;
+}
+
+/*-- search bar style end --*/
+
+/*-- fpage position(page number) --*/
+
+.pagination > .active > a{
+	background-color: #ffcc80;
+    border-color: #ffcc80;
+}
+
+.pagination > li > a:hover{
+	background-color: #cc7a00;
+    border-color: #cc7a00;
+}
+
+.pagination > .active > a:hover{
+	background-color: #ffcc80;
+    border-color: #ffcc80;
+}
+
+/*-- fpage position(page number) end--*/
+
+/*-- main page list--*/
+.padding-zero{
+	padding-right:0px;
+	padding-left:0px;
+	padding-top:4px;
+	padding-bottom:4px;
+}
+
+.name-width{
+	width: 130px;
+}
+.padding-top{
+	padding-top:4px;
+}
+
+.padding-small{
+	padding-right:0px;
+	padding-left:0px;
+}
+.padding-left{
+	padding-left:8px;
+}
+.list-element-margin-top{
+	margin-top:4px;
+}
+/*--main page list end--*/
+
+/*---------------------------------------------------------- user profile-------------------------------------------------*/
+.label-position{
+	margin-top: 5px;
+	width: 70px;
+}
+.profile-img-size{
+	width: 300px;
+	height: 300px;
+}
+.my-rating-mess{
+	width:106px;
+}
+.label-style{
+	border-radius: 25px;
+	background-color: #ffcc80;
+	width:200px;
+	height:30px;
+}
+
+.label-style1{
+	border-radius: 25px;
+	background-color: #ffffff;
+	width:200px;
+	height:30px;
+}
+
+#changeProfile{
+	display: none;
+}
+
+#back-profile{
+	display: none;
+}
+
+.margin-position-top{
+	margin-top:18px;
+}
+
+
+.btn-file {
+    position: relative;
+    overflow: hidden;
+}
+.btn-file input[type=file] {
+    position: absolute;
+    top: 0;
+    right: 0;
+    min-width: 100%;
+    min-height: 100%;
+    font-size: 100px;
+    text-align: right;
+    filter: alpha(opacity=0);
+    opacity: 0;
+    outline: none;
+    background: white;
+    cursor: inherit;
+    display: block;
+}
+
+.margin-left-zero{
+	margin-left:0;
+}
+.p-word{
+	word-wrap: break-word;
+}
+
+.myprofild-padding-top{
+	padding-top:20px;
+}
+
+.course-input-padding{
+	padding:5px;
+}
+
+.textArea-width{
+	width:90%;
+	margin:auto;
+}
+/*---------------------------------------------------------- user profile end-------------------------------------------------*/
+
+/*--  --*/
+.rating-padding{
+	padding-left:120px;
+	padding-top:5px;
+}
+.col3-width{
+	width: 220px;
+}
+.rounded{
+	border-radius: 8%;
+}
+/*--  --*/
+/*--------------------    student post    -------------------*/
+.student-post-time-label {
+	margin-right:15px;
+}
+
+
+/*--------------------    student post  end  -------------------*/
+
+/*--------------------    tutor post    -------------------*/
+.form-rounded {
+	border-radius: 1rem;
+}
+.form-rounded-select {
+    border-radius: 4rem;
+}
+
+.button-bg{
+	background-color: #8F8F8F;
+	color:#ffffff;
+}
+
+.button-bg-clicked{
+	background-color: #79C625;
+	color:#ffffff;
+}
+
+.padding-bottom-m{
+	padding-bottom: 20px;
+}
+
+.margin-top-m{
+	margin-top: 20px;
+}
+
+.padding-right-zero{
+	padding-right:0px;
+}
+
+.time-text-width{
+	width: 190px;
+}
+
+.button-width{
+	width: 142px;
+}
+.button-margin-left{
+	margin-left: 6px;
+}
+.button-style-time{
+	border-radius: 1rem;
+	font-size: 14px;
+}
+
+/*--------------------    tutor post  end  -------------------*/
+
+/*--------------------    tutor post  detail  -------------------*/
+.margin-top-s{
+	margin-top: 10px;
+}
+
+.margin-right-s{
+	margin-right: 10px;
+}
+
+.label-style-time{
+	border-radius: 14rem;
+	width:70px;
+	height:35px;
+	padding:5px; 
+}
+
+.avaTime-bg{
+	background-color: #80ff91;
+}
+
+.notAvaTime-bg{
+	background-color: #767777;
+}
+
+.label-style-course{
+	border-radius: 0.5rem;
+	background-color: #93BDEE;
+	color:#ffffff;
+	width:120px;
+	height:40px;
+	padding:8px; 
+}
+
+.padding-left-detail{
+	padding-left:30px;
+}
+
+.head-width{
+	width:90px;
+}
+
+.rating-button-margin{
+	margin:8px;
+}
+
+.label-margin{
+	margin-right:15px;
+}
+
+.label-style-school-list{
+	border-radius: 0.5rem;
+	background-color: #FFAC81;
+	width:120px;
+	height:25px;
+	color:#ffffff;
+	padding:3px;
+	font-size: 14px;
+}
+
+.label-style-course-list{
+	border-radius: 0.5rem;
+	background-color: #93BDEE;
+	width:120px;
+	height:25px;
+	padding:3px; 
+	color:#ffffff;
+	font-size: 14px;
+}
+
+.td-post-time {
+	width:100%;
+	text-align: right;
+}
+.button-text{
+	font-size:20px;
+	font-weight: bold;
+}
+/*************margin top 0***************/
+.text-position-top{
+	vertical-align: top;
+}
+.text-margin-top{
+	margin-top: 8px;
+}
+
+.text-padding-bottom-right{
+	padding-bottom: 8px;
+	padding-right: 8px;
+}
+.text-margin-bottom-comment{
+	margin-bottom: 12px;
+}
+
+.body-margin{
+	margin-left:25px;
+	margin-left:25px;
+}
