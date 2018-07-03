@@ -3,6 +3,7 @@
 body{
 	margin:auto;
 	font-family: "Arial","Microsoft YaHei","黑体","宋体",sans-serif;
+	color: #575757;
 }
 /* ----------------for index change the carousel size according the px-----------------------*/
 .carousel-control     		 { width:  4%; }
@@ -273,9 +274,11 @@ a:active {
 }
 .label-style{
 	border-radius: 25px;
-	background-color: #ffcc80;
-	width:200px;
+	background-color: #FAC164;
+	width:160px;
 	height:30px;
+	margin-left: 6px;
+	color: white;
 }
 
 .label-style1{
@@ -418,16 +421,19 @@ a:active {
 .label-style-time{
 	border-radius: 14rem;
 	width:70px;
-	height:35px;
+	/* set height is useless */
+	/* height:35px; */ 
 	padding:5px; 
 }
 
 .avaTime-bg{
-	background-color: #80ff91;
+	background-color: #79C625;
+	color: #ffffff;
 }
 
 .notAvaTime-bg{
-	background-color: #767777;
+	background-color: #8F8F8F;
+	color: #ffffff;
 }
 
 .label-style-course{

@@ -18,7 +18,7 @@
 		$rateTimes = $result['rateNumber'];
         $_SESSION['tutorPostAccount'] = $result['userAccount'];
 
-        echo    "<div id='userProfile' class='theme-backcolor2'>  
+        echo    "<div id='userProfile' class='theme-backcolor3'>  
                     <div class='row myprofild-padding-top'>
                         <div class='col-lg-1'></div>
                         <div class='col-lg-3'> 
@@ -68,7 +68,7 @@
 
 
 
-                <div id='changeProfile' class='theme-backcolor2'>
+                <div id='changeProfile' class='theme-backcolor3'>
                     <form name='signupForm' action='php/passData.php' enctype='multipart/form-data' method='POST'>
                         <div class='row myprofild-padding-top'>
                             <div class='col-md-4 text-center'>
@@ -124,7 +124,7 @@
                 
 
 
-        echo    "<div class='row theme-backcolor2 myprofild-padding-top' id='edit-Profile'>
+        echo    "<div class='row theme-backcolor3 myprofild-padding-top' id='edit-Profile'>
                     <div class='col-md-12 form-group text-center'>					 
                         <button onclick='editMyProfile()' type='button' class='btn btn-margin userprofile-button-bg'>编辑信息</button>                            
                         <a href='/userProfile/myPostList.php?accountb=$accountb'><button type='button' class='btn btn-margin userprofile-button-bg'>查看帖子</button></a>
@@ -145,7 +145,7 @@
                 </div>";
     ?>
     
-    <div class='row theme-backcolor2'>
+    <div class='row theme-backcolor3'>
         <div class='col-lg-1 padding-small'></div>
         <div class='col-lg-10 text-margin-top'>
             <?php include($_SERVER['DOCUMENT_ROOT'].'/component/comment/comment.php'); ?>

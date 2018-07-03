@@ -3,7 +3,7 @@
 <script src="/post/js/JavaScript.js" type="text/javascript"></script>
 
 <form name='uploadPost' action='php/uploadTutorPost.php' enctype='multipart/form-data' method='POST' class='body-margin' onsubmit="return checkTutorPostInput()">
-    <div class="container theme-backcolor2">
+    <div class="container theme-backcolor3">
         <?php
             include($_SERVER['DOCUMENT_ROOT'].'/userProfile/php/processUserInfo.php'); 
             $accountb = $_SESSION['accountb'];           

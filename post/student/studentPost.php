@@ -3,7 +3,7 @@
 <script src="/post/js/JavaScript.js" type="text/javascript"></script>
 
 <form name='uploadPost' action='php/uploadStudentPost.php' enctype='multipart/form-data' method='POST' class='body-margin' onsubmit="return checkTutorPostInput()">
-    <div class="container padding-smaill theme-backcolor2 padding-bottom-m">
+    <div class="container padding-smaill  padding-bottom-m theme-backcolor3">
         <?php
             if(isset($_SESSION['accountb'])){
                 include($_SERVER['DOCUMENT_ROOT'].'/userProfile/php/processUserInfo.php'); 

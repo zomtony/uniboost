@@ -21,7 +21,7 @@
         $courseArray = explode("|", $result['courseNumber']);
         $_SESSION['tutorPostAccount'] = $result['userAccount'];
         
-        echo    "<div id='userProfile' class='theme-backcolor2'> 
+        echo    "<div id='userProfile' class='theme-backcolor3'> 
                     <div class='row table-center'>
                         <div class='col-lg-1 padding-small'></div>
                         <div class='col-lg-3'>
@@ -33,10 +33,10 @@
                         <div class='col-lg-3 padding-small'>                            
                             <img class='rounded profile-img-size' src='data:image/jpeg;base64," . base64_encode($result['userHQPhotoId']) . "'alt='userpic'/>                                                        							
                         </div>    
-                        <div class='col-lg-8 section-padding-left'>
+                        <div class='col-lg-8 section-padding-left' style='margin-top: 12px'>
 
                             <div class='row section-padding-left'>
-                                <div class='col-lg-1 padding-right-zero'><label class='label-position padding-small'>时间:</label></div>
+                                <div class='col-lg-1 padding-right-zero'><label class='label-position padding-small'>时间</label></div>
                                 <div class='col-lg-11 table-center'>";
 
                                 if($avaliableDay[0] == 1){
@@ -94,8 +94,8 @@
                                     <div class='row'>
 
                                         <div class='col-md-12 form-group '>
-                                            <div class='col-sm-2 padding-small'><label class='label-position'>学校:</label></div>
-                                            <div class='col-sm-5 label-style text-center padding-top'>
+                                            <div class='col-sm-2 padding-small'><label class='label-position'>学校</label></div>
+                                            <div class='col-sm-5 label-style text-center padding-top' style='background-color: #F3A8B1;'>
                                                 ". $result['school'] ."
                                             </div>
                                         </div>
@@ -103,7 +103,7 @@
                                     
                                     <div class='row '>
                                         <div class='col-md-12 form-group'>
-                                        <div class='col-sm-2 padding-small'><label class='label-position'>时薪:</label></div>
+                                        <div class='col-sm-2 padding-small'><label class='label-position'>时薪</label></div>
                                             <div class='col-sm-5 label-style text-center padding-top'>
                                                 ". $result['wage'] ."
                                             </div>
@@ -112,7 +112,7 @@
 
                                     <div class='row '>
                                         <div class='col-md-12 form-group'>
-                                        <div class='col-sm-2 padding-small'><label class='label-position'>电话:</label></div>
+                                        <div class='col-sm-2 padding-small'><label class='label-position'>电话</label></div>
                                             <div class='col-sm-5 label-style text-center padding-top'>
                                                 ". $result['phoneNumber'] ."
                                             </div>
@@ -120,7 +120,7 @@
                                     </div>
                                     <div class='row '>
                                         <div class='col-md-12 form-group'>
-                                        <div class='col-sm-2 padding-small'><label class='label-position'>微信:</label></div>
+                                        <div class='col-sm-2 padding-small'><label class='label-position'>微信</label></div>
                                             <div class='col-sm-5 label-style text-center padding-top'>
                                                 ". $result['weChatNumber'] ."
                                             </div>
@@ -211,7 +211,7 @@
                 </div>";
 
     ?>
-    <div class='row theme-backcolor2'>
+    <div class='row theme-backcolor3'>
         <div class='col-lg-1 padding-small'></div>
         <div class='col-lg-10 text-margin-top'>
             <?php include($_SERVER['DOCUMENT_ROOT'].'/component/comment/comment.php'); ?>
