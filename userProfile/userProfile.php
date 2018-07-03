@@ -16,8 +16,12 @@
         $rateValue = $result['averageRateScore'];
 		$ratePre = ($rateValue/5-4/120)*100;
 		$rateTimes = $result['rateNumber'];
+<<<<<<< HEAD
         $_SESSION['tutorPostAccount'] = $result['userAccount'];
 
+=======
+        
+>>>>>>> master
         echo    "<div id='userProfile' class='theme-backcolor2'>  
                     <div class='row myprofild-padding-top'>
                         <div class='col-lg-1'></div>
@@ -30,7 +34,11 @@
                             <div class='row'>
 
                                 <div class='col-md-12 form-group '>
+<<<<<<< HEAD
                                     <label class='col-sm-2 label-position padding-small'>名字</label>
+=======
+                                    <label class='col-sm-2 label-position padding-small'>名字:</label>
+>>>>>>> master
                                     <div class='col-sm-5 label-style'>
                                         ". $result['userName'] ."
                                     </div>
@@ -39,7 +47,11 @@
                             
                             <div class='row '>
                                 <div class='col-md-12 form-group'>
+<<<<<<< HEAD
                                     <label class='col-sm-2 label-position padding-small'>电话</label>
+=======
+                                    <label class='col-sm-2 label-position padding-small'>电话:</label>
+>>>>>>> master
                                     <div class='col-sm-5 label-style'>
                                         ". $result['phoneNumber'] ."
                                     </div>
@@ -47,7 +59,11 @@
                             </div>
                             <div class='row '>
                                 <div class='col-md-12 form-group'>
+<<<<<<< HEAD
                                     <label class='col-sm-1 label-position padding-small'>微信</label>
+=======
+                                    <label class='col-sm-1 label-position padding-small'>微信:</label>
+>>>>>>> master
                                     <div class='col-sm-5 label-style'>
                                         ". $result['weChatNumber'] ."
                                     </div>
@@ -81,6 +97,7 @@
                             <div class='col-md-4 margin-position-top padding-small'>
                                 <div class='row'>
                                     <div class='col-md-12 form-group'>
+<<<<<<< HEAD
                                         <label class='col-sm-2 label-position padding-small text-center'>名字</label>                                              
                                         <div class='col-sm-5'>
                                             <input type='' name='userNamef' id='userNamef' placeholder='' class='form-control label-info-position margin-left-zero label-style1'  value='" . $result['userName'] . "'>
@@ -90,6 +107,9 @@
                                 <div class='row'>
                                     <div class='col-md-12 form-group'>
                                         <label class='col-sm-2 label-position padding-small text-center'>电话</label>                                              
+=======
+                                        <label class='col-sm-2 label-position padding-small text-center'>电话:</label>                                              
+>>>>>>> master
                                         <div class='col-sm-5'>
                                             <input type='' name='phonef' id='phonef' placeholder='' class='form-control label-info-position margin-left-zero label-style1'  value='" . $result['phoneNumber'] . "'>
                                         </div>
@@ -97,12 +117,21 @@
                                 </div>
                                 <div class='row'>
                                     <div class='col-md-12 form-group'>
+<<<<<<< HEAD
                                         <label class='col-sm-2 label-position padding-small text-center'>微信</label>                                               									
+=======
+                                        <label class='col-sm-2 label-position padding-small text-center'>微信:</label>                                               									
+>>>>>>> master
                                         <div class='col-sm-5'>
                                             <input type='' name='wechatf' id='wechatf' placeholder='' class='form-control label-info-position margin-left-zero label-style1'  value='" . $result['weChatNumber'] . "'>
                                         </div>
                                     </div>
+<<<<<<< HEAD
                                 </div>                           
+=======
+                                </div>
+                                
+>>>>>>> master
                             </div> 
                             
                         </div>

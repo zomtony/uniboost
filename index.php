@@ -1,5 +1,5 @@
 
-
+<!-- jeff -->
 <?php include($_SERVER['DOCUMENT_ROOT'].'/include/header.php');?>
     <div class="container">       
         <div class="carousel slide" data-ride="carousel" data-type="multi" data-interval="3000" id="myCarousel">

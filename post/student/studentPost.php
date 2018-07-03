@@ -76,6 +76,7 @@
                                 <div class='col-md-12 form-group margin-position-top'>
                                     <label class='col-sm-1 label-position padding-small'>期望价格</label>                                              
                                     <div class='col-sm-5 padding-small'>
+<<<<<<< HEAD
                                         <input type='number' step='.01' name='expectedPricef' id='expectedPricef' placeholder='' class='form-control label-style1 table-center'  value=''>
                                     </div>
                                 </div> 
@@ -102,6 +103,25 @@
                                             <option value='CC'>CC</option>
                                             <option value='AC'>AC</option>
                                         </select>
+=======
+                                        <input type='' name='expectedPricef' id='expectedPricef' placeholder='' class='form-control label-style1 table-center'  value=''>
+                                    </div>
+                                </div> 
+                            </div>
+                            <div class='row margin--position-top'>
+                                <div class='col-md-12 form-group margin-position-top'>
+                                    <label class='col-sm-1 label-position padding-small'>所在学校</label>                                              
+                                    <div class='col-sm-5 padding-small'>
+                                        <input type='' name='schoolf' id='schoolf' placeholder='' class='form-control label-style1 table-center'  value=''>
+                                    </div>
+                                </div> 
+                            </div>
+                            <div class='row margin--position-top'>
+                                <div class='col-md-12 form-group margin-position-top'>
+                                    <label class='col-sm-1 label-position padding-small'>所需课号</label>                                              
+                                    <div class='col-sm-5 padding-small'>
+                                        <input type='' name='expectedCoursef' id='expectedCoursef' placeholder='' class='form-control label-style1 table-center'  value=''>
+>>>>>>> master
                                     </div>
                                 </div> 
                             </div>

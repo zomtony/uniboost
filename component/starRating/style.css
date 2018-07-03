@@ -18,24 +18,25 @@
 }
 
 .result-container{
-	height: 24px;
+	height: 26px;
 	width:120px;
 	position: relative;
 	border-radius: 10rem;
-	background-color: rgb(226, 243, 247);
+	background-color: rgb(245, 245, 245);
 }
 .rate-stars{
-	width: 120px; height: 24px;
+	width: 120px; height: 26px;
 	background: url(/component/starRating/img/rate-stars.png) no-repeat;
 	position: absolute;
-	background-size: 120px 24px;
+	background-size: 120px 26px;
 }
 .rate-bg{
 	margin-top:3px;
 	margin-left:4px;
 	height: 18px;
-	background-color: rgb(255, 230, 0);
+	background-color: rgb(254, 236, 44);
 	position: absolute;
+	border-radius: 10px;
 }
 
 .rate-font-size{
