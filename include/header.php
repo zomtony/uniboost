@@ -41,12 +41,9 @@
                         <a class="navbar-brand titleFont padding-zero-logo" href="/index.php"><img class='logo3 logo-color' src='/img/logo3.png' alt = "我是红领巾"></a>
                     </div>
                     <div class="collapse navbar-collapse" id="myNavbar">
-                        <!--
-                        <ul class="nav navbar-nav">
-                            <li class="navElementPosition"><a  href="#">TUTOR</span></a></li>
-                        </ul>
-                        -->
+        
                         <ul class="nav navbar-nav navbar-right">
+                            <li class='navElementPosition'><a href='https://goo.gl/forms/pL0jrE5sBpmq65g33' style='padding:0px;margin:0px;'><button type='button' class='btn btn-margin btn-float btn-margin theme-button text-color'>申请资料</button></a></li>
                             <?php                       
                                 session_start();
                                 if(isset($_SESSION['accountb'])){

@@ -37,7 +37,7 @@
 		$_SESSION['accountb'] = $accountb;
 		header("Location: /index.php");
 	}else{
-	//	header("Location: ../tutorPost.php?info=发布消息失败");
+		header("Location: ../tutorPost.php?info=发布消息失败");
 	}
 
     function getCourseString($courseArrayb){
