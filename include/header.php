@@ -55,12 +55,16 @@
                         <a class="navbar-brand titleFont padding-zero-logo" href="/index.php"><img class='logo1 logo-color' src='/img/logo1.png' alt = "我是红领巾"></a>
                         <a class="navbar-brand titleFont padding-zero-logo" href="/index.php"><img class='logo2 logo-color1' src='/img/logo2.png' alt = "我是红领巾"></a>
                         <a class="navbar-brand titleFont padding-zero-logo" href="/index.php"><img class='logo3 logo-color' src='/img/logo3.png' alt = "我是红领巾"></a>
+                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>                        
+                        </button>
                     </div>
                     <div class="collapse navbar-collapse" id="myNavbar">
         
                         <ul class="nav navbar-nav navbar-right">
-                            <li class='navElementPosition'><a href='https://goo.gl/forms/pL0jrE5sBpmq65g33' style='padding:0px;margin:0px;'><button type='button' class='btn btn-margin btn-float btn-margin theme-button text-color'>申请资料</button></a></li>
-                            <?php                       
+                        <li class='navElementPosition'><a href='https://goo.gl/forms/pL0jrE5sBpmq65g33' style='padding:0px;margin:0px;'><button type='button' class='btn btn-margin btn-float btn-margin theme-button resource-button-color text-color'>申请资料</button></a></li>                            <?php                       
                                 session_start();
                                 if(isset($_SESSION['accountb'])){
                                     $accountb = $_SESSION['accountb'];
@@ -72,8 +76,7 @@
                                                 </ul>
                                             </li>";
                                 }else {
-                                    echo "<li class='navElementPosition'><a href='https://goo.gl/forms/pL0jrE5sBpmq65g33' style='padding:0px;margin:0px;'><button type='button' class='btn btn-margin btn-float btn-margin theme-button resource-button-color text-color'>申请资料</button></a></li>
-                                          <li class='navElementPosition' style='margin-left: 8px'><a href='/signin_out_up/signin.php' style='padding:0px;margin:0px;'><button type='button' class='btn btn-margin btn-float btn-margin login-button-color text-color'>登陆</button></a></li>
+                                    echo "<li class='navElementPosition' style='margin-left: 8px'><a href='/signin_out_up/signin.php' style='padding:0px;margin:0px;'><button type='button' class='btn btn-margin btn-float btn-margin login-button-color text-color'>登陆</button></a></li>
                                           <li class='navElementPosition' style='margin-left: 4px'><a href='/signin_out_up/signup.php' style='padding:0px;margin:0px;'><button type='button' class='btn btn-margin btn-float btn-margin login-button-color text-color'>注册</button></a></li>";
                                 }
                             ?>                        				
