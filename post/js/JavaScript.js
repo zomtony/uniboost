@@ -91,17 +91,19 @@ function setValueForSunday(){
     sunday.value = 0;
   }
 }
-
+function infoChangeName(){
+  window.alert("请在我的档案处修改名字.");
+}
 $(document).ready(function() {
   var html = $(".copy-fields").html();
   $(".after-add-more").after(html);
   $(".add-more").click(function(){
     count++
-    if(count <= 5){
+    if(count <= 2){
       var html = $(".copy-fields").html();
       $(".after-add-more").after(html);
     }else{
-      window.alert("最多只能选六门课");
+      window.alert("最多只能选三门课");
     }
   });
 });

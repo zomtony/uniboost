@@ -4,6 +4,7 @@
     $accountb=$_SESSION['accountb'];
     $phoneb=$_POST['phonef'];
     $wechatb=$_POST['wechatf'];
+    $userNameb=$_POST['userNamef'];
     $briefIntroductionb=$_POST['briefIntroductionf'];
     if(!empty($_FILES['file']['name'])){
         $filename = $_FILES['file']['name'];
@@ -32,7 +33,7 @@
 
     $processUserInfo = new processUserInfo();
     $count = 0;
-    $count = $processUserInfo->updataInfo($accountb, $phoneb, $wechatb, $briefIntroductionb, $contentHQPhotoIdb, $contentLQPhotoIdb); 
+    $count = $processUserInfo->updataInfo($accountb, $userNameb, $phoneb, $wechatb, $briefIntroductionb, $contentHQPhotoIdb, $contentLQPhotoIdb); 
 
     if($count > 0 ){
         $processUserInfo->disconnect();
