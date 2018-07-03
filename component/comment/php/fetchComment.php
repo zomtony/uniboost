@@ -2,25 +2,30 @@
     session_start();
     //fetch_comment.php
     $tutorPostAccount = $_SESSION['tutorPostAccount'];
-
+	include($_SERVER['DOCUMENT_ROOT'].'/php/getPostTime.php'); 
     include($_SERVER['DOCUMENT_ROOT'].'/php/createConnection.php'); //database connected
     $myconn = new createConnection(); //create new database connected
+    $getPostTime = new getPostTime(); //create new database connected
+
     $connect = $myconn->connect();
+
+	$currectTimeSql = $connect->prepare("SELECT now() as now");
+	$currectTimeSql -> execute();
+	$currectTimeResult = $currectTimeSql->fetch(PDO::FETCH_OBJ);
+	$currectTime = $currectTimeResult -> now;
 
     $query = "SELECT * FROM User_Comment uc LEFT JOIN User_Info ui ON uc.commentSenderAccount = ui.userAccount WHERE uc.userAccount = '$tutorPostAccount'
             ORDER BY commentId DESC";
-
     $statement = $connect->prepare($query);
-
     $statement->execute();
-
     $result = $statement->fetchAll();
+
     $output = '';
     foreach($result as $row)
     {
-
-
-        
+		$postTime = $row['date'];
+        $timeAgo = $getPostTime -> timeAgo($currectTime, $postTime);
+                
         echo "<div  class='row btn-margin theme-backcolor1 text-margin-bottom-comment'>
                 <table>
                     <tr>
@@ -31,11 +36,11 @@
         echo               "<img class='Width rounded rating-button-margin' style='margin-left:16px;' src='/img/defaultLQPohotId.jpg' alt=''>";
                         }
         echo           "</td>
-                        <td class='text-position-top'>";
+                        <td class='text-position-top' style='width:100%;'>";
                         if($row['userName'] != null){
-                            echo "<div class='padding-left text-margin-top'><b>".$row['userName']."</b> on <span class='td-post-time'>".$row['date']."</span></div>";
+                            echo "<div class='padding-left text-margin-top'><b>".$row['userName']."</b> <span class='comment-post-time'>". $timeAgo ."</span></div>";
                         }else{
-                            echo "<div class='padding-left text-margin-top'><b>游客</b> on <span class='td-post-time'>".$row['date']."</span></div>"; 
+                            echo "<div class='padding-left text-margin-top'><b>游客</b> <span class='comment-post-time'>". $timeAgo ."</span></div>"; 
                         }
                             echo "<div class='padding-left text-padding-bottom-right'>".$row['comment']."</div>
                         </td>
