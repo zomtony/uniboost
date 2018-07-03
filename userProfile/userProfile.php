@@ -30,7 +30,7 @@
                             <div class='row'>
 
                                 <div class='col-md-12 form-group '>
-                                    <label class='col-sm-2 label-position padding-small'>名字:</label>
+                                    <label class='col-sm-2 label-position padding-small'>名字</label>
                                     <div class='col-sm-5 label-style'>
                                         ". $result['userName'] ."
                                     </div>
