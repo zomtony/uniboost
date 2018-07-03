@@ -1,10 +1,18 @@
 <?php
 	include($_SERVER['DOCUMENT_ROOT'].'/php/splitPage.php'); 
 	include($_SERVER['DOCUMENT_ROOT'].'/php/createConnection.php'); //database connected
+	include($_SERVER['DOCUMENT_ROOT'].'/php/getPostTime.php'); 
 	include($_SERVER['DOCUMENT_ROOT'].'/component/starRating/rating.php'); //rating
 	$rating = new rating();
 	$myconn = new createConnection(); //create new database connected
+	$getPostTime = new getPostTime(); //create new database connected
+
 	$conn = $myconn->connect();
+
+	$currectTimeSql = $conn->prepare("SELECT now() as now");
+	$currectTimeSql -> execute();
+	$currectTimeResult = $currectTimeSql->fetch(PDO::FETCH_OBJ);
+	$currectTime = $currectTimeResult -> now;
 
 	$num=12;
 
@@ -59,8 +67,15 @@
 		$sql = "SELECT sp.studentPostId, sp.userName, sp.userAccount, sp.expectedCourse, sp.expectedPrice, sp.school, sp.date, ui.userLQPhotoId FROM Student_Post sp LEFT JOIN User_Info ui ON sp.userAccount = ui.userAccount  ORDER BY sp.studentPostId DESC {$splitPageStudent->limit}";
 	}
 	
+	if($total == 0){
+	    echo "<div><h3>啊, 还没有相关帖子哦, 看看其他的吧</h3></div><br>";
+		$sql = "SELECT sp.studentPostId, sp.userName, sp.userAccount, sp.expectedCourse, sp.expectedPrice, sp.school, sp.date, ui.userLQPhotoId FROM Student_Post sp LEFT JOIN User_Info ui ON sp.userAccount = ui.userAccount  ORDER BY sp.studentPostId DESC {$splitPageStudent->limit}";
+	}
+
 	$count = 0;
 	foreach ($conn->query($sql) as $row ) {
+		$postTime = $row['date'];
+		$timeAgo = $getPostTime -> timeAgo($currectTime, $postTime);
 		echo "<a href='/post/student/studentPostDetail.php?studentPost=". $row['studentPostId'] . "'>";
 		if($count%2 == 0){
 			echo    "<div class='row theme-backcolor2'>";
@@ -104,7 +119,7 @@
 								<table>
 									<tr>
 										<td>" . $row['school'] . "</td>
-										<td class='td-post-time'>" . $row['date'] . "</td>
+										<td class='td-post-time'>" . $timeAgo . "</td>
 									</tr>
 									<tr>
 										<td colspan='2'>
