@@ -84,14 +84,12 @@
 			ON t_post.userAccount = u_info.userACCOUNT ORDER BY t_post.tutorPostId DESC {$splitPage->limit}";
 	}
 
-
     if($total == 0){
 	    echo "<div><h3>啊, 还没有人教这个课哦, 看看其他的吧</h3></div><br>";
         $sql = "SELECT * FROM Tutor_Post t_post
             LEFT JOIN User_Info u_info
             ON t_post.userAccount = u_info.userACCOUNT ORDER BY t_post.tutorPostId DESC {$splitPage->limit}";
     }
-
 
 	$count = 0;
 	foreach ($conn->query($sql) as $row) {
