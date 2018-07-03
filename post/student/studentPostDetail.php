@@ -12,7 +12,7 @@
 
         $avaliableDay = $result['avaliableDay'];
 
-        echo    "<div id='userProfile' class='theme-backcolor2'> 
+        echo    "<div id='userProfile' class='theme-backcolor3'> 
                     <div class='row table-center'>
                         <div class='col-lg-1 padding-small'></div>
                         <div class='col-lg-3'>
@@ -29,11 +29,10 @@
         echo                "<img class='rounded profile-img-size' src='data:image/jpeg;base64," . base64_encode($result['userHQPhotoId']) . "'alt='userpic'/>";    
                         }                                                    							
         echo            "</div>    
-                        <div class='col-lg-8 section-padding-left'>
+                        <div class='col-lg-8 section-padding-left' style='margin-top: 12px'>
 
-                            <div class='row'>
-                                <div class='col-lg-1 text-center padding-top'></div>
-                                <div class='col-lg-1 text-center padding-top'>时间:</div>
+                            <div class='row section-padding-left'>
+                                <div class='col-lg-1 padding-right-zero'>时间</div>
                                 <div class='col-lg-9 table-center'>";
 
                                 if($avaliableDay[0] == 1){
@@ -91,8 +90,8 @@
                                     <div class='row'>
 
                                         <div class='col-md-12 form-group '>
-                                            <label class='col-sm-3 label-position padding-small'>学校:</label>
-                                            <lable class='col-sm-5 label-style text-center padding-top'>
+                                            <label class='col-sm-3 label-position padding-small'>学校</label>
+                                            <lable class='col-sm-5 label-style text-center padding-top' style='background-color: #F3A8B1;'>
                                                 ". $result['school'] ."
                                             </lable>
                                         </div>
@@ -100,7 +99,7 @@
                                     
                                     <div class='row '>
                                         <div class='col-md-12 form-group'>
-                                            <label class='col-sm-3 label-position padding-small'>时薪:</label>
+                                            <label class='col-sm-3 label-position padding-small'>期望价格</label>
                                             <div class='col-sm-5 label-style text-center padding-top'>
                                                 ". $result['expectedPrice'] ."
                                             </div>
@@ -109,7 +108,7 @@
 
                                     <div class='row '>
                                         <div class='col-md-12 form-group'>
-                                            <label class='col-sm-2 label-position padding-small'>电话:</label>
+                                            <label class='col-sm-2 label-position padding-small'>电话</label>
                                             <div class='col-sm-5 label-style text-center padding-top'>
                                                 ". $result['phoneNumber'] ."
                                             </div>
@@ -117,7 +116,7 @@
                                     </div>
                                     <div class='row '>
                                         <div class='col-md-12 form-group'>
-                                            <label class='col-sm-1 label-position padding-small'>微信:</label>
+                                            <label class='col-sm-1 label-position padding-small'>微信</label>
                                             <div class='col-sm-5 label-style text-center padding-top'>
                                                 ". $result['weChatNumber'] ."
                                             </div>
