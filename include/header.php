@@ -17,7 +17,6 @@
         <script src="/js/validata.js" type="text/javascript"></script>
         <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
         
-<<<<<<< HEAD
         <style>
             .resource-button-color {
                 background-color: #93BDEE
@@ -37,36 +36,14 @@
                 <div class="container-fluid" style="padding: 0">
                     
                     <div class="navbar-header padding-zero-logo">
-=======
-    </head>
-    <body>
-        <nav class="navbar navbar-inverse theme-backcolor">
-            <div class="container">   
-                <div class="container-fluid">
-                    <div class="navbar-header padding-zero-logo">
-                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>                        
-                        </button>
->>>>>>> 78ed8a5714e18772182dcb9fec585162ab354957
                         <a class="navbar-brand titleFont padding-zero-logo" href="/index.php"><img class='logo1 logo-color' src='/img/logo1.png' alt = "我是红领巾"></a>
                         <a class="navbar-brand titleFont padding-zero-logo" href="/index.php"><img class='logo2 logo-color1' src='/img/logo2.png' alt = "我是红领巾"></a>
                         <a class="navbar-brand titleFont padding-zero-logo" href="/index.php"><img class='logo3 logo-color' src='/img/logo3.png' alt = "我是红领巾"></a>
                     </div>
                     <div class="collapse navbar-collapse" id="myNavbar">
-<<<<<<< HEAD
-                        <!--
-                        <ul class="nav navbar-nav">
-                            <li class="navElementPosition"><a  href="#">TUTOR</span></a></li>
-                        </ul>
-                        -->
-                        <ul class="nav navbar-nav navbar-right">
-=======
         
                         <ul class="nav navbar-nav navbar-right">
                             <li class='navElementPosition'><a href='https://goo.gl/forms/pL0jrE5sBpmq65g33' style='padding:0px;margin:0px;'><button type='button' class='btn btn-margin btn-float btn-margin theme-button text-color'>申请资料</button></a></li>
->>>>>>> 78ed8a5714e18772182dcb9fec585162ab354957
                             <?php                       
                                 session_start();
                                 if(isset($_SESSION['accountb'])){
@@ -79,14 +56,9 @@
                                                 </ul>
                                             </li>";
                                 }else {
-<<<<<<< HEAD
                                     echo "<li class='navElementPosition'><a href='https://goo.gl/forms/pL0jrE5sBpmq65g33' style='padding:0px;margin:0px;'><button type='button' class='btn btn-margin btn-float btn-margin theme-button resource-button-color text-color'>申请资料</button></a></li>
                                           <li class='navElementPosition' style='margin-left: 8px'><a href='/signin_out_up/signin.php' style='padding:0px;margin:0px;'><button type='button' class='btn btn-margin btn-float btn-margin login-button-color text-color'>登陆</button></a></li>
                                           <li class='navElementPosition' style='margin-left: 4px'><a href='/signin_out_up/signup.php' style='padding:0px;margin:0px;'><button type='button' class='btn btn-margin btn-float btn-margin login-button-color text-color'>注册</button></a></li>";
-=======
-                                    echo "<li class='navElementPosition'><a href='/signin_out_up/signin.php' style='padding:0px;margin:0px;'><button type='button' class='btn btn-margin btn-float btn-margin theme-button text-color'>登陆</button></a></li>
-                                        <li class='navElementPosition'><a href='/signin_out_up/signup.php' style='padding:0px;margin:0px;'><button type='button' class='btn btn-margin btn-float btn-margin theme-button text-color'>注册</button></a></li>";
->>>>>>> 78ed8a5714e18772182dcb9fec585162ab354957
                                 }
                             ?>                        				
                         </ul>
