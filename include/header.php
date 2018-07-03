@@ -21,11 +21,27 @@
             .resource-button-color {
                 background-color: #93BDEE
             }
+
             .login-button-color {
                 background-color: #FF7345
             }
+
             .login-button-layout {
                 margin-left: 4px;
+            }
+        
+            /* text-center post button */
+
+            .phone-post-button {
+                float: right;
+            }
+
+            @media (max-width: 460px) {
+                .phone-post-button {
+                    width: 100%;
+                    text-align: center;
+                    float: none;
+                }
             }
         </style>
 
