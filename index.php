@@ -29,7 +29,7 @@
         </div> 
         <!-- Alter width and notice how this behaves -->
         <div class="row" style="padding-top: 12px; padding-bottom: 4px">
-            <div class="TimeFontAlign padding-right-zero" style="float: right;">   
+            <div class="TimeFontAlign padding-right-zero phone-post-button">   
                 
                 <?php                   
                         if(isset($_SESSION['accountb'])){
