@@ -17,11 +17,7 @@
                             <div class='row margin-top-m padding-bottom-m margin-position-top'>
                                 <div class='col-sm-2 padding-small table-center'><label class='label-position'>名字</label></div>
                                 <div class='col-sm-5 padding-small'>
-<<<<<<< HEAD
-                                   <div class='label-style text-center' style='margin:auto;'> ". $result['userName'] ."</div>
-=======
                                     <input type='' name='userNamef' id='userNamef' placeholder='' class='form-control label-style1 table-center'  onclick='infoChangeName()' value='". $result['userName'] ."' readonly>
->>>>>>> 78ed8a5714e18772182dcb9fec585162ab354957
                                 </div>
                             </div>
                             
@@ -43,15 +39,6 @@
                             <div class='row margin-position-top padding-bottom-m'>
                                 <div class='col-sm-2 padding-small table-center'><label class='label-position padding-small'>时薪</label></div>                                              
                                 <div class='col-sm-5 padding-small '>
-<<<<<<< HEAD
-                                    <input type='' name='wagef' id='wagef' placeholder='' class='form-control label-style1 table-center'  value=''>
-                                </div>
-                            </div>
-                            <div class='row margin-position-top padding-bottom-m'>
-                                <div class='col-sm-2 padding-small table-center'><label class='label-position padding-small'>学校<font color='red'>*</font>:</label></div>                                               
-                                <div class='col-sm-5 padding-small'>
-                                    <input type='' name='schoolf' id='schoolf' placeholder='' class='form-control label-style1 table-center'  value='' required>
-=======
                                     <input type='number' step='.01' name='wagef' id='wagef' placeholder='' class='form-control label-style1 table-center'  value=''>
                                 </div>
                             </div>
@@ -66,7 +53,6 @@
                                         <option value='CC'>CC</option>
                                         <option value='AC'>AC</option>
                                     </select>
->>>>>>> 78ed8a5714e18772182dcb9fec585162ab354957
                                 </div>
                             </div>
 
@@ -74,19 +60,12 @@
                         
                         <div class='col-lg-5 p-word text-margin-top'>
                             <h4>个人简介</h4> 
-<<<<<<< HEAD
-                            <textarea name='briefIntroductionf' class='form-control form-rounded' rows='5' value='" . $result['briefIntroduction'] . "'></textarea>
-=======
                             <textarea name='briefIntroductionf' class='form-control form-rounded' rows='5' > " . $result['briefIntroduction'] . " </textarea>
->>>>>>> 78ed8a5714e18772182dcb9fec585162ab354957
 
                                     <button class='btn button-add-course-button add-more margin--position-top button-width button-margin-left form-rounded button-course margin-position-top' type='button'>
                                         继续添加
                                     </button>
-<<<<<<< HEAD
-=======
                                     
->>>>>>> 78ed8a5714e18772182dcb9fec585162ab354957
                                     <div class='input-group control-group after-add-more  clean-input-group-display'>
         
                                 </div>
@@ -154,8 +133,3 @@
         </div>
     </div>
 </form>
-<<<<<<< HEAD
-
-
-=======
->>>>>>> 78ed8a5714e18772182dcb9fec585162ab354957
