@@ -26,6 +26,8 @@
         imagejpeg($userLQPhotoIdb, $_SERVER['DOCUMENT_ROOT'].'/uploads/'.$LQPhotoIdb, 100);
         $contentLQPhotoIdb=addslashes(file_get_contents($_SERVER['DOCUMENT_ROOT'].'/uploads/'.$LQPhotoIdb));
         imagedestroy($userLQPhotoIdb);
+
+        $LQPhotoIdNav = file_get_contents($_SERVER['DOCUMENT_ROOT'].'/uploads/'.$LQPhotoIdb);       
     }else{
         $contentHQPhotoIdb='';
         $contentLQPhotoIdb='';
@@ -33,7 +35,7 @@
 
     $processUserInfo = new processUserInfo();
     $count = 0;
-    $count = $processUserInfo->updataInfo($accountb, $userNameb, $phoneb, $wechatb, $briefIntroductionb, $contentHQPhotoIdb, $contentLQPhotoIdb); 
+    $count = $processUserInfo->updataInfo($accountb, $userNameb, $phoneb, $wechatb, $briefIntroductionb, $contentHQPhotoIdb, $contentLQPhotoIdb, $LQPhotoIdNav); 
 
     if($count > 0 ){
         $processUserInfo->disconnect();
