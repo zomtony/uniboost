@@ -1,13 +1,19 @@
 
 <?php 
     include($_SERVER['DOCUMENT_ROOT'].'/include/header.php');
-    $_SESSION['chooseSchool'] = $_POST["chooseSchool"];
-    $_SESSION['choosePostType'] = $_POST['choosePostType'];
-    $_SESSION['keyWords'] = $_POST["keyWords"];
+    if(isset($_POST["chooseSchool"])){
+        $_SESSION['chooseSchool'] = $_POST["chooseSchool"];
+    }
+    if(isset($_POST["choosePostType"])){
+        $_SESSION['choosePostType'] = $_POST['choosePostType'];
+    }
+    if(isset($_POST["keyWords"])){
+        $_SESSION['keyWords'] = $_POST["keyWords"];
+    }
 ?>
 
     <div class="container">       
-        <div class="carousel slide" data-ride="carousel" data-type="multi" data-interval="3000" id="myCarousel">
+        <div class="carousel slide" data-ride="carousel" data-type="multi" data-interval="6000" id="myCarousel">
             <div class="carousel-inner">
                 <section class="item active">
                     <div class="col-md-2 col-sm-6 col-xs-12 rollImagePosition imgSize">
