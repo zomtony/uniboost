@@ -16,8 +16,8 @@
 
 	$num=12;
 
-	if(isset($_SESSION['chooseSchool']) && isset($_SESSION['key'])){
-		if($_SESSION['chooseSchool'] == 'selected' && ($_SESSION['key'] == null || $_SESSION['key'] == '')){
+	if(isset($_SESSION['chooseSchool']) && isset($_SESSION['keyWords'])){
+		if($_SESSION['chooseSchool'] == 'selected' && ($_SESSION['keyWords'] == null || $_SESSION['keyWords'] == '')){
 
 			$stmt = $conn->prepare("SELECT * FROM Student_Post sp"); 
 			$stmt->execute();
@@ -26,28 +26,28 @@
 			$splitPageStudent = new splitPage($total, $num);
 			$sql = "SELECT sp.studentPostId, sp.userName, sp.userAccount, sp.expectedCourse, sp.expectedPrice, sp.school, sp.date, ui.userLQPhotoId FROM Student_Post  sp LEFT JOIN User_Info ui ON sp.userAccount = ui.userAccount  ORDER BY sp.studentPostId DESC {$splitPageStudent->limit}";
 
-		}elseif($_SESSION['chooseSchool'] == 'selected' && ($_SESSION['key'] != null && $_SESSION['key'] != '')){
+		}elseif($_SESSION['chooseSchool'] == 'selected' && ($_SESSION['keyWords'] != null && $_SESSION['keyWords'] != '')){
 
-			$key = $_SESSION['key'];
-			$stmt = $conn->prepare("SELECT * FROM Student_Post WHERE expectedCourse LIKE '%$key%'"); 
+			$keyWords = $_SESSION['keyWords'];
+			$stmt = $conn->prepare("SELECT * FROM Student_Post WHERE expectedCourse LIKE '%$keyWords%'"); 
 			$stmt->execute();
 			$total = $stmt->rowCount();
 			$splitPageStudent = new splitPage($total, $num);
 
-			$sql = "SELECT sp.studentPostId, sp.userName, sp.userAccount, sp.expectedCourse, sp.expectedPrice, sp.school, sp.date, ui.userLQPhotoId FROM Student_Post sp LEFT JOIN User_Info ui ON sp.userAccount = ui.userAccount WHERE expectedCourse LIKE '%$key%'  ORDER BY sp.studentPostId DESC {$splitPageStudent->limit}";
+			$sql = "SELECT sp.studentPostId, sp.userName, sp.userAccount, sp.expectedCourse, sp.expectedPrice, sp.school, sp.date, ui.userLQPhotoId FROM Student_Post sp LEFT JOIN User_Info ui ON sp.userAccount = ui.userAccount WHERE expectedCourse LIKE '%$keyWords%'  ORDER BY sp.studentPostId DESC {$splitPageStudent->limit}";
 
-		}elseif($_SESSION['chooseSchool'] != 'selected' && ($_SESSION['key'] != null && $_SESSION['key'] != '')){
+		}elseif($_SESSION['chooseSchool'] != 'selected' && ($_SESSION['keyWords'] != null && $_SESSION['keyWords'] != '')){
 
 			$school = $_SESSION['chooseSchool'];
-			$key = $_SESSION['key'];
-			$stmt = $conn->prepare("SELECT * FROM Student_Post WHERE school = '$school' AND expectedCourse LIKE '%$key%'"); 
+			$keyWords = $_SESSION['keyWords'];
+			$stmt = $conn->prepare("SELECT * FROM Student_Post WHERE school = '$school' AND expectedCourse LIKE '%$keyWords%'"); 
 			$stmt->execute();
 			$total = $stmt->rowCount();
 			$splitPageStudent = new splitPage($total, $num);
 
-			$sql = "SELECT sp.studentPostId, sp.userName, sp.userAccount, sp.expectedCourse, sp.expectedPrice, sp.school, sp.date, ui.userLQPhotoId FROM Student_Post sp LEFT JOIN User_Info ui ON sp.userAccount = ui.userAccount WHERE school = '$school' AND expectedCourse LIKE '%$key%'  ORDER BY sp.studentPostId DESC {$splitPageStudent->limit}";
+			$sql = "SELECT sp.studentPostId, sp.userName, sp.userAccount, sp.expectedCourse, sp.expectedPrice, sp.school, sp.date, ui.userLQPhotoId FROM Student_Post sp LEFT JOIN User_Info ui ON sp.userAccount = ui.userAccount WHERE school = '$school' AND expectedCourse LIKE '%$keyWords%'  ORDER BY sp.studentPostId DESC {$splitPageStudent->limit}";
 
-		}elseif($_SESSION['chooseSchool'] != 'selected' && ($_SESSION['key'] == null || $_SESSION['key'] == '')){
+		}elseif($_SESSION['chooseSchool'] != 'selected' && ($_SESSION['keyWords'] == null || $_SESSION['keyWords'] == '')){
 
 			$school = $_SESSION['chooseSchool'];
 			$stmt = $conn->prepare("SELECT * FROM Student_Post WHERE school = '$school'"); 

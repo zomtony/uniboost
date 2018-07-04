@@ -14,8 +14,10 @@
 	$stmt->bindParam(':pwdb', $pwdb);
 	$stmt->execute();
 	$result = $stmt->rowCount();
+	$row = $stmt->fetch();
 	if($result > 0 ){
 		$_SESSION['accountb'] = $accountb;
+		$_SESSION['userLQPhotoId'] = $row['userLQPhotoId'];
 		header("Location: ../../index.php");
 	}else{
 		header("Location: ../signin.php?info=user account or password are wrong");

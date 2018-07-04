@@ -18,6 +18,16 @@
     margin-top:24px;
     margin-left:4px;
 }
+.slogon{
+    margin-top:15px;
+    margin-right:10px;
+}
+.userPhotoId{
+    margin-top:5px;
+    width:40px;
+    border-radius: 100%;
+}
+
 .navElementPosition{
     padding-top:5px;
 }
