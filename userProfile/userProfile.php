@@ -30,6 +30,7 @@
                             <div class='row'>
 
                                 <div class='col-md-12 form-group '>
+                                    <div class='col-sm-1' ></div>
                                     <div class='col-sm-2 padding-small'><label class='label-position'>名字</label></div>
                                     <div class='col-sm-5' >
                                         <label class='label-style text-center padding-top'>". $result['userName'] ."</label>
@@ -39,6 +40,7 @@
                             
                             <div class='row '>
                                 <div class='col-md-12 form-group'>
+                                    <div class='col-sm-1' ></div>
                                     <div class='col-sm-2 padding-small'><label class='label-position'>电话</label></div>
                                     <div class='col-sm-5' >
                                         <label class='label-style text-center padding-top'>". $result['phoneNumber'] ."</label>
@@ -47,6 +49,7 @@
                             </div>
                             <div class='row '>
                                 <div class='col-md-12 form-group'>
+                                    <div class='col-sm-1' ></div>
                                     <div class='col-sm-2 padding-small'><label class='label-position'>微信</label></div>
                                     <div class='col-sm-5' >
                                         <label class='label-style text-center padding-top'>". $result['weChatNumber'] ."</label>
