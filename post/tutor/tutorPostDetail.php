@@ -127,9 +127,10 @@
                                         </div>
                                     </div>
                                     
-                                </div>
-
-                                <div class='col-lg-7 padding-small text-margin-top table-center'>
+                                </div>";
+ 
+                            if($courseArray[0] != ''){   
+                    echo        "<div class='col-lg-7 padding-small text-margin-top table-center'>
                                     <div><label class='label-position padding-small'>所教课号</label></div>
                                     <div>";
 
@@ -148,9 +149,11 @@
                                     }  
                                           
                             echo    "</div>                                     
-                                </div>
-                            </div>
+                                </div>";
+                            }
 
+
+                    echo    "</div>
                         </div>
                     </div>
 
