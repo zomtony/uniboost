@@ -38,37 +38,6 @@ body{
 		margin-left:10px;
 	}
 
-	.logo1{
-		width:100px;
-		margin-top:12px;
-		margin-left:0px;
-		padding-right:0px;
-		
-	}
-	.logo2{
-		width:23px;
-		margin-top:7px;
-		padding-right:0px;
-		padding-left:0px;
-	}
-	.logo3{
-		width:100px;
-		margin-top:17;
-		padding-left:0px;
-	}
-
-	.padding-zero-logo{
-		padding:0px;
-	}
-
-	.height-div{
-		margin-top:60px;
-	}
-
-	.hidden-slogon{
-		display: none;
-	}
-
 }
 
 
