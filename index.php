@@ -98,5 +98,5 @@
     </div>
 
 <script src="/js/mainpage.js" type="text/javascript"></script>
-<div><hr></div>
+<div class="height-div"></div>
 <?php include($_SERVER['DOCUMENT_ROOT'].'/include/footer.php');?>

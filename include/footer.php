@@ -5,7 +5,7 @@
                 <div class="col-sm-4">
 					<img class='logo1 logo-color' src='/img/logo1.png' alt = "我是红领巾">
 				</div>
-                <div class="col-sm-4">
+                <div class="col-sm-6">
 
 					<div class="row btn-margin text-margin-bottom-comment text-center" style="margin-top:15px;">
 						<div class="col-xs-4">关于我们</div>
@@ -18,7 +18,7 @@
 					</div>        
 
 				</div>
-                <div class="col-sm-4"></div>
+                <div class="col-sm-2"></div>
             </div>
 		</footer>	
 	</body>
