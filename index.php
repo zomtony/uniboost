@@ -1,5 +1,11 @@
 
-<?php include($_SERVER['DOCUMENT_ROOT'].'/include/header.php');?>
+<?php 
+    include($_SERVER['DOCUMENT_ROOT'].'/include/header.php');
+    $_SESSION['chooseSchool'] = $_POST["chooseSchool"];
+    $_SESSION['choosePostType'] = $_POST['choosePostType'];
+    $_SESSION['keyWords'] = $_POST["keyWords"];
+?>
+
     <div class="container">       
         <div class="carousel slide" data-ride="carousel" data-type="multi" data-interval="3000" id="myCarousel">
             <div class="carousel-inner">
@@ -44,38 +50,88 @@
 
             <div class="col-lg-8 padding-small">                                      
                 <form class="navbar-form padding-small" role="search" action="index.php" method="POST">
+                    <?php
+                        if(isset($_SESSION['choosePostType'])){
+                echo        "<select class='form-control' name='choosePostType' id='choosePostType'>";
+                                if($_SESSION['choosePostType'] == 'teacher'){
+                        echo        "<option value='teacher' selected>只看老师</option>";
+                                }else{
+                        echo        "<option value='teacher'>只看老师</option>";                
+                                }
+                                if($_SESSION['choosePostType'] == 'student'){
+                        echo        "<option value='student' selected>只看学生</option>";
+                                }else{
+                        echo        "<option value='student'>只看学生</option>";   
+                                }
+                echo        "</select>"; 
+                        }else{
+                echo        "<select class='form-control' name='choosePostType' id='choosePostType'>
+                                <option value='teacher'>只看老师</option>
+                                <option value='student'>只看学生</option>
+                            </select>";                            
+                        }
 
-                    <select class="form-control" name="choosePostType" id="choosePostType">
-                        <option value="teacher">只看老师</option>
-                        <option value="student">只看学生</option>
-                    </select> 
-                    <select class="form-control" name="chooseSchool" id="chooseSchool">
-                        <option value="selected">--选择学校--</option>
-                        <option value="Langara">Langara</option>
-                        <option value="UBC">UBC</option>
-                        <option value="SFU">SFU</option>
-                        <option value="CC">CC</option>
-                        <option value="AV">AC</option>
-                    </select>
- 
-                    <div class="input-group">                           
-                        <input class="form-control" placeholder="Search" name="key" id="srch-term" type="text">
-                            <div class="input-group-btn">
-                                <button class="btn theme-button site-btn" type="submit" name='submit' onclick="saveInfo()"><span class='search-button-padding text-color'>搜索</span><i class="glyphicon glyphicon-search text-color"></i></button>
+
+                        if(isset($_SESSION['chooseSchool'])){
+                echo        " <select class='form-control' name='chooseSchool' id='chooseSchool'>
+                                <option value='selected'>--选择学校--</option>";
+                                if($_SESSION['chooseSchool'] == 'Langara'){
+                echo                "<option value='Langara' selected>Langara</option>";
+                                }else{
+                echo                "<option value='Langara'>Langara</option>";
+                                }
+                                if($_SESSION['chooseSchool'] == 'UBC'){
+                echo                "<option value='UBC' selected>UBC</option>";
+                                }else{
+                echo                "<option value='UBC'>UBC</option>";
+                                }
+                                if($_SESSION['chooseSchool'] == 'SFU'){
+                echo                "<option value='SFU' selected>SFU</option>";
+                                }else{
+                echo                "<option value='SFU'>SFU</option>";
+                                }
+                                if($_SESSION['chooseSchool'] == 'CC'){
+                echo                "<option value='CC' selected>CC</option>";
+                                }else{
+                echo                "<option value='CC'>CC</option>";
+                                }  
+                                if($_SESSION['chooseSchool'] == 'AC'){
+                echo                "<option value='AC' selected>AC</option>";
+                                }else{
+                echo                "<option value='AC'>AC</option>";
+                                }  
+                echo            "</select>";
+                        }else{
+                echo        "<select class='form-control' name='chooseSchool' id='chooseSchool'>
+                                <option value='selected'>--选择学校--</option>
+                                <option value='Langara'>Langara</option>
+                                <option value='UBC'>UBC</option>
+                                <option value='SFU'>SFU</option>
+                                <option value='CC'>CC</option>
+                                <option value='AV'>AC</option>
+                            </select>";         
+                        }
+
+                echo    "<div class='input-group'>";   
+                        if(isset($_SESSION['keyWords'])){
+                echo        "<input type='text' class='form-control' placeholder='搜索' name='keyWords' id='keyWords' value='" . $_SESSION['keyWords'] . "'>";
+                        }else{
+                echo        "<input type='text' class='form-control' placeholder='搜索' name='keyWords' id='keyWords'>";
+                        }
+                echo        "<div class='input-group-btn'>
+                                <button class='btn theme-button site-btn' type='submit' name='submit' onclick='saveInfo()'><span class='search-button-padding text-color'>搜索</span><i class='glyphicon glyphicon-search text-color'></i></button>
                             </div>
-                    </div>
+                        </div>";
+                    ?>
                 </form> 
             </div>
         </div>
 
         <div>
                       
-            <?php    
-                
-                if(isset($_POST['submit'])){
-                    $_SESSION['chooseSchool'] = $_POST["chooseSchool"];
-                    $_SESSION['choosePostType'] = $_POST['choosePostType'];
-                    $_SESSION['key'] = $_POST["key"];                    
+            <?php                   
+                if(isset($_POST['submit'])){  
+                    
                     if($_POST['choosePostType'] == 'student'){
                         include($_SERVER['DOCUMENT_ROOT'].'/post/student/studentPostList.php'); 
                     }else{
@@ -91,7 +147,6 @@
                         include($_SERVER['DOCUMENT_ROOT'].'/post/student/studentPostList.php');
                     }
                 }
-
             ?>                         
         </div> 
         

@@ -14,8 +14,8 @@
 	$currectTime = $currectTimeResult -> now;
 	//echo $currectTime;
 	$num=12;	
-	if(isset($_SESSION['chooseSchool']) && isset($_SESSION['key'])){
-		if($_SESSION['chooseSchool'] == 'selected' && ($_SESSION['key'] == null || $_SESSION['key'] == '')){
+	if(isset($_SESSION['chooseSchool']) && isset($_SESSION['keyWords'])){
+		if($_SESSION['chooseSchool'] == 'selected' && ($_SESSION['keyWords'] == null || $_SESSION['keyWords'] == '')){
 			$stmt = $conn->prepare("SELECT * FROM Tutor_Post");
 			$stmt->execute();
 			$total = $stmt->rowCount();
@@ -25,26 +25,26 @@
 			$sql = "SELECT * FROM Tutor_Post t_post
 				LEFT JOIN User_Info u_info
 				ON t_post.userAccount = u_info.userACCOUNT ORDER BY t_post.tutorPostId DESC {$splitPage->limit}";
-		}elseif($_SESSION['chooseSchool'] == 'selected' && ($_SESSION['key'] != null && $_SESSION['key'] != '')){
-			$key = $_SESSION['key'];
-			$stmt = $conn->prepare("SELECT * FROM Tutor_Post WHERE courseNumber LIKE '%$key%'");
+		}elseif($_SESSION['chooseSchool'] == 'selected' && ($_SESSION['keyWords'] != null && $_SESSION['keyWords'] != '')){
+			$keyWords = $_SESSION['keyWords'];
+			$stmt = $conn->prepare("SELECT * FROM Tutor_Post WHERE courseNumber LIKE '%$keyWords%'");
 			$stmt->execute();
 			$total = $stmt->rowCount();
 			$splitPage = new splitPage($total, $num);
 			$sql = "SELECT * FROM Tutor_Post t_post
 				LEFT JOIN User_Info u_info
-				ON t_post.userAccount = u_info.userACCOUNT WHERE t_post.courseNumber LIKE '%$key%' ORDER BY t_post.tutorPostId DESC {$splitPage->limit}";
-		}elseif($_SESSION['chooseSchool'] != 'selected' && ($_SESSION['key'] != null && $_SESSION['key'] != '')){
+				ON t_post.userAccount = u_info.userACCOUNT WHERE t_post.courseNumber LIKE '%$keyWords%' ORDER BY t_post.tutorPostId DESC {$splitPage->limit}";
+		}elseif($_SESSION['chooseSchool'] != 'selected' && ($_SESSION['keyWords'] != null && $_SESSION['keyWords'] != '')){
 			$school = $_SESSION['chooseSchool'];
-			$key = $_SESSION['key'];
-			$stmt = $conn->prepare("SELECT * FROM Tutor_Post WHERE school = '$school' AND courseNumber LIKE '%$key%'");
+			$keyWords = $_SESSION['keyWords'];
+			$stmt = $conn->prepare("SELECT * FROM Tutor_Post WHERE school = '$school' AND courseNumber LIKE '%$keyWords%'");
 			$stmt->execute();
 			$total = $stmt->rowCount();
 			$splitPage = new splitPage($total, $num);
 			$sql = "SELECT * FROM Tutor_Post t_post
 				LEFT JOIN User_Info u_info
-				ON t_post.userAccount = u_info.userACCOUNT WHERE t_post.school = '$school' AND t_post.courseNumber LIKE '%$key%' ORDER BY t_post.tutorPostId DESC {$splitPage->limit}";
-		}elseif($_SESSION['chooseSchool'] != 'selected' && ($_SESSION['key'] == null || $_SESSION['key'] == '')){
+				ON t_post.userAccount = u_info.userACCOUNT WHERE t_post.school = '$school' AND t_post.courseNumber LIKE '%$keyWords%' ORDER BY t_post.tutorPostId DESC {$splitPage->limit}";
+		}elseif($_SESSION['chooseSchool'] != 'selected' && ($_SESSION['keyWords'] == null || $_SESSION['keyWords'] == '')){
 			$school = $_SESSION['chooseSchool'];
 			$stmt = $conn->prepare("SELECT * FROM Tutor_Post WHERE school = '$school'");
 			$stmt->execute();
