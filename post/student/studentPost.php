@@ -85,7 +85,7 @@
                                 <div class='col-md-12 form-group margin-position-top'>
                                     <label class='col-sm-1 label-position padding-small'>所需课号</label>                                              
                                     <div class='col-sm-5 padding-small'>
-                                        <input type='' name='expectedCoursef' id='expectedCoursef' placeholder='' class='form-control label-style1 table-center'  value=''>
+                                        <input type='' name='expectedCoursef' id='expectedCoursef' placeholder='' class='form-control label-style1 table-center'  value='' required>
                                     </div>
                                 </div> 
                             </div>

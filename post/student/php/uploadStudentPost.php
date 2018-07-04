@@ -6,7 +6,6 @@
         $accountb = 'Guest';
     }
 
-    $date = date("Y-m-d H:i:s");
     $userNameb=$_POST['userNamef'];
     $phoneNumberb=$_POST['phoneNumberf'];
     $weChatNumberb=$_POST['weChatNumberf'];
@@ -25,8 +24,8 @@
 	$conn = $myconn->connect();
 	
 	try{
-		$count = $conn->exec("INSERT INTO Student_Post (userAccount, userName, date, avaliableDay, expectedPrice, school, phoneNumber, weChatNumber, expectedCourse, content) 
-            VALUES ('$accountb', '$userNameb', '$date', '$avaDayb', '$expectedPriceb', '$schoolb', '$phoneNumberb', '$weChatNumberb', '$expectedCourseb', '$contentb')");
+		$count = $conn->exec("INSERT INTO Student_Post (userAccount, userName, avaliableDay, expectedPrice, school, phoneNumber, weChatNumber, expectedCourse, content) 
+            VALUES ('$accountb', '$userNameb', '$avaDayb', '$expectedPriceb', '$schoolb', '$phoneNumberb', '$weChatNumberb', '$expectedCourseb', '$contentb')");
 	} catch(PDOException $err){
 		echo $err->getMessage();		
 	}	
@@ -34,7 +33,7 @@
     if($count > 0 ){
 		header("Location: /index.php");
 	}else{
-		header("Location: ../studentPost.php?info=发布消息失败");
+	//	header("Location: ../studentPost.php?info=发布消息失败");
 	}
 
 ?>

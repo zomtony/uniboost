@@ -78,9 +78,9 @@
 		$timeAgo = $getPostTime -> timeAgo($currectTime, $postTime);
 		echo "<a href='/post/tutor/tutorPostDetail.php?tutorPost=". $row['tutorPostId'] . "'>";
 		if($count%2 == 0){
-			echo    "<div class='row theme-backcolor2 main-pg-list-bg'>";
+		echo    "<div class='row theme-backcolor2 main-pg-list-bg'>";
 		}else {
-			echo    "<div class='row theme-backcolor1 main-pg-list-bg1'>";
+		echo    "<div class='row theme-backcolor1 main-pg-list-bg1'>";
 		}
 		$count++;
 		$rateValue = $row['averageRateScore'];
