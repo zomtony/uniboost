@@ -96,20 +96,7 @@
         </div> 
         
     </div>
-        
- 
-        
-        <footer>
-            <div class="copyright">
-                <div class="container">
-                    <div class="row text-center copyright">
-                        <p>Copyright © 2018 All rights reserved</p>
-                    </div>        
-                </div>
-            </div>
-        </footer>
-
-    </body>
-</html>
 
 <script src="/js/mainpage.js" type="text/javascript"></script>
+<div class="height-div"></div>
+<?php include($_SERVER['DOCUMENT_ROOT'].'/include/footer.php');?>

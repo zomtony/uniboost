@@ -1,7 +1,15 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900');
 
+
+html{
+	height: 100%;
+	box-sizing: border-box;
+}
+  
 body{
-	margin:auto;
+	position: relative;
+	margin: auto;
+	min-height: 100%;
 	font-family: "Arial","Microsoft YaHei","黑体","宋体",sans-serif;
 	color: #575757;
 }
@@ -51,6 +59,10 @@ body{
 
 	.padding-zero-logo{
 		padding:0px;
+	}
+
+	.height-div{
+		margin-top:60px;
 	}
 
 }
@@ -516,4 +528,21 @@ a:active {
 .comment-post-time {
 	float: right;
 	padding-right:8px;
+}
+
+
+/**********footer style************/
+.footer{
+	text-align: center;
+	vertical-align: center;
+	background-color: #ebebe0;
+	width: 100%;
+	position: absolute;
+	bottom: 0;
+	padding-bottom:5px;
+	padding-top:5px;
+}
+
+.height-div{
+	height:100px;
 }
