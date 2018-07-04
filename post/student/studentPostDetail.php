@@ -90,35 +90,43 @@
                                     <div class='row'>
 
                                         <div class='col-md-12 form-group '>
-                                            <label class='col-sm-3 label-position padding-small'>学校</label>
-                                            <lable class='col-sm-5 label-style text-center padding-top' style='background-color: #F3A8B1;'>
-                                                ". $result['school'] ."
-                                            </lable>
+                                            <div class='col-sm-2 padding-small'><label class='label-position'>学校</label></div>
+                                            <div class='col-sm-5'>
+                                                <label class='label-style text-center padding-top' style='background-color: #F3A8B1;'>
+                                                    ". $result['school'] ."
+                                                </lable>
+                                            </div>
                                         </div>
                                     </div>
                                     
                                     <div class='row '>
                                         <div class='col-md-12 form-group'>
-                                            <label class='col-sm-3 label-position padding-small'>期望价格</label>
-                                            <div class='col-sm-5 label-style text-center padding-top'>
-                                                ". $result['expectedPrice'] ."
+                                            <div class='col-sm-2 padding-small'><label class='label-position'>期望价</label></div>
+                                            <div class='col-sm-5'>
+                                                <label class='label-style text-center padding-top'>$
+                                                    ". $result['expectedPrice'] ."
+                                                </lable>
                                             </div>
                                         </div>
                                     </div>
 
                                     <div class='row '>
                                         <div class='col-md-12 form-group'>
-                                            <label class='col-sm-2 label-position padding-small'>电话</label>
-                                            <div class='col-sm-5 label-style text-center padding-top'>
-                                                ". $result['phoneNumber'] ."
+                                            <div class='col-sm-2 padding-small'><label class='label-position'>电话</label></div>
+                                            <div class='col-sm-5'>
+                                                <label class='label-style text-center padding-top'>
+                                                    ". $result['phoneNumber'] ."
+                                                </lable>
                                             </div>
                                         </div>
                                     </div>
                                     <div class='row '>
                                         <div class='col-md-12 form-group'>
-                                            <label class='col-sm-1 label-position padding-small'>微信</label>
-                                            <div class='col-sm-5 label-style text-center padding-top'>
-                                                ". $result['weChatNumber'] ."
+                                            <div class='col-sm-2 padding-small'><label class='label-position'>微信</label></div>
+                                            <div class='col-sm-5'>
+                                                <label class='label-style text-center padding-top'>
+                                                    ". $result['weChatNumber'] ."
+                                                </lable>
                                             </div>
                                         </div>
                                     </div>

@@ -1793,7 +1793,8 @@ pre code {
     width: 50%;
   }
   .col-sm-5 {
-    width: 41.66666667%;
+    /* width: 41.66666667%; --change to 60%*/
+    width: 60%;
   }
   .col-sm-4 {
     width: 33.33333333%;

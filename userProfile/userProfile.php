@@ -19,7 +19,7 @@
         $_SESSION['tutorPostAccount'] = $result['userAccount'];
 
         echo    "<div id='userProfile' class='theme-backcolor3'>  
-                    <div class='row myprofild-padding-top'>
+                    <div class='row myprofild-padding-top table-center'>
                         <div class='col-lg-1'></div>
                         <div class='col-lg-3'> 
                             <img class='rounded profile-img-size' src='data:image/jpeg;base64," . base64_encode($result['userHQPhotoId']) . "'alt='userpic'/>                                                        							
@@ -30,26 +30,26 @@
                             <div class='row'>
 
                                 <div class='col-md-12 form-group '>
-                                    <label class='col-sm-2 label-position padding-small'>名字</label>
-                                    <div class='col-sm-5 label-style'>
-                                        ". $result['userName'] ."
+                                    <div class='col-sm-2 padding-small'><label class='label-position'>名字</label></div>
+                                    <div class='col-sm-5' >
+                                        <label class='label-style text-center padding-top'>". $result['userName'] ."</label>
                                     </div>
                                 </div>
                             </div>
                             
                             <div class='row '>
                                 <div class='col-md-12 form-group'>
-                                    <label class='col-sm-2 label-position padding-small'>电话</label>
-                                    <div class='col-sm-5 label-style'>
-                                        ". $result['phoneNumber'] ."
+                                    <div class='col-sm-2 padding-small'><label class='label-position'>电话</label></div>
+                                    <div class='col-sm-5' >
+                                        <label class='label-style text-center padding-top'>". $result['phoneNumber'] ."</label>
                                     </div>
                                 </div>
                             </div>
                             <div class='row '>
                                 <div class='col-md-12 form-group'>
-                                    <label class='col-sm-1 label-position padding-small'>微信</label>
-                                    <div class='col-sm-5 label-style'>
-                                        ". $result['weChatNumber'] ."
+                                    <div class='col-sm-2 padding-small'><label class='label-position'>微信</label></div>
+                                    <div class='col-sm-5' >
+                                        <label class='label-style text-center padding-top'>". $result['weChatNumber'] ."</label>
                                     </div>
                                 </div>
                             </div>

@@ -95,34 +95,34 @@
 
                                         <div class='col-md-12 form-group '>
                                             <div class='col-sm-2 padding-small'><label class='label-position'>学校</label></div>
-                                            <div class='col-sm-5 label-style text-center padding-top' style='background-color: #F3A8B1;'>
-                                                ". $result['school'] ."
+                                            <div class='col-sm-5' >
+                                                <label class='label-style text-center padding-top' style='background-color: #F3A8B1;'>". $result['school'] ."</label>
                                             </div>
                                         </div>
                                     </div>
                                     
                                     <div class='row '>
                                         <div class='col-md-12 form-group'>
-                                        <div class='col-sm-2 padding-small'><label class='label-position'>时薪</label></div>
-                                            <div class='col-sm-5 label-style text-center padding-top'>
-                                                ". $result['wage'] ."
+                                            <div class='col-sm-2 padding-small'><label class='label-position'>时薪</label></div>
+                                            <div class='col-sm-5'>
+                                                <label class='label-style text-center padding-top'>". $result['wage'] ."</label>
                                             </div>
                                         </div>
                                     </div>
 
                                     <div class='row '>
                                         <div class='col-md-12 form-group'>
-                                        <div class='col-sm-2 padding-small'><label class='label-position'>电话</label></div>
-                                            <div class='col-sm-5 label-style text-center padding-top'>
-                                                ". $result['phoneNumber'] ."
+                                            <div class='col-sm-2 padding-small'><label class='label-position'>电话</label></div>
+                                            <div class='col-sm-5'>
+                                                <label class='label-style text-center padding-top'>". $result['phoneNumber'] ."</label>
                                             </div>
                                         </div>
                                     </div>
                                     <div class='row '>
                                         <div class='col-md-12 form-group'>
-                                        <div class='col-sm-2 padding-small'><label class='label-position'>微信</label></div>
-                                            <div class='col-sm-5 label-style text-center padding-top'>
-                                                ". $result['weChatNumber'] ."
+                                            <div class='col-sm-2 padding-small'><label class='label-position'>微信</label></div>
+                                            <div class='col-sm-5'>
+                                                <label class='label-style text-center padding-top'>". $result['weChatNumber'] ."</label>
                                             </div>
                                         </div>
                                     </div>
