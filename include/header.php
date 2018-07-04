@@ -94,12 +94,12 @@
             </div>
 
 
-            <div class="container phone" style="padding-right: 2px;">   
+            <div class="container phone" style="padding-right: 0px;padding-left: 0px;">   
                 <div class="container-fluid" style="padding: 0">                   
                     <div class="navbar-header padding-zero-logo" style='margin:0px;'>                          
-                        <a class="navbar-brand titleFont padding-zero-logo" href="/index.php"><img class='logo1 logo-color' src='/img/logo1.png' alt = "我是红领巾"></a>
-                        <a class="navbar-brand titleFont padding-zero-logo" href="/index.php"><img class='logo2 logo-color1' src='/img/logo2.png' alt = "我是红领巾"></a>
-                        <a class="navbar-brand titleFont padding-zero-logo" href="/index.php"><img class='logo3 logo-color' src='/img/logo3.png' alt = "我是红领巾"></a>
+                        <a class="navbar-brand titleFont padding-zero-logo" href="/index.php"><img class='phonelogo1 logo-color' src='/img/logo1.png' alt = "我是红领巾"></a>
+                        <a class="navbar-brand titleFont padding-zero-logo" href="/index.php"><img class='phonelogo2 logo-color1' src='/img/logo2.png' alt = "我是红领巾"></a>
+                        <a class="navbar-brand titleFont padding-zero-logo" href="/index.php"><img class='phonelogo3 logo-color' src='/img/logo3.png' alt = "我是红领巾"></a>
                                 
                     <?php
                         if(isset($_SESSION['accountb'])){
