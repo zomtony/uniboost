@@ -542,13 +542,17 @@ a:active {
 	background-color: #ebebe0;
 	width: 100%;
 	position: absolute;
-	bottom: -160px;
+	bottom: -180px;
 	padding-bottom:5px;
 	padding-top:5px;
 }
 
 .height-div{
-	height:100px;
+	height:20px;
+}
+
+.footer-logo {
+	margin-bottom: 10px;
 }
 
 @media (min-width: 800px){
