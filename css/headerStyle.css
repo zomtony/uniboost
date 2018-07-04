@@ -38,6 +38,7 @@
 /* card color */
 .theme-backcolor3{
     background-color: #FFF3DD;
+    border-radius: 20px;
 }
 
 .theme-button{
