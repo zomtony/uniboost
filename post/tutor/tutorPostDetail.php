@@ -169,29 +169,27 @@
                 echo            "</div>   
                             </div>
                             <div class='row p-word'>
-                                <div class='col-xs-12 padding-small intro-margin-left'>
+                                <div class='col-xs-11 padding-small intro-margin-left'>
                                     <p>" . $result['briefIntroduction'] . "</p>
                                 </div>
                             </div>
                             <div class='row p-word'>
-                                <div class='col-xs-12 padding-small intro-margin-left'>
+                                <div class='col-xs-11 padding-small intro-margin-left'>
                                     <h4>内容</h4>
                                     <p>" . $result['content'] . "</p>
                                 </div>
                             </div>
                         </div>
                     </div>
-
-
-
                 </div>
 
                 <div class='row'>
                     <div class='col-xs-1 padding-small'></div>                   
-                    <div class='col-xs-5'><h3>学生评论</h3></div>  
+                    <div class='col-xs-5' style='margin-top:10px;'><h4 style='margin-right:0px; margin-left:0px;'>学生评论</h4></div>  
                     <div class='col-xs-5 TimeFontAlign'> 
-                        <button class='btn userprofile-button-bg rating-button-margin button-width button-text' type='button' data-toggle='modal' data-target='#myModal'>写评论</button>
+                        <button class='btn userprofile-button-bg rating-button-margin button-width button-text' style='margin-right:0px;margin-left:0px;' type='button' data-toggle='modal' data-target='#myModal'>写评论</button>
                     </div>
+                    <div class='col-xs-1 padding-small'></div>   
                 </div>
 
                 <div class='modal fade' id='myModal' tabindex='-1' role='dialog' aria-labelledby='myModalLabel' aria-hidden='true'>
