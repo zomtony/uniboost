@@ -108,7 +108,7 @@
                                 }  
                 echo            "</select>";
                         }else{
-                echo        "<select class='form-control maingpage-button' name='chooseSchool' id='chooseSchool'>
+                echo        "<select class='form-control maingpage-button school-choose-select' name='chooseSchool' id='chooseSchool'>
                                 <option value='selected'>--选择学校--</option>
                                 <option value='Langara'>Langara</option>
                                 <option value='UBC'>UBC</option>

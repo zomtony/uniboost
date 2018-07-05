@@ -18,6 +18,10 @@
     .maingpage-button{
         margin-left:0px;
     }
+
+    .school-choose-select{
+        margin-top:1px;
+    }
 }
 @media (min-width: 767px) {
     
