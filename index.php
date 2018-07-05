@@ -47,7 +47,7 @@
                         if(isset($_SESSION['accountb'])){
                             echo "<a href='/post/tutor/tutorPost.php'><button type='button' class='btn btn-margin btn-float btn-margin theme-button text-color'>发帖教学生</button></a>";
                         }else{
-                            echo "<a href='signin_out_up/signin.php?info=请登陆先，然后再发老师帖。'><button type='button' class='btn btn-margin btn-float btn-margin theme-button text-color'>发帖教学生</button></a>";    
+                            echo "<a href='signin_out_up/signin.php?info=Tutor需要有个账户哦'><button type='button' class='btn btn-margin btn-float btn-margin theme-button text-color'>发帖教学生</button></a>";    
                         }
                 ?> 
                 <a href='/post/student/studentPost.php' style='margin-left: 4px;'><button type="button" class="btn btn-margin btn-margin theme-button text-color">发帖找老师</button></a>

@@ -25,7 +25,7 @@
     echo    "<div style='padding:10px;'>";
     }else{
     echo    "<div style='padding:10px;text-align:center;'>
-            <h3>暂时还没有评论哦</h3>";
+            <h4>暂时还没有评论哦</h4>";
     }
     $output = '';
     foreach($result as $row)
