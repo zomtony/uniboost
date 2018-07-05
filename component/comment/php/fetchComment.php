@@ -25,7 +25,7 @@
     echo    "<div style='padding:10px;'>";
     }else{
     echo    "<div style='padding:10px;text-align:center;'>
-            <h3>暂时还没有评论哦</h3>";
+            <h4>暂时还没有评论哦</h4>";
     }
     $output = '';
     foreach($result as $row)
@@ -33,7 +33,7 @@
 		$postTime = $row['date'];
         $timeAgo = $getPostTime -> timeAgo($currectTime, $postTime);
                 
-        echo "<div  class='row btn-margin theme-backcolor1 text-margin-bottom-comment'>
+        echo "<div  class='row btn-margin theme-backcolor1 text-margin-bottom-comment' style='margin-left: 2%; margin-right: 2%;'>
                 <table>
                     <tr>
                         <td class='text-position-top'>";

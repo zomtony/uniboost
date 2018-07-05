@@ -6,7 +6,7 @@
 			<?php
 				extract ($_GET);
 				if(isset($info)){
-					echo "<div class='col-xs-12'><h3>" . $info . "</h3></div>";
+					echo "<div class='col-xs-12'><h4 style='text-align: center;'>" . $info . "</h4></div>";
 				}
 			?>
 			<label for="userID" class="sr-only-focusable">用户名</label>
