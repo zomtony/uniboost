@@ -38,10 +38,10 @@
 							</div>
 						</div>
 						<div class='row'>
-							<div class="col-md-6">
+							<div class="col-md-6" style="width: 120px; margin-bottom: 16px;">
 								<input type="submit" id="btnSubmit" class="btn btn-primary login-signup-button" value="一键注册"/>
 							</div>
-							<div class='col-md-6 margin-top-s'>
+							<div class='col-md-6' style="padding-right: 0px;">
 								<p>已经有了一个账号? <a class="label-link account-exist" href="signin.php" >登陆</a></p >
 							</div>
 						</div>

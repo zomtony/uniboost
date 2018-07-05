@@ -571,5 +571,7 @@ a:active {
 .account-exist {
 	font-weight: bold;
 	color: #f89f1b;
+	display: block;
+	text-decoration: none;
 }
 
