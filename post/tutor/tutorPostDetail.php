@@ -215,5 +215,5 @@
     <div class='theme-backcolor3'>
         <?php include($_SERVER['DOCUMENT_ROOT'].'/component/comment/comment.php'); ?>
     </div>
-
+ </div>
 <?php include($_SERVER['DOCUMENT_ROOT'].'/include/footer.php');?>
