@@ -1,9 +1,9 @@
 <?php include($_SERVER['DOCUMENT_ROOT'].'/include/header.php'); ?>
 
 <div class="container padding-small">
-
-
-    
+    <script src='/component/crop/js/croppie.js'></script>
+	<link href='/component/crop/css/croppie.css' rel='stylesheet' />
+   
     <?php
         include($_SERVER['DOCUMENT_ROOT'].'/component/starRating/rating.php'); //rating
         include($_SERVER['DOCUMENT_ROOT'].'/userProfile/php/processUserInfo.php'); 
@@ -60,28 +60,43 @@
                             
                         </div>   
                         
-
                         <div class='col-lg-4 p-word'>
                                 <h4>个人简介</h4> 
                                 <p>" . $result['briefIntroduction'] . "</p>
                         </div>
                     </div>
-
-
                 </div>
 
-
+                <div id='uploadimageModal' class='modal' role='dialog'>
+                    <div class='modal-dialog'>
+                        <div class='modal-content'>
+                            <div class='modal-header'>
+                            <button type='button' class='close' data-dismiss='modal'>&times;</button>
+                            <h4 class='modal-title'>剪裁头像</h4>
+                        </div>
+                        <div class='text-center'>
+                            <div id='image' style='margin-top:auto'></div>
+                            <button class='btn btn-success crop_image'>确定</button>
+                            <button type='button' class='btn btn-default' data-dismiss='modal'>取消</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
 
                 <div id='changeProfile'>
                     <form name='signupForm' action='php/passData.php' enctype='multipart/form-data' method='POST'>
                         <div class='row myprofild-padding-top'>
+
                             <div class='col-md-4 text-center'>
-                                <img class='rounded profile-img-size' name='photoIdf' id='photoIdf' src='data:image/jpeg;base64," . base64_encode($result['userHQPhotoId']) . "'alt='userpic'/>  
-                                <div><span class='btn btn-default btn-file margin-position-top'>                                                      						
-                                    选择头像<input type='file' id='file' name='file' onchange='change()'/>
-                                </span></div>
+                                <img class='rounded profile-img-size' name='photoId' id='photoId' src='data:image/jpeg;base64," . base64_encode($result['userHQPhotoId']) . "'alt='userpic'/>  
+                                <div id='uploaded_image'></div>
+                                <div>
+                                    <span class='btn btn-default btn-file margin-position-top'>                                                      						
+                                        选择头像<input type='file' name='upload_image' id='upload_image' accept='image/x-png,image/gif,image/jpeg'/>
+                                    </span>
+                                </div>
                             </div>
-                        
+                  
                             <div class='col-md-4 margin-position-top padding-small'>
                                 <div class='row'>
                                     <div class='col-md-12 form-group'>

@@ -6,28 +6,26 @@
     $wechatb=$_POST['wechatf'];
     $userNameb=$_POST['userNamef'];
     $briefIntroductionb=$_POST['briefIntroductionf'];
-    if(!empty($_FILES['file']['name'])){
-        $filename = $_FILES['file']['name'];
-        $ext = explode( ".", $filename);
 
-        $image_path = $_FILES['file']['tmp_name'];
-        $info = getimagesize($_FILES['file']['tmp_name']);
+    if(isset($_SESSION['Crop_ImgDir'])){
+
+        $image_path = $_SESSION['Crop_ImgDir'];
+        $info = getimagesize($_SESSION['Crop_ImgDir']);
         
-        $ext = strtolower(end($ext));
-
         $userHQPhotoIdb = compress($info, $image_path, 300, 300);
-        $HQPhotoIdb= 'photos_'.uniqid(mt_rand(10, 15)).'_'.time().'_300x300.'.$ext;
+        $HQPhotoIdb= 'photos_'.uniqid(mt_rand(10, 15)).'_'.time().'_300x300.' . jpeg;
         imagejpeg($userHQPhotoIdb, $_SERVER['DOCUMENT_ROOT'].'/uploads/'.$HQPhotoIdb, 100);
         $contentHQPhotoIdb=addslashes(file_get_contents($_SERVER['DOCUMENT_ROOT'].'/uploads/'.$HQPhotoIdb));
         imagedestroy($userHQPhotoIdb);
 
         $userLQPhotoIdb = compress($info, $image_path, 60, 60);
-        $LQPhotoIdb = 'photos_'.uniqid(mt_rand(10, 15)).'_'.time().'_60x60.'.$ext;
+        $LQPhotoIdb = 'photos_'.uniqid(mt_rand(10, 15)).'_'.time().'_60x60.' . jpeg;
         imagejpeg($userLQPhotoIdb, $_SERVER['DOCUMENT_ROOT'].'/uploads/'.$LQPhotoIdb, 100);
         $contentLQPhotoIdb=addslashes(file_get_contents($_SERVER['DOCUMENT_ROOT'].'/uploads/'.$LQPhotoIdb));
         imagedestroy($userLQPhotoIdb);
 
-        $LQPhotoIdNav = file_get_contents($_SERVER['DOCUMENT_ROOT'].'/uploads/'.$LQPhotoIdb);       
+        $LQPhotoIdNav = file_get_contents($_SERVER['DOCUMENT_ROOT'].'/uploads/'.$LQPhotoIdb);
+        unlink($_SESSION['Crop_ImgDir']);    
     }else{
         $contentHQPhotoIdb='';
         $contentLQPhotoIdb='';
