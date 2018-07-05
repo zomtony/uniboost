@@ -19,7 +19,7 @@
                             <h3>". $result['userName'] ."同学</h3> 
                         </div>
                     </div>
-                    <div class='row table-center'>
+                    <div class='row table-center' style='padding-bottom:20px;'>
                         <div class='col-lg-1 padding-small'></div>
                         <div class='col-lg-3 padding-small'>";   
                         
@@ -97,54 +97,63 @@
                                                 </lable>
                                             </div>
                                         </div>
-                                    </div>
-                                    
-                                    <div class='row '>
-                                        <div class='col-md-12 form-group'>
-                                            <div class='col-sm-2 padding-small'><label class='label-position'>期望价</label></div>
-                                            <div class='col-sm-5'>
-                                                <label class='label-style text-center padding-top'>$
-                                                    ". $result['expectedPrice'] ."
-                                                </lable>
-                                            </div>
-                                        </div>
-                                    </div>
+                                    </div>";
 
-                                    <div class='row '>
-                                        <div class='col-md-12 form-group'>
-                                            <div class='col-sm-2 padding-small'><label class='label-position'>电话</label></div>
-                                            <div class='col-sm-5'>
-                                                <label class='label-style text-center padding-top'>
-                                                    ". $result['phoneNumber'] ."
-                                                </lable>
+                                    if($result['expectedPrice'] != '' && $result['expectedPrice'] != 0.00){ 
+                        echo            "<div class='row '>
+                                            <div class='col-md-12 form-group'>
+                                                <div class='col-sm-2 padding-small'><label class='label-position'>期望价</label></div>
+                                                <div class='col-sm-5'>
+                                                    <label class='label-style text-center padding-top'>$
+                                                        ". $result['expectedPrice'] ."
+                                                    </lable>
+                                                </div>
                                             </div>
-                                        </div>
-                                    </div>
-                                    <div class='row '>
-                                        <div class='col-md-12 form-group'>
-                                            <div class='col-sm-2 padding-small'><label class='label-position'>微信</label></div>
-                                            <div class='col-sm-5'>
-                                                <label class='label-style text-center padding-top'>
-                                                    ". $result['weChatNumber'] ."
-                                                </lable>
+                                        </div>";
+                                    }
+                                    if($result['phoneNumber'] != ''){ 
+                        echo            "<div class='row '>
+                                            <div class='col-md-12 form-group'>
+                                                <div class='col-sm-2 padding-small'><label class='label-position'>电话</label></div>
+                                                <div class='col-sm-5'>
+                                                    <label class='label-style text-center padding-top'>
+                                                        ". $result['phoneNumber'] ."
+                                                    </lable>
+                                                </div>
                                             </div>
-                                        </div>
-                                    </div>
-                                    
-                                </div>
+                                        </div>";
+                                    }
 
-                                <div class='col-lg-6 padding-small margin--position-top table-center'>
+                                    if($result['weChatNumber'] != ''){ 
+                        echo            "<div class='row '>
+                                            <div class='col-md-12 form-group'>
+                                                <div class='col-sm-2 padding-small'><label class='label-position'>微信</label></div>
+                                                <div class='col-sm-5'>
+                                                    <label class='label-style text-center padding-top'>
+                                                        ". $result['weChatNumber'] ."
+                                                    </lable>
+                                                </div>
+                                            </div>
+                                        </div>";
+                                    }
+                                    
+                        echo    "</div>";
+
+                            if($result['expectedCourse'] != ''){ 
+                    echo        "<div class='col-lg-6 padding-small margin--position-top table-center'>
                                     <div>所需课号</div>
                                     <div>
                                         <label class='label-style-course text-center label-margin' id='mondayf' >".$result['expectedCourse']."</label>
                                     </div>                                     
-                                </div>
-                            </div>
+                                </div>";
+                            }
+                    echo    "</div>
 
                         </div>
-                    </div>
+                    </div>";
 
-                    <div class='row margin-top-s'>
+                if($result['content'] != ''){
+        echo        "<div class='row'>
                         <div class='col-sm-1 padding-small'></div>
                         <div class='col-sm-11 padding-small' >                           
                             <div class='row p-word'>
@@ -154,8 +163,9 @@
                                 </div>
                             </div>
                         </div>
-                    </div>
-                </div>";
+                    </div>";
+                }
+        echo    "</div>";
 
 
     ?>

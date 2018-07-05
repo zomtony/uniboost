@@ -9,11 +9,15 @@
     $userNameb=$_POST['userNamef'];
     $phoneNumberb=$_POST['phoneNumberf'];
     $weChatNumberb=$_POST['weChatNumberf'];
-    $expectedPriceb=$_POST['expectedPricef'];
     $schoolb=$_POST['schoolf'];
     $expectedCourseb=$_POST['expectedCoursef'];
     $contentb=$_POST['contentf'];
-
+    
+    if($_POST['expectedPricef'] != null){
+        $expectedPriceb = $_POST['expectedPricef'];
+    }else{
+        $expectedPriceb = 0.00;
+    }
   
     $avaDayb = $_POST['mondayf'].$_POST['tuesdayf'].$_POST['wednesdayf'].$_POST['thursdayf'].$_POST['fridayf'].$_POST['saturdayf'].$_POST['sundayf'];
     $count = 0;
@@ -33,7 +37,7 @@
     if($count > 0 ){
 		header("Location: /index.php");
 	}else{
-	//	header("Location: ../studentPost.php?info=发布消息失败");
+		header("Location: ../studentPost.php?info=发布消息失败");
 	}
 
 ?>
