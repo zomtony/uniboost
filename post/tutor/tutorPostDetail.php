@@ -212,12 +212,8 @@
                 </div>";
 
     ?>
-    <div class='row theme-backcolor3'>
-        <div class='col-lg-1 padding-small'></div>
-        <div class='col-lg-10 text-margin-top'>
-            <?php include($_SERVER['DOCUMENT_ROOT'].'/component/comment/comment.php'); ?>
-        </div>
+    <div class='theme-backcolor3'>
+        <?php include($_SERVER['DOCUMENT_ROOT'].'/component/comment/comment.php'); ?>
     </div>
-</div>
 
 <?php include($_SERVER['DOCUMENT_ROOT'].'/include/footer.php');?>

@@ -19,7 +19,10 @@
     $statement = $connect->prepare($query);
     $statement->execute();
     $result = $statement->fetchAll();
-
+    $rowCount = $statement->rowCount();
+    if($rowCount > 0){
+        echo "<div style='padding:10px;'>";
+    }
     $output = '';
     foreach($result as $row)
     {
@@ -48,7 +51,9 @@
                 </table>         
             </div>";
     }
-
+    if($rowCount > 0){
+    echo    "</div>";
+    }
 
 
 ?>
