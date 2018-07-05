@@ -99,35 +99,38 @@
                                                 <label class='label-style text-center padding-top' style='background-color: #F3A8B1;'>". $result['school'] ."</label>
                                             </div>
                                         </div>
-                                    </div>
-                                    
-                                    <div class='row '>
-                                        <div class='col-md-12 form-group'>
-                                            <div class='col-sm-2 padding-small'><label class='label-position'>时薪</label></div>
-                                            <div class='col-sm-5'>
-                                                <label class='label-style text-center padding-top'>". $result['wage'] ."</label>
+                                    </div>";
+                                    if($result['wage'] != '' && $result['wage'] != 0.00){   
+                        echo           "<div class='row '>
+                                            <div class='col-md-12 form-group'>
+                                                <div class='col-sm-2 padding-small'><label class='label-position'>时薪</label></div>
+                                                <div class='col-sm-5'>
+                                                    <label class='label-style text-center padding-top'>$". $result['wage'] ."</label>
+                                                </div>
                                             </div>
-                                        </div>
-                                    </div>
-
-                                    <div class='row '>
-                                        <div class='col-md-12 form-group'>
-                                            <div class='col-sm-2 padding-small'><label class='label-position'>电话</label></div>
-                                            <div class='col-sm-5'>
-                                                <label class='label-style text-center padding-top'>". $result['phoneNumber'] ."</label>
+                                        </div>";
+                                    }    
+                                    if($result['phoneNumber'] != ''){  
+                        echo            "<div class='row '>
+                                            <div class='col-md-12 form-group'>
+                                                <div class='col-sm-2 padding-small'><label class='label-position'>电话</label></div>
+                                                <div class='col-sm-5'>
+                                                    <label class='label-style text-center padding-top'>". $result['phoneNumber'] ."</label>
+                                                </div>
                                             </div>
-                                        </div>
-                                    </div>
-                                    <div class='row '>
-                                        <div class='col-md-12 form-group'>
-                                            <div class='col-sm-2 padding-small'><label class='label-position'>微信</label></div>
-                                            <div class='col-sm-5'>
-                                                <label class='label-style text-center padding-top'>". $result['weChatNumber'] ."</label>
+                                        </div>";
+                                    }
+                                    if($result['weChatNumber'] != ''){  
+                        echo            "<div class='row '>
+                                            <div class='col-md-12 form-group'>
+                                                <div class='col-sm-2 padding-small'><label class='label-position'>微信</label></div>
+                                                <div class='col-sm-5'>
+                                                    <label class='label-style text-center padding-top'>". $result['weChatNumber'] ."</label>
+                                                </div>
                                             </div>
-                                        </div>
-                                    </div>
-                                    
-                                </div>";
+                                        </div>";
+                                    }
+                        echo    "</div>";
  
                             if($courseArray[0] != ''){   
                     echo        "<div class='col-lg-7 padding-small text-margin-top table-center'>
@@ -172,14 +175,16 @@
                                 <div class='col-xs-11 padding-small intro-margin-left'>
                                     <p>" . $result['briefIntroduction'] . "</p>
                                 </div>
-                            </div>
-                            <div class='row p-word'>
-                                <div class='col-xs-11 padding-small intro-margin-left'>
-                                    <h4>内容</h4>
-                                    <p>" . $result['content'] . "</p>
-                                </div>
-                            </div>
-                        </div>
+                            </div>";
+                            if($result['content'] != ''){ 
+                echo            "<div class='row p-word'>
+                                    <div class='col-xs-11 padding-small intro-margin-left'>
+                                        <h4>内容</h4>
+                                        <p>" . $result['content'] . "</p>
+                                    </div>
+                                </div>";
+                            }
+                echo    "</div>
                     </div>
                 </div>
 
