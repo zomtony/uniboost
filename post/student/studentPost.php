@@ -47,7 +47,7 @@
                             <div class='col-lg-4 text-center'> 
                                 <div class='row margin-position-top'>
                                     <div class='col-md-12 form-group'>
-                                        <label class='col-sm-2 label-position padding-small'>名字<font color='red'>*</font>:</label>
+                                        <label class='col-sm-2 label-position padding-small'>名字<font color='red'>*</font></label>
                                         <div class='col-sm-5 padding-small'>
                                             <input type='' name='userNamef' id='userNamef' placeholder='' class='form-control label-style1 table-center'  value='' required autofocus>
                                         </div>
@@ -110,7 +110,7 @@
                         <div class='col-lg-6 p-word'>
                             <div class='row myprofild-padding-top '>
                                 <div class='col-lg-12 text-center'>
-                                    <div class='text-center padding-bottom-m'>请选择你的空余时间:</div>
+                                    <div class='text-center padding-bottom-m'>请选择你的空余时间</div>
                                     <button class='btn button-bg course-input-padding avaliabletime-margin-top margin-right-s button-style-time' id='mondayf' type='button' onclick='setValueForMonday()'>星期一</button>
                                     <input type='hidden' id='monday' name='mondayf' value='0'/>    
                                     <button class='btn button-bg course-input-padding avaliabletime-margin-top margin-right-s button-style-time' id='tuesdayf' type='button' onclick='setValueTuesday()'>星期二</button>

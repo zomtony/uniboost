@@ -21,7 +21,7 @@
                                 </div>
                             </div>
                             
-                            <div class='row margin-position-top padding-bottom-m margin-position-top'>
+                            <div class='row margin-position-top padding-bottom-m margin-position-top '>
                                 <div class='col-sm-2 padding-small table-center'><label class='label-position padding-small'>电话</label></div>
                                 <div class='col-sm-5 padding-small '>
                                     <input type='' name='phoneNumberf' id='phoneNumberf' placeholder='' class='form-control label-style1 table-center'  value='". $result['phoneNumber'] ."'>
@@ -88,7 +88,7 @@
                         <div class='col-lg-11 '>
                             <div class='row'>
                                 <div class='col-sm-2 padding-small table-center'>
-                                    <label class='label-position time-text-width'>请选择你的空余时间:</label>
+                                    <label class='label-position time-text-width'>请选择你的空余时间</label>
                                 </div>
                                 <div class='col-sm-10 table-center'>
                                     <button class='btn button-bg course-input-padding avaliabletime-margin-top margin-right-s button-style-time' id='mondayf' type='button' onclick='setValueForMonday()'>星期一</button>

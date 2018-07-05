@@ -269,7 +269,7 @@ a:active {
 .label-style1{
 	border-radius: 25px;
 	background-color: #ffffff;
-	width:200px;
+	width:180px;
 	height:30px;
 }
 
@@ -575,3 +575,12 @@ a:active {
 	text-decoration: none;
 }
 
+
+
+/******************************* post form style  ******************************** */
+
+.post-form-style {
+	width: 280px;
+	display: flex;
+	margin: auto;
+}
