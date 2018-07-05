@@ -14,7 +14,7 @@
             echo    "<div class='row myprofild-padding-top'>
                         <div class='col-lg-1'></div>
                         <div class='col-lg-4'> 
-                            <div class='row margin-top-m padding-bottom-m margin-position-top post-form-style'>
+                            <div class='row margin-top-m padding-bottom-m margin-position-top post-form-style' style='margin-top: 20px;'>
                                 <div class='col-sm-2 padding-small table-center'><label class='label-position'>名字</label></div>
                                 <div class='col-sm-5 padding-small'>
                                     <input type='' name='userNamef' id='userNamef' placeholder='' class='form-control label-style1 table-center'  onclick='infoChangeName()' value='". $result['userName'] ."' readonly>
@@ -112,7 +112,7 @@
                     
                     
                     
-                    <div class='row padding-bottom-m'>
+                    <div class='row padding-bottom-m' style='margin-top: 20px;'>
                         <div class='col-lg-1'></div>
                         <div class='col-lg-10'>
                             <h4>补充内容</h4>
