@@ -78,7 +78,7 @@
                             <div class='col-md-4 text-center'>
                                 <img class='rounded profile-img-size' name='photoIdf' id='photoIdf' src='data:image/jpeg;base64," . base64_encode($result['userHQPhotoId']) . "'alt='userpic'/>  
                                 <div><span class='btn btn-default btn-file margin-position-top'>                                                      						
-                                    选择头像<input type='file' id='file' name='file' onchange='change()' />
+                                    选择头像<input type='file' id='file' name='file' onchange='change()'/>
                                 </span></div>
                             </div>
                         
