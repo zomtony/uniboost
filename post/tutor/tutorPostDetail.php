@@ -185,7 +185,7 @@
 
                 <div class='row'>
                     <div class='col-xs-1 padding-small'></div>                   
-                    <div class='col-xs-5' style='margin-top:10px;'><h4 style='margin-right:0px; margin-left:0px;'>学生评论</h4></div>  
+                    <div class='col-xs-5' style='margin-top:10px;padding-left:0px;'><h4 style='margin-right:0px;'>学生评论</h4></div>  
                     <div class='col-xs-5 TimeFontAlign'> 
                         <button class='btn userprofile-button-bg rating-button-margin button-width button-text' style='margin-right:0px;margin-left:0px;' type='button' data-toggle='modal' data-target='#myModal'>写评论</button>
                     </div>
