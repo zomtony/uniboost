@@ -50,7 +50,7 @@
     <body>
         <nav class="navbar navbar-inverse theme-backcolor">
             <div class="container comp" style="padding-right: 2px;">   
-                <div class="container-fluid" style="padding: 0">                   
+                <div class="container-fluid" style="margin: 0px 0px 0px -8px">                   
                     <div class="navbar-header padding-zero-logo" style='margin:0px;'>
                         <a class="navbar-brand titleFont padding-zero-logo" href="/index.php"><img class='logo1 logo-color' src='/img/logo1.png' alt = "我是红领巾"></a>
                         <a class="navbar-brand titleFont padding-zero-logo" href="/index.php"><img class='logo2 logo-color1' src='/img/logo2.png' alt = "我是红领巾"></a>
@@ -94,7 +94,7 @@
             </div>
 
 
-            <div class="container phone" style="padding-right: 0px;padding-left: 0px;">   
+            <div class="container phone" style="padding-right: 0px; padding-left: 0px; margin-left: 10px;">   
                 <div class="container-fluid" style="padding: 0">                   
                     <div class="navbar-header padding-zero-logo" style='margin:0px;'>                          
                         <a class="navbar-brand titleFont padding-zero-logo" href="/index.php"><img class='phonelogo1 logo-color' src='/img/logo1.png' alt = "我是红领巾"></a>
