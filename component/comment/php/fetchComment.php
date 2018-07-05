@@ -20,8 +20,12 @@
     $statement->execute();
     $result = $statement->fetchAll();
     $rowCount = $statement->rowCount();
+
     if($rowCount > 0){
-        echo "<div style='padding:10px;'>";
+    echo    "<div style='padding:10px;'>";
+    }else{
+    echo    "<div style='padding:10px;text-align:center;'>
+            <h3>暂时还没有评论哦</h3>";
     }
     $output = '';
     foreach($result as $row)
@@ -51,9 +55,9 @@
                 </table>         
             </div>";
     }
-    if($rowCount > 0){
-    echo    "</div>";
-    }
+
+echo    "</div>";
+
 
 
 ?>
