@@ -78,9 +78,9 @@
 		$timeAgo = $getPostTime -> timeAgo($currectTime, $postTime);
 		echo "<a href='/post/student/studentPostDetail.php?studentPost=". $row['studentPostId'] . "'>";
 		if($count%2 == 0){
-			echo    "<div class='row theme-backcolor2'>";
+			echo    "<div class='row theme-backcolor2 main-pg-list-bg'>";
 		}else {
-			echo    "<div class='row theme-backcolor1'>";
+			echo    "<div class='row theme-backcolor1 main-pg-list-bg1'>";
 		}
 		$count++;
 
@@ -118,7 +118,7 @@
 							<div class='col-xs-12 padding-top'>                  
 								<table>
 									<tr>
-										<td>" . $row['school'] . "</td>
+										<td><label class='label-style-school-list text-center'>" . $row['school'] . "</label></td>
 										<td class='td-post-time'>" . $timeAgo . "</td>
 									</tr>
 									<tr>
