@@ -76,8 +76,8 @@
                         </div>
                         <div class='text-center'>
                             <div id='image' style='margin-top:auto'></div>
-                            <button class='btn btn-success crop_image'>确定</button>
-                            <button type='button' class='btn btn-default' data-dismiss='modal'>取消</button>
+                            <button type='button' class='btn btn-default crop_image' style='margin-bottom:20px;'>确定</button>
+                            <button type='button' class='btn btn-default' data-dismiss='modal' style='margin-bottom:20px;'>取消</button>
                             </div>
                         </div>
                     </div>

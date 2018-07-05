@@ -1,6 +1,3 @@
-
-
-
 function saveInfo(){
   var choosePostType = document.getElementById("choosePostType").value;
   sessionStorage.setItem("choosePostType", choosePostType);
