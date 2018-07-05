@@ -15,14 +15,20 @@
     .comp{
         display:none;
     }
-
+    .maingpage-button{
+        margin-left:0px;
+        margin-top:1px;
+    }
 }
 @media (min-width: 767px) {
     
     .phone{
         display:none;
     }
-
+    .maingpage-button{
+        margin-left:5px;
+        margin-top:1px;
+    }
 }
 
 @media (min-width: 767px) and (max-width: 1100px ){

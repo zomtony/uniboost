@@ -118,7 +118,7 @@
                             </select>";         
                         }
 
-                echo    "<div class='input-group' style='margin-left:5px;margin-top:1px;'>";   
+                echo    "<div class='input-group maingpage-button'>";   
                         if(isset($_SESSION['keyWords'])){
                 echo        "<input type='text' class='form-control' placeholder='搜索' name='keyWords' id='keyWords' value='" . $_SESSION['keyWords'] . "'>";
                         }else{
