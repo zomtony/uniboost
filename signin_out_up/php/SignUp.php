@@ -23,7 +23,8 @@
 		echo $err->getMessage();		
 	}	
 	if($count > 0 ){
-		$_SESSION['accountb'] = $accountb;
+		$_SESSION['accountb'] = $accountb;	
+		$_SESSION['userLQPhotoId'] = file_get_contents($_SERVER['DOCUMENT_ROOT'].'/img/defaultLQPohotId.jpg');
 		header("Location: ../../index.php");
 	}else{
 		header("Location: ../signup.php?info=账号已经被注册请输入其他账号");
