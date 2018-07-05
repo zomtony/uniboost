@@ -104,7 +104,7 @@
 							<div class='col-xs-11 name-width'>                           
 								<table>
 									<tr>
-										<td class='padding-left '>". $row['userName'] . "</td>
+										<td class='padding-left' style='padding-top: 2px; padding-bottom: 6px; font-size: 18px; color:rgb(120,120,120);'>". $row['userName'] . "</td>
 									</tr>
 									<tr>
 										<td class='padding-left'></td>
