@@ -18,7 +18,8 @@
 		$rateTimes = $result['rateNumber'];
         $_SESSION['tutorPostAccount'] = $result['userAccount'];
 
-        echo    "<div id='userProfile' class='theme-backcolor3'>  
+    echo    "<div class='theme-backcolor3'>
+                <div id='userProfile'>  
                     <div class='row myprofild-padding-top table-center'>
                         <div class='col-lg-1'></div>
                         <div class='col-lg-3'> 
@@ -71,7 +72,7 @@
 
 
 
-                <div id='changeProfile' class='theme-backcolor3'>
+                <div id='changeProfile'>
                     <form name='signupForm' action='php/passData.php' enctype='multipart/form-data' method='POST'>
                         <div class='row myprofild-padding-top'>
                             <div class='col-md-4 text-center'>
@@ -127,15 +128,14 @@
                 
 
 
-        echo    "<div class='row theme-backcolor3 myprofild-padding-top' id='edit-Profile'>
+        echo    "<div class='row myprofild-padding-top' id='edit-Profile'>
                     <div class='col-md-12 form-group text-center'>					 
                         <button onclick='editMyProfile()' type='button' class='btn btn-margin userprofile-button-bg'>编辑信息</button>                            
                         <a href='/userProfile/myPostList.php?accountb=$accountb'><button type='button' class='btn btn-margin userprofile-button-bg'>查看帖子</button></a>
 
                     </div>
                 </div>
-
-                
+            </div>        
         
                 <div class='row'>
                     <div class='col-xs-1 padding-small'></div>
