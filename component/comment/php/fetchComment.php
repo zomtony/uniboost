@@ -29,7 +29,7 @@
 		$postTime = $row['date'];
         $timeAgo = $getPostTime -> timeAgo($currectTime, $postTime);
                 
-        echo "<div  class='row btn-margin theme-backcolor1 text-margin-bottom-comment'>
+        echo "<div  class='row btn-margin theme-backcolor1 text-margin-bottom-comment' style='margin-left: 2%; margin-right: 2%;'>
                 <table>
                     <tr>
                         <td class='text-position-top'>";
