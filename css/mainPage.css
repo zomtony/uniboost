@@ -539,3 +539,37 @@ a:active {
 	}
 }
 
+/******************************* signup and signin  **************************/
+
+.signup-container {
+	width: 350px;
+	border-radius: 20px;
+	padding: 20px;
+	margin: auto;
+	background-color: #FFF3DD;
+}
+
+@media (max-width: 450px){
+	.signup-container {
+		width: 92%;
+		border-radius: 10px;
+		padding: 20px;
+		margin: auto;
+		background-color: #FFF3DD;
+	}
+
+	.account-form-hint {
+		font-size: 10px;
+	}
+}
+
+.login-signup-button:hover {
+	background-color: #FAC164;
+	border-color: #FFAC81;
+}
+
+.account-exist {
+	font-weight: bold;
+	color: #f89f1b;
+}
+
