@@ -89,10 +89,14 @@
     margin-right:10px;
     width: 80%;
 }
+
 .userPhotoId{
     margin-top:5px;
+    border: 2px;
     width:40px;
     border-radius: 100%;
+    border-style: solid;
+    border-color: #FFF3DD;
 }
 
 .navElementPosition{
