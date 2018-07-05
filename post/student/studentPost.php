@@ -16,7 +16,7 @@
                             <div class='col-lg-1'></div>
                             <div class='col-lg-4 text-center'> 
                                 <div class='row margin-position-top'>
-                                    <div class='col-md-12 form-group'>
+                                    <div class='col-md-12 form-group post-form-style'>
                                         <label class='col-sm-2 label-position padding-small'>名字</label>
                                         <div class='col-sm-5 padding-small'>
                                             <input type='' name='userNamef' id='userNamef' placeholder='' class='form-control label-style1 table-center'  value='". $result['userName'] ."' required>
@@ -25,7 +25,7 @@
                                 </div>
                                 
                                 <div class='row margin-position-top'>
-                                    <div class='col-md-12 form-group'>
+                                    <div class='col-md-12 form-group post-form-style post-form-style'>
                                         <label class='col-sm-2 label-position padding-small'>电话</label>
 
                                         <div class='col-sm-5 padding-small'>
@@ -34,7 +34,7 @@
                                     </div>
                                 </div>
                                 <div class='row margin-position-top'>
-                                    <div class='col-md-12 form-group'>
+                                    <div class='col-md-12 form-group post-form-style post-form-style'>
                                         <label class='col-sm-1 label-position padding-small'>微信</label>
                                         <div class='col-sm-5 padding-small'>
                                             <input type='' name='weChatNumberf' id='weChatNumberf' placeholder='' class='form-control label-style1 table-center'  value='". $result['weChatNumber'] ."'>
@@ -46,7 +46,7 @@
                             <div class='col-lg-1'></div>
                             <div class='col-lg-4 text-center'> 
                                 <div class='row margin-position-top'>
-                                    <div class='col-md-12 form-group'>
+                                    <div class='col-md-12 form-group post-form-style post-form-style'>
                                         <label class='col-sm-2 label-position padding-small'>名字<font color='red'>*</font></label>
                                         <div class='col-sm-5 padding-small'>
                                             <input type='' name='userNamef' id='userNamef' placeholder='' class='form-control label-style1 table-center'  value='' required autofocus>
@@ -55,7 +55,7 @@
                                 </div>
                                 
                                 <div class='row margin-position-top'>
-                                    <div class='col-md-12 form-group'>
+                                    <div class='col-md-12 form-group post-form-style post-form-style'>
                                         <label class='col-sm-2 label-position padding-small'>电话</label>
 
                                         <div class='col-sm-5 padding-small'>
@@ -64,7 +64,7 @@
                                     </div>
                                 </div>
                                 <div class='row margin-position-top'>
-                                    <div class='col-md-12 form-group'>
+                                    <div class='col-md-12 form-group post-form-style post-form-style'>
                                         <label class='col-sm-1 label-position padding-small'>微信</label>
                                         <div class='col-sm-5 padding-small'>
                                             <input type='' name='weChatNumberf' id='weChatNumberf' placeholder='' class='form-control label-style1 table-center'  value=''>
@@ -72,8 +72,8 @@
                                     </div>
                                 </div>";
             }
-        echo               "<div class='row margin--position-top'>
-                                <div class='col-md-12 form-group margin-position-top'>
+        echo               "<div class='row margin-position-top'>
+                                <div class='col-md-12 form-group post-form-style margin-position-top'>
                                     <label class='col-sm-1 label-position padding-small'>期望价格</label>                                              
                                     <div class='col-sm-5 padding-small'>
                                         <input type='number' step='.01' name='expectedPricef' id='expectedPricef' placeholder='' class='form-control label-style1 table-center'  value=''>
@@ -81,8 +81,8 @@
                                 </div> 
                             </div>
 
-                            <div class='row margin--position-top'>
-                                <div class='col-md-12 form-group margin-position-top'>
+                            <div class='row margin-position-top'>
+                                <div class='col-md-12 form-group post-form-style margin-position-top'>
                                     <label class='col-sm-1 label-position padding-small'>所需课号</label>                                              
                                     <div class='col-sm-5 padding-small'>
                                         <input type='' name='expectedCoursef' id='expectedCoursef' placeholder='' class='form-control label-style1 table-center'  value='' required>
@@ -90,8 +90,8 @@
                                 </div> 
                             </div>
 
-                            <div class='row margin--position-top'>
-                                <div class='col-md-12 form-group margin-position-top'>
+                            <div class='row margin-position-top'>
+                                <div class='col-md-12 form-group post-form-style margin-position-top'>
                                     <label class='col-sm-1 label-position padding-small'>所在学校</label>                                              
                                     <div class='col-sm-5 padding-small'>
                                         <select class='form-control label-style1 form-rounded-select' name='schoolf' id='chooseSchool' style='padding-top:0px;padding-bottom:0px;'>

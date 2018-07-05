@@ -245,11 +245,20 @@ a:active {
 }
 /*--main page list end--*/
 
-/*---------------------------------------------------------- user profile-------------------------------------------------*/
+/*-----------------------------user post text field   &   user profile----------------------------------------*/
 .label-position{
 	margin-top: 5px;
 	width: 70px;
+	text-align: left;
+	padding-left: 0px;
 }
+
+@media (max-width: 330px){
+	.label-position{
+		padding-left: 25px;
+	}
+}
+
 .profile-img-size{
 	width: 300px;
 	height: 300px;
@@ -257,6 +266,9 @@ a:active {
 .my-rating-mess{
 	width:106px;
 }
+
+
+
 .label-style{
 	border-radius: 25px;
 	background-color: #FAC164;
@@ -271,7 +283,23 @@ a:active {
 	background-color: #ffffff;
 	width:180px;
 	height:30px;
+	margin-left: 8px;
 }
+
+@media (max-width: 420px){
+	.label-style1{
+		width:170px;
+	}
+}
+
+@media (max-width: 330px){
+	.label-style1{
+		width:140px;
+	}
+}
+
+
+
 
 #changeProfile{
 	display: none;
@@ -604,4 +632,12 @@ a:active {
 		position: relative;
 		right: 30px;
 	}
+}
+
+
+
+/* center the text in 选择学校 button */
+select {
+	text-align: center;
+	text-align-last: center;
 }
