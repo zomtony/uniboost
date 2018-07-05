@@ -494,7 +494,7 @@ a:active {
 
 .body-margin{
 	margin-left:25px;
-	margin-left:25px;
+	margin-right:25px;
 }
 /*********end*********/
 
@@ -583,4 +583,25 @@ a:active {
 	width: 280px;
 	display: flex;
 	margin: auto;
+	padding-right: 20px;
+}
+
+@media (min-width: 1210px){
+	.post-form-style {
+		width: 340px;
+		display: flex;
+		margin: auto;
+		padding-right: 0px;
+	}
+}
+
+@media (max-width: 370px){
+	.post-form-style {
+		width: 250px;
+		display: flex;
+		margin: auto;
+		padding-right: 20px;
+		position: relative;
+		right: 30px;
+	}
 }

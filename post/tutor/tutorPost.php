@@ -14,21 +14,21 @@
             echo    "<div class='row myprofild-padding-top'>
                         <div class='col-lg-1'></div>
                         <div class='col-lg-4'> 
-                            <div class='row margin-top-m padding-bottom-m margin-position-top'>
+                            <div class='row margin-top-m padding-bottom-m margin-position-top post-form-style'>
                                 <div class='col-sm-2 padding-small table-center'><label class='label-position'>名字</label></div>
                                 <div class='col-sm-5 padding-small'>
                                     <input type='' name='userNamef' id='userNamef' placeholder='' class='form-control label-style1 table-center'  onclick='infoChangeName()' value='". $result['userName'] ."' readonly>
                                 </div>
                             </div>
                             
-                            <div class='row margin-position-top padding-bottom-m margin-position-top '>
+                            <div class='row margin-position-top padding-bottom-m margin-position-top post-form-style'>
                                 <div class='col-sm-2 padding-small table-center'><label class='label-position padding-small'>电话</label></div>
                                 <div class='col-sm-5 padding-small '>
                                     <input type='' name='phoneNumberf' id='phoneNumberf' placeholder='' class='form-control label-style1 table-center'  value='". $result['phoneNumber'] ."'>
                                     
                                 </div>
                             </div>
-                            <div class='row margin-position-top padding-bottom-m'>
+                            <div class='row margin-position-top padding-bottom-m post-form-style'>
                                 <div class='col-sm-2 padding-small table-center'><label class='label-position padding-small'>微信</label></div>
                                 <div class='col-sm-5 padding-small '>
                                     <input type='' name='weChatf' id='weChatf' placeholder='' class='form-control label-style1 table-center'  value='". $result['weChatNumber'] ."'>
@@ -36,13 +36,13 @@
                                 </div>
                             </div>
 
-                            <div class='row margin-position-top padding-bottom-m'>
+                            <div class='row margin-position-top padding-bottom-m post-form-style'>
                                 <div class='col-sm-2 padding-small table-center'><label class='label-position padding-small'>时薪</label></div>                                              
                                 <div class='col-sm-5 padding-small '>
                                     <input type='number' step='.01' name='wagef' id='wagef' placeholder='' class='form-control label-style1 table-center'  value=''>
                                 </div>
                             </div>
-                            <div class='row margin-position-top padding-bottom-m'>
+                            <div class='row margin-position-top padding-bottom-m post-form-style'>
                                 <div class='col-sm-2 padding-small table-center'><label class='label-position padding-small'>学校</label></div>                                               
                                 <div class='col-sm-5 padding-small'>
                                     <select class='form-control label-style1 form-rounded-select' name='schoolf' id='chooseSchool' style='padding-top:0px;padding-bottom:0px;'>
