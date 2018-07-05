@@ -20,14 +20,22 @@
     .comp{
         display:none;
     }
+    .maingpage-button{
+        margin-left:0px;
+    }
 
+    .school-choose-select{
+        margin-top:1px;
+    }
 }
 @media (min-width: 767px) {
     
     .phone{
         display:none;
     }
-
+    .maingpage-button{
+        margin-left:5px;
+    }
 }
 
 @media (min-width: 767px) and (max-width: 1100px ){

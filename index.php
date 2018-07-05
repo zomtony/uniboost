@@ -108,7 +108,7 @@
                                 }  
                 echo            "</select>";
                         }else{
-                echo        "<select class='form-control' name='chooseSchool' id='chooseSchool'>
+                echo        "<select class='form-control maingpage-button school-choose-select' name='chooseSchool' id='chooseSchool'>
                                 <option value='selected'>--选择学校--</option>
                                 <option value='Langara'>Langara</option>
                                 <option value='UBC'>UBC</option>
@@ -118,7 +118,7 @@
                             </select>";         
                         }
 
-                echo    "<div class='input-group' style='margin-left:5px;margin-top:1px;'>";   
+                echo    "<div class='input-group maingpage-button' style='margin-top:1px;'>";   
                         if(isset($_SESSION['keyWords'])){
                 echo        "<input type='text' class='form-control' placeholder='搜索' name='keyWords' id='keyWords' value='" . $_SESSION['keyWords'] . "'>";
                         }else{
