@@ -27,7 +27,8 @@
         imagedestroy($userLQPhotoIdb);
 
         $LQPhotoIdNav = file_get_contents($_SERVER['DOCUMENT_ROOT'].'/uploads/'.$LQPhotoIdb);
-        unlink($_SESSION['Crop_ImgDir']);    
+        unlink($_SERVER['DOCUMENT_ROOT'].'/uploads/'.$HQPhotoIdb); 
+        unlink($_SERVER['DOCUMENT_ROOT'].'/uploads/'.$LQPhotoIdb);    
     }else{
         $contentHQPhotoIdb='';
         $contentLQPhotoIdb='';

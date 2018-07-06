@@ -17,6 +17,8 @@
 	$num=12;
 
 	if(isset($_SESSION['chooseSchool']) && isset($_SESSION['keyWords'])){
+		$keyWords = $_SESSION['keyWords'];
+		$keyWords = str_replace(' ', '', $keyWords);
 		if($_SESSION['chooseSchool'] == 'selected' && ($_SESSION['keyWords'] == null || $_SESSION['keyWords'] == '')){
 
 			$stmt = $conn->prepare("SELECT * FROM Student_Post sp"); 
@@ -28,7 +30,6 @@
 
 		}elseif($_SESSION['chooseSchool'] == 'selected' && ($_SESSION['keyWords'] != null && $_SESSION['keyWords'] != '')){
 
-			$keyWords = $_SESSION['keyWords'];
 			$stmt = $conn->prepare("SELECT * FROM Student_Post WHERE expectedCourse LIKE '%$keyWords%'"); 
 			$stmt->execute();
 			$total = $stmt->rowCount();
@@ -39,7 +40,6 @@
 		}elseif($_SESSION['chooseSchool'] != 'selected' && ($_SESSION['keyWords'] != null && $_SESSION['keyWords'] != '')){
 
 			$school = $_SESSION['chooseSchool'];
-			$keyWords = $_SESSION['keyWords'];
 			$stmt = $conn->prepare("SELECT * FROM Student_Post WHERE school = '$school' AND expectedCourse LIKE '%$keyWords%'"); 
 			$stmt->execute();
 			$total = $stmt->rowCount();

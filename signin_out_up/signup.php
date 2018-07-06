@@ -32,12 +32,6 @@
 						</div>
 	
 						<div class='row'>
-							<div class="form-group col-lg-12">
-										<label>昵称<font color="red">*</font></label>
-										<input type="" name="nickNamef" class="form-control" required>
-							</div>
-						</div>
-						<div class='row'>
 							<div class="col-md-6" style="width: 120px; margin-bottom: 16px;">
 								<input type="submit" id="btnSubmit" class="btn btn-primary login-signup-button" value="一键注册"/>
 							</div>
