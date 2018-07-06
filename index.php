@@ -8,7 +8,7 @@
         $_SESSION['choosePostType'] = $_POST['choosePostType'];
     }
     if(isset($_POST["keyWords"])){
-        $_SESSION['keyWords'] = $_POST["keyWords"];
+        $_SESSION['keyWords'] = trim($_POST["keyWords"]);
     }
 ?>
 

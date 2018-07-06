@@ -39,7 +39,7 @@
                             <div class='row margin-position-top padding-bottom-m post-form-style'>
                                 <div class='col-sm-2 padding-small table-center'><label class='label-position padding-small'>时薪</label></div>                                              
                                 <div class='col-sm-5 padding-small '>
-                                    <input type='number' step='5' name='wagef' id='wagef' placeholder='' class='form-control label-style1 table-center'  value=''>
+                                    <input type='number' step='1' name='wagef' id='wagef' placeholder='' class='form-control label-style1 table-center'  value=''>
                                 </div>
                             </div>
                             <div class='row margin-position-top padding-bottom-m post-form-style'>

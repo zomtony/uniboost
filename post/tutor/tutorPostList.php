@@ -15,6 +15,8 @@
 	//echo $currectTime;
 	$num=12;	
 	if(isset($_SESSION['chooseSchool']) && isset($_SESSION['keyWords'])){
+		$keyWords = $_SESSION['keyWords'];
+		$keyWords = str_replace(' ', '', $keyWords);
 		if($_SESSION['chooseSchool'] == 'selected' && ($_SESSION['keyWords'] == null || $_SESSION['keyWords'] == '')){
 			$stmt = $conn->prepare("SELECT * FROM Tutor_Post");
 			$stmt->execute();
@@ -26,7 +28,6 @@
 				LEFT JOIN User_Info u_info
 				ON t_post.userAccount = u_info.userACCOUNT ORDER BY t_post.tutorPostId DESC {$splitPage->limit}";
 		}elseif($_SESSION['chooseSchool'] == 'selected' && ($_SESSION['keyWords'] != null && $_SESSION['keyWords'] != '')){
-			$keyWords = $_SESSION['keyWords'];
 			$stmt = $conn->prepare("SELECT * FROM Tutor_Post WHERE courseNumber LIKE '%$keyWords%'");
 			$stmt->execute();
 			$total = $stmt->rowCount();
@@ -36,7 +37,6 @@
 				ON t_post.userAccount = u_info.userACCOUNT WHERE t_post.courseNumber LIKE '%$keyWords%' ORDER BY t_post.tutorPostId DESC {$splitPage->limit}";
 		}elseif($_SESSION['chooseSchool'] != 'selected' && ($_SESSION['keyWords'] != null && $_SESSION['keyWords'] != '')){
 			$school = $_SESSION['chooseSchool'];
-			$keyWords = $_SESSION['keyWords'];
 			$stmt = $conn->prepare("SELECT * FROM Tutor_Post WHERE school = '$school' AND courseNumber LIKE '%$keyWords%'");
 			$stmt->execute();
 			$total = $stmt->rowCount();
