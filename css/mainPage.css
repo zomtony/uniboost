@@ -167,13 +167,13 @@ a:visited {
 }
 
 a:hover {
-	background-color: #ffcc80;
-    border-color: #ffcc80;
-    text-decoration: underline;
+	background-color: transparent;
+    border-color: transparent;
+    text-decoration: none;
 }
 
 a:active {
-    text-decoration: underline;
+    text-decoration: none;
 }
 /*-- a tag link style end--*/
 
@@ -371,6 +371,14 @@ a:active {
 		margin-left:25px;
 		margin-right:25px;
 	}
+}
+
+
+/************* edit profile layout UI **********/
+
+.flexbox-center {
+	display: flex;
+	justify-content: center;
 }
 
 
@@ -691,7 +699,7 @@ a:active {
 
 @media (max-width: 660px){
 	.inner-textfield {
-		margin-left: -50px;
+		margin-left: -45px;
 	}
 }
 
@@ -711,6 +719,15 @@ a:active {
 		padding-right: 0px;
 	}
 }
+
+
+
+
+
+
+
+
+
 
 /* center the text in 选择学校 button */
 select {
