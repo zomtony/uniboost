@@ -5,7 +5,8 @@
         <!-- Required meta tags -->
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-        <title>HomePage</title>
+        <title>红领巾</title>
+        <link rel="shortcut icon" href="img/small_icon.png">
         <link href="/css/bootstrap.css" rel="stylesheet" media="screen">	
         <link href="/css/headerStyle.css" rel="stylesheet" media="screen">
         <link href="/css/mainPage.css" rel="stylesheet" media="screen">        
