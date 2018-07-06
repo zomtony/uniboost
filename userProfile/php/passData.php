@@ -11,21 +11,23 @@
 
         $image_path = $_SESSION['Crop_ImgDir'];
         $info = getimagesize($_SESSION['Crop_ImgDir']);
+
+        $ext = explode( ".", $_SESSION['Crop_ImgName']);
         
         $userHQPhotoIdb = compress($info, $image_path, 300, 300);
-        $HQPhotoIdb= 'photos_'.uniqid(mt_rand(10, 15)).'_'.time().'_300x300.' . jpeg;
+        $HQPhotoIdb= 'photos_'.uniqid(mt_rand(10, 15)).'_'.time().'_300x300.' . $ext[1];
         imagejpeg($userHQPhotoIdb, $_SERVER['DOCUMENT_ROOT'].'/uploads/'.$HQPhotoIdb, 100);
         $contentHQPhotoIdb=addslashes(file_get_contents($_SERVER['DOCUMENT_ROOT'].'/uploads/'.$HQPhotoIdb));
         imagedestroy($userHQPhotoIdb);
 
         $userLQPhotoIdb = compress($info, $image_path, 60, 60);
-        $LQPhotoIdb = 'photos_'.uniqid(mt_rand(10, 15)).'_'.time().'_60x60.' . jpeg;
+        $LQPhotoIdb = 'photos_'.uniqid(mt_rand(10, 15)).'_'.time().'_60x60.' . $ext[1];
         imagejpeg($userLQPhotoIdb, $_SERVER['DOCUMENT_ROOT'].'/uploads/'.$LQPhotoIdb, 100);
         $contentLQPhotoIdb=addslashes(file_get_contents($_SERVER['DOCUMENT_ROOT'].'/uploads/'.$LQPhotoIdb));
         imagedestroy($userLQPhotoIdb);
 
         $LQPhotoIdNav = file_get_contents($_SERVER['DOCUMENT_ROOT'].'/uploads/'.$LQPhotoIdb);
-        unlink($_SESSION['Crop_ImgDir']);    
+     //   unlink($_SESSION['Crop_ImgDir']);    
     }else{
         $contentHQPhotoIdb='';
         $contentLQPhotoIdb='';
@@ -37,10 +39,10 @@
 
     if($count > 0 ){
         $processUserInfo->disconnect();
-        header("Location: ../userProfile.php?accountb=$accountb");
+    //    header("Location: ../userProfile.php?accountb=$accountb");
     }else{
         $processUserInfo->disconnect();
-        header("Location: ../userProfile.php?accountb=$accountb&info=no change");
+     //   header("Location: ../userProfile.php?accountb=$accountb&info=no change");
     } 
 
 
