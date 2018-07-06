@@ -15,21 +15,72 @@
     <div class="container">       
         <div class="carousel slide" data-ride="carousel" data-type="multi" data-interval="6000" id="myCarousel">
             <div class="carousel-inner">
+<!-- 1 -->
                 <section class="item active">
                     <div class="col-md-2 col-sm-6 col-xs-12 rollImagePosition imgSize">
                         <div class=img-box>
                             <a href="">
-                                <img src="img/tutor.jpg" class="img-zoom imgSize"  alt = "">
+                                <img src="img/tutors/tutor1.jpg" class="img-zoom imgSize"  alt = "">
                             </a>
                         </div>
                     </div>
                 </section>
-
+<!-- 2 -->
                 <section class="item">
                     <div class="col-md-2 col-sm-6 col-xs-12 rollImagePosition imgSize">
                         <div class=img-box>
                             <a href="">
-                                <img src="img/tutor.jpg" class="img-zoom" alt = "">
+                                <img src="img/tutors/tutor2.jpg" class="img-zoom" alt = "">
+                            </a>
+                        </div>
+                    </div>
+                </section>
+<!-- 3 -->
+                <section class="item">
+                    <div class="col-md-2 col-sm-6 col-xs-12 rollImagePosition imgSize">
+                        <div class=img-box>
+                            <a href="">
+                                <img src="img/tutors/tutor3.jpg" class="img-zoom" alt = "">
+                            </a>
+                        </div>
+                    </div>
+                </section>
+<!-- 4 -->
+                <section class="item">
+                    <div class="col-md-2 col-sm-6 col-xs-12 rollImagePosition imgSize">
+                        <div class=img-box>
+                            <a href="">
+                                <img src="img/tutors/tutor4.jpg" class="img-zoom" alt = "">
+                            </a>
+                        </div>
+                    </div>
+                </section>
+<!-- 5 -->
+                <section class="item">
+                    <div class="col-md-2 col-sm-6 col-xs-12 rollImagePosition imgSize">
+                        <div class=img-box>
+                            <a href="">
+                                <img src="img/tutors/tutor5.jpg" class="img-zoom" alt = "">
+                            </a>
+                        </div>
+                    </div>
+                </section>
+<!-- 6 -->
+                <section class="item">
+                    <div class="col-md-2 col-sm-6 col-xs-12 rollImagePosition imgSize">
+                        <div class=img-box>
+                            <a href="">
+                                <img src="img/tutors/tutor6.jpg" class="img-zoom" alt = "">
+                            </a>
+                        </div>
+                    </div>
+                </section>
+<!-- 7 -->
+                <section class="item">
+                    <div class="col-md-2 col-sm-6 col-xs-12 rollImagePosition imgSize">
+                        <div class=img-box>
+                            <a href="">
+                                <img src="img/tutors/tutor7.jpg" class="img-zoom" alt = "">
                             </a>
                         </div>
                     </div>
