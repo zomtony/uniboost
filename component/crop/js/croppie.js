@@ -52,7 +52,9 @@ $(document).ready(function(){
   });  
 
 
-
+function cleanInput(){
+    document.getElementById('upload_image').value = null;
+}
 
 
 (function (root, factory) {
