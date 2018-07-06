@@ -6,7 +6,7 @@
 				<?php
 					extract ($_GET);
 					if(isset($info)){
-						echo "<div class='col-xs-12'><h3>" . $info . "</h3></div>";
+						echo "<div class='col-xs-12'><h4 style='text-align: center; margin: 20px;'>" . $info . "</h4></div>";
 					}
 				?>
 				<div class='row'>
