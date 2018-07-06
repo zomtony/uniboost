@@ -11,6 +11,7 @@
     $weChatNumberb=$_POST['weChatNumberf'];
     $schoolb=$_POST['schoolf'];
     $expectedCourseb=$_POST['expectedCoursef'];
+    $expectedCourseb = str_replace(' ', '', $expectedCourseb);
     $contentb=$_POST['contentf'];
     
     if($_POST['expectedPricef'] != null){

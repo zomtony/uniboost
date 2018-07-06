@@ -26,18 +26,21 @@ body{
 				transform: none!important;
 	}
 }
+
 .multi-item-carousel .carousel-inner > .item {
 	transition: 500ms ease-in-out left;
   }
+
 .carousel-control.left,.carousel-control.right {margin:auto;background-image:none;}
+
 @media (max-width: 767px) {
 	.imgSize{
 		width: 50%;
 	}
-	.multi-item-carousel .carousel-inner .active.left { left: -100%; }
-	.multi-item-carousel .carousel-inner .active.right { left: 100%; }
-	.multi-item-carousel .carousel-inner .next        { left:  100%; }
-	.multi-item-carousel .carousel-inner .prev		 { left: -100%; }
+	.multi-item-carousel .carousel-inner .active.left { left: -50%; }
+	.multi-item-carousel .carousel-inner .active.right { left: 50%; }
+	.multi-item-carousel .carousel-inner .next        { left:  50%; }
+	.multi-item-carousel .carousel-inner .prev		 { left: -50%; }
 	.active > div { display:none; }
 	.active > div:first-child { display:block; }
 	.active > div:first-child + div{ display:block; }

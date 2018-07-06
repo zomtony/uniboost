@@ -7,8 +7,9 @@
     $briefIntroductionb = $_POST['briefIntroductionf'];
 
     $contentb = $_POST['contentf'];
-
+    
     $courseArrayb = $_POST['courseArrayf'];
+    $courseArrayb = str_replace(' ', '', $courseArrayb);
     $courseString = getCourseString($courseArrayb);
 
     if($_POST['wagef'] != null){
