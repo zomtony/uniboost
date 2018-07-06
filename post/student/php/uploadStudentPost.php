@@ -35,6 +35,9 @@
 	}	
 
     if($count > 0 ){
+        $_SESSION['choosePostType'] = 'student';
+        $_SESSION['chooseSchool'] = 'selected';
+        $_SESSION['keyWords'] = '';
 		header("Location: /index.php");
 	}else{
 		header("Location: ../studentPost.php?info=发布消息失败");

@@ -39,7 +39,7 @@
                             <div class='row margin-position-top padding-bottom-m post-form-style'>
                                 <div class='col-sm-2 padding-small table-center'><label class='label-position padding-small'>时薪</label></div>                                              
                                 <div class='col-sm-5 padding-small '>
-                                    <input type='number' step='.01' name='wagef' id='wagef' placeholder='' class='form-control label-style1 table-center'  value=''>
+                                    <input type='number' step='5' name='wagef' id='wagef' placeholder='' class='form-control label-style1 table-center'  value=''>
                                 </div>
                             </div>
                             <div class='row margin-position-top padding-bottom-m post-form-style'>
@@ -60,7 +60,7 @@
                         
                         <div class='col-lg-5 p-word text-margin-top'>
                             <h4>个人简介</h4> 
-                            <textarea name='briefIntroductionf' class='form-control form-rounded' rows='5' > " . $result['briefIntroduction'] . " </textarea>
+                            <textarea name='briefIntroductionf' class='form-control form-rounded' rows='1' > " . $result['briefIntroduction'] . " </textarea>
 
                                     <button class='btn button-add-course-button add-more margin--position-top button-width button-margin-left form-rounded button-course margin-position-top' type='button'>
                                         继续添加

@@ -34,7 +34,9 @@
 	}	
 
     if($count > 0 ){
-		$_SESSION['accountb'] = $accountb;
+        $_SESSION['choosePostType'] = 'teacher';
+        $_SESSION['chooseSchool'] = 'selected';
+        $_SESSION['keyWords'] = '';
 		header("Location: /index.php");
 	}else{
 		header("Location: ../tutorPost.php?info=发布消息失败");

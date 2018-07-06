@@ -76,7 +76,7 @@
                                 <div class='col-md-12 form-group post-form-style margin-position-top'>
                                     <label class='col-sm-1 label-position padding-small'>期望价格</label>                                              
                                     <div class='col-sm-5 padding-small'>
-                                        <input type='number' step='.01' name='expectedPricef' id='expectedPricef' placeholder='' class='form-control label-style1 table-center'  value=''>
+                                        <input type='number' step='1' name='expectedPricef' id='expectedPricef' placeholder='' class='form-control label-style1 table-center'  value=''>
                                     </div>
                                 </div> 
                             </div>
