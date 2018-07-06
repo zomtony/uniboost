@@ -26,10 +26,13 @@ body{
 				transform: none!important;
 	}
 }
+
 .multi-item-carousel .carousel-inner > .item {
 	transition: 500ms ease-in-out left;
   }
+
 .carousel-control.left,.carousel-control.right {margin:auto;background-image:none;}
+
 @media (max-width: 767px) {
 	.imgSize{
 		width: 50%;
