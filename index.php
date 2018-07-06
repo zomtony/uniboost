@@ -13,7 +13,7 @@
 ?>
 
     <div class="container">       
-        <div class="carousel slide" data-ride="carousel" data-type="multi" data-interval="6000" id="myCarousel">
+        <div class="carousel slide multi-item-carousel" data-ride="carousel" data-type="multi" data-interval="3000" id="myCarousel">
             <div class="carousel-inner">
 <!-- 1 -->
                 <section class="item active">
