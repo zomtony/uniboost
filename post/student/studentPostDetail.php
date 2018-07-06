@@ -32,56 +32,60 @@
                         <div class='col-lg-8 section-padding-left' style='margin-top: 12px'>
 
                             <div class='row section-padding-left'>
-                                <div class='col-lg-1 padding-right-zero'>时间</div>
-                                <div class='col-lg-9 table-center'>";
+                                <div class='col-md-12 form-group '>
+                                    <div class='col-sm-1 padding-small'>
+                                        <label class='label-position'>时间
+                                    </div>
+                                    <div class='col-sm-9 table-center'>";
 
-                                if($avaliableDay[0] == 1){
-                                    echo "<label class='label-style-time text-center avaTime-bg label-margin' id='mondayf'>星期一</label>";
-                                }else{
-                                    echo "<label class='label-style-time text-center notAvaTime-bg label-margin' id='mondayf'>星期一</label>";
-                                }
-                                    
-                                if($avaliableDay[1] == 1){    
-                                    echo "<label class='label-style-time text-center avaTime-bg label-margin' id='tuesdayf'>星期二</label>";
-                                }else{
-                                    echo "<label class='label-style-time text-center notAvaTime-bg label-margin' id='tuesdayf'>星期二</label>";
-                                }
-                                    
-                                if($avaliableDay[2] == 1){    
-                                    echo "<label class='label-style-time text-center avaTime-bg label-margin' id='wednesdayf'>星期三</label>";
-                                }else{
-                                    echo "<label class='label-style-time text-center notAvaTime-bg label-margin' id='wednesdayf'>星期三</label>";
-                                }
-                                    
-                                if($avaliableDay[3] == 1){    
-                                    echo "<label class='label-style-time text-center avaTime-bg label-margin' id='thuesdayf'>星期四</label>";
-                                }else{
-                                    echo "<label class='label-style-time text-center notAvaTime-bg label-margin' id='thuesdayf'>星期四</label>";
-                                }
-                                    
+                                        if($avaliableDay[0] == 1){
+                                            echo "<label class='label-style-time text-center avaTime-bg label-margin' id='mondayf'>星期一</label>";
+                                        }else{
+                                            echo "<label class='label-style-time text-center notAvaTime-bg label-margin' id='mondayf'>星期一</label>";
+                                        }
+                                            
+                                        if($avaliableDay[1] == 1){    
+                                            echo "<label class='label-style-time text-center avaTime-bg label-margin' id='tuesdayf'>星期二</label>";
+                                        }else{
+                                            echo "<label class='label-style-time text-center notAvaTime-bg label-margin' id='tuesdayf'>星期二</label>";
+                                        }
+                                            
+                                        if($avaliableDay[2] == 1){    
+                                            echo "<label class='label-style-time text-center avaTime-bg label-margin' id='wednesdayf'>星期三</label>";
+                                        }else{
+                                            echo "<label class='label-style-time text-center notAvaTime-bg label-margin' id='wednesdayf'>星期三</label>";
+                                        }
+                                            
+                                        if($avaliableDay[3] == 1){    
+                                            echo "<label class='label-style-time text-center avaTime-bg label-margin' id='thuesdayf'>星期四</label>";
+                                        }else{
+                                            echo "<label class='label-style-time text-center notAvaTime-bg label-margin' id='thuesdayf'>星期四</label>";
+                                        }
+                                            
 
-                                if($avaliableDay[4] == 1){    
-                                    echo "<label class='label-style-time text-center avaTime-bg label-margin' id='fridayf'>星期五</label>";
-                                }else{
-                                    echo "<label class='label-style-time text-center notAvaTime-bg label-margin' id='fridayf'>星期五</label>";
-                                }
-                                    
+                                        if($avaliableDay[4] == 1){    
+                                            echo "<label class='label-style-time text-center avaTime-bg label-margin' id='fridayf'>星期五</label>";
+                                        }else{
+                                            echo "<label class='label-style-time text-center notAvaTime-bg label-margin' id='fridayf'>星期五</label>";
+                                        }
+                                            
 
-                                if($avaliableDay[5] == 1){    
-                                    echo "<label class='label-style-time text-center avaTime-bg label-margin' id='saturdayf'>星期六</label>";
-                                }else{
-                                    echo "<label class='label-style-time text-center notAvaTime-bg label-margin' id='saturdayf'>星期六</label>";
-                                }
-                                    
+                                        if($avaliableDay[5] == 1){    
+                                            echo "<label class='label-style-time text-center avaTime-bg label-margin' id='saturdayf'>星期六</label>";
+                                        }else{
+                                            echo "<label class='label-style-time text-center notAvaTime-bg label-margin' id='saturdayf'>星期六</label>";
+                                        }
+                                            
 
-                                if($avaliableDay[6] == 1){    
-                                    echo "<label class='label-style-time text-center avaTime-bg label-margin' id='sundayf'>星期天</label>";
-                                }else{
-                                    echo "<label class='label-style-time text-center notAvaTime-bg label-margin' id='sundayf'>星期天</label>";
-                                }
-                                    
+                                        if($avaliableDay[6] == 1){    
+                                            echo "<label class='label-style-time text-center avaTime-bg label-margin' id='sundayf'>星期天</label>";
+                                        }else{
+                                            echo "<label class='label-style-time text-center notAvaTime-bg label-margin' id='sundayf'>星期天</label>";
+                                        }
+                                        
                                 
-                    echo        "</div>           
+                    echo            "</div>
+                                </div>           
                             </div>
 
                             <div class='row margin-top-m section-padding-left'>
@@ -141,7 +145,7 @@
 
                             if($result['expectedCourse'] != ''){ 
                     echo        "<div class='col-lg-6 padding-small margin--position-top table-center'>
-                                    <div>所需课号</div>
+                                    <div><label class='label-position'>所需课号</label></div>
                                     <div>
                                         <label class='label-style-course text-center label-margin' id='mondayf' >".$result['expectedCourse']."</label>
                                     </div>                                     
