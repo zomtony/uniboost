@@ -196,9 +196,17 @@
     background-color: #FF9560;
     color:#ffffff;
 }
+
 .userprofile-button-bg:hover{
     -webkit-transition-duration: 0.6s; /* Safari */
     transition-duration: 0.6s;
     background-color: #fd7a38; 
     color:#ffffff;
+}
+
+@media (max-width: 700px ) {
+	.userprofile-button-bg{
+		padding: 6px;
+		font-size: 14px;
+	}
 }

@@ -167,13 +167,13 @@ a:visited {
 }
 
 a:hover {
-	background-color: #ffcc80;
-    border-color: #ffcc80;
-    text-decoration: underline;
+	background-color: transparent;
+    border-color: transparent;
+    text-decoration: none;
 }
 
 a:active {
-    text-decoration: underline;
+    text-decoration: none;
 }
 /*-- a tag link style end--*/
 
@@ -263,6 +263,14 @@ a:active {
 	width: 300px;
 	height: 300px;
 }
+
+@media (max-width: 1220px){
+	.profile-img-size{
+		width: 220px;
+		height: 220px;
+	}
+}
+
 .my-rating-mess{
 	width:106px;
 }
@@ -353,6 +361,27 @@ a:active {
 	width:90%;
 	margin:auto;
 }
+
+
+
+/* add by jeff for phone */
+
+@media (max-width: 766px){
+	.phone-body-margin { 
+		margin-left:25px;
+		margin-right:25px;
+	}
+}
+
+
+/************* edit profile layout UI **********/
+
+.flexbox-center {
+	display: flex;
+	justify-content: center;
+}
+
+
 /*---------------------------------------------------------- user profile end-------------------------------------------------*/
 
 /*--  --*/
@@ -587,7 +616,7 @@ a:active {
 	}
 
 	.account-form-hint {
-		font-size: 10px;
+		font-size: 12px;
 	}
 }
 
@@ -605,7 +634,7 @@ a:active {
 
 
 
-/******************************* post form style  ******************************** */
+/******************************* post form style for phone  ******************************** */
 
 .post-form-style {
 	width: 280px;
@@ -633,6 +662,70 @@ a:active {
 		right: 30px;
 	}
 }
+
+
+
+@media (max-width: 1200px){
+	.profile-form-style {
+		width: 340px;
+		display: flex;
+		/* margin: auto; */
+		padding-right: 0px;
+	}
+
+	.inner-textfield {
+		width: 200px;
+		margin-left: -30px;
+	}
+
+	.inner-group {
+		height: 50px;
+		margin: auto;
+		width: 300px;
+		float: none;
+	}
+}
+
+@media (max-width: 1200px){
+	.label-style {
+		width: 160px;
+	}
+
+	.inner-textfield {
+		width: 200px;
+		margin-left: -30px;
+	}
+}
+
+@media (max-width: 660px){
+	.inner-textfield {
+		margin-left: -45px;
+	}
+}
+
+@media (max-width: 330px){
+	.inner-textfield {
+		margin-left: -20px;
+	}
+
+	.iphone5-fix-margin {
+		margin-left: -50px;
+	}
+
+	.profile-form-style {
+		width: 240px;
+		display: flex;
+		/* margin: auto; */
+		padding-right: 0px;
+	}
+}
+
+
+
+
+
+
+
 
 
 

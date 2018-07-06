@@ -1,6 +1,6 @@
 <?php include($_SERVER['DOCUMENT_ROOT'].'/include/header.php'); ?>
 
-<div class="container padding-small">
+<div class="container padding-small phone-body-margin">
     <script src='/component/crop/js/croppie.js'></script>
 	<link href='/component/crop/css/croppie.css' rel='stylesheet' />
    
@@ -30,29 +30,29 @@
             
                             <div class='row'>
 
-                                <div class='col-md-12 form-group '>
+                                <div class='col-md-12 form-group profile-form-style inner-group'>
                                     <div class='col-sm-1' ></div>
-                                    <div class='col-sm-2 padding-small'><label class='label-position'>名字</label></div>
-                                    <div class='col-sm-5' >
+                                    <div class='col-sm-2 padding-small iphone5-fix-margin'><label class='label-position'>名字</label></div>
+                                    <div class='col-sm-5 inner-textfield' >
                                         <label class='label-style text-center padding-top'>". $result['userName'] ."</label>
                                     </div>
                                 </div>
                             </div>
                             
                             <div class='row '>
-                                <div class='col-md-12 form-group'>
+                                <div class='col-md-12 form-group profile-form-style inner-group'>
                                     <div class='col-sm-1' ></div>
-                                    <div class='col-sm-2 padding-small'><label class='label-position'>电话</label></div>
-                                    <div class='col-sm-5' >
+                                    <div class='col-sm-2 padding-small iphone5-fix-margin'><label class='label-position'>电话</label></div>
+                                    <div class='col-sm-5 inner-textfield' >
                                         <label class='label-style text-center padding-top'>". $result['phoneNumber'] ."</label>
                                     </div>
                                 </div>
                             </div>
                             <div class='row '>
-                                <div class='col-md-12 form-group'>
+                                <div class='col-md-12 form-group profile-form-style inner-group'>
                                     <div class='col-sm-1' ></div>
-                                    <div class='col-sm-2 padding-small'><label class='label-position'>微信</label></div>
-                                    <div class='col-sm-5' >
+                                    <div class='col-sm-2 padding-small iphone5-fix-margin'><label class='label-position'>微信</label></div>
+                                    <div class='col-sm-5 inner-textfield' >
                                         <label class='label-style text-center padding-top'>". $result['weChatNumber'] ."</label>
                                     </div>
                                 </div>
@@ -99,25 +99,25 @@
                   
                             <div class='col-md-4 margin-position-top padding-small'>
                                 <div class='row'>
-                                    <div class='col-md-12 form-group'>
+                                    <div class='col-md-12 form-group inner-group flexbox-center'>
                                         <label class='col-sm-2 label-position padding-small text-center'>名字</label>                                              
-                                        <div class='col-sm-5'>
+                                        <div class='col-sm-5 inner-textfield'>
                                             <input type='' name='userNamef' id='userNamef' placeholder='' class='form-control label-info-position margin-left-zero label-style1'  value='" . $result['userName'] . "'>
                                         </div>
                                     </div>
                                 </div>
                                 <div class='row'>
-                                    <div class='col-md-12 form-group'>
+                                    <div class='col-md-12 form-group inner-group flexbox-center'>
                                         <label class='col-sm-2 label-position padding-small text-center'>电话</label>                                              
-                                        <div class='col-sm-5'>
+                                        <div class='col-sm-5 inner-textfield'>
                                             <input type='' name='phonef' id='phonef' placeholder='' class='form-control label-info-position margin-left-zero label-style1'  value='" . $result['phoneNumber'] . "'>
                                         </div>
                                     </div>
                                 </div>
                                 <div class='row'>
-                                    <div class='col-md-12 form-group'>
+                                    <div class='col-md-12 form-group inner-group flexbox-center'>
                                         <label class='col-sm-2 label-position padding-small text-center'>微信</label>                                               									
-                                        <div class='col-sm-5'>
+                                        <div class='col-sm-5 inner-textfield'>
                                             <input type='' name='wechatf' id='wechatf' placeholder='' class='form-control label-info-position margin-left-zero label-style1'  value='" . $result['weChatNumber'] . "'>
                                         </div>
                                     </div>
@@ -126,13 +126,13 @@
                             
                         </div>
 
-                        <div class='row textArea-width'>
+                        <div class='row textArea-width' style='margin-top: 15px;'>
                                 <h4>个人简介</h4>
                                 <textarea name='briefIntroductionf' class='form-control' placeholder='编辑你的个人简介' rows='5'>" . $result['briefIntroduction'] ."</textarea>
                         </div>
 
                         <div class='row'>				
-                            <div class='col-lg-12 text-center margin-position-top'>
+                            <div class='col-lg-12 text-center margin-position-top' style='margin-top: 10px; margin-bottom: 10px'>
                                 <button onclick='editMyProfile()' type='button' class='btn btn-margin btn-margin userprofile-button-bg'>返回个人信息</button>
                                 <input type='submit' id='btnSubmit' class='btn userprofile-button-bg' value='完成修改'/>
                             </div>
@@ -146,7 +146,7 @@
         echo    "<div class='row myprofild-padding-top' id='edit-Profile'>
                     <div class='col-md-12 form-group text-center'>					 
                         <button onclick='editMyProfile()' type='button' class='btn btn-margin userprofile-button-bg'>编辑信息</button>                            
-                        <a href='/userProfile/myPostList.php?accountb=$accountb'><button type='button' class='btn btn-margin userprofile-button-bg'>查看帖子</button></a>
+                        <a href='/userProfile/myPostList.php?accountb=$accountb'><button type='button' class='btn btn-margin userprofile-button-bg' style='margin-left: 6px'>查看帖子</button></a>
 
                     </div>
                 </div>
