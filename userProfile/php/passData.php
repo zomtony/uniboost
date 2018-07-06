@@ -31,6 +31,7 @@
     }else{
         $contentHQPhotoIdb='';
         $contentLQPhotoIdb='';
+        $LQPhotoIdNav='';
     }
 
     $processUserInfo = new processUserInfo();
