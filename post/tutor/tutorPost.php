@@ -60,7 +60,7 @@
                         
                         <div class='col-lg-5 p-word text-margin-top'>
                             <h4>个人简介</h4> 
-                            <textarea name='briefIntroductionf' class='form-control form-rounded' rows='1' > " . $result['briefIntroduction'] . " </textarea>
+                            <textarea name='briefIntroductionf' class='form-control form-rounded' rows='4' > " . $result['briefIntroduction'] . " </textarea>
 
                                     <button class='btn button-add-course-button add-more margin--position-top button-width button-margin-left form-rounded button-course margin-position-top' type='button'>
                                         继续添加
