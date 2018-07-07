@@ -84,7 +84,7 @@
                 </div>
 
                 <div id='changeProfile'>
-                    <form name='signupForm' action='php/passData.php' enctype='multipart/form-data' method='POST'>
+                    <form action='php/passData.php' enctype='multipart/form-data' method='POST'>
                         <div class='row myprofild-padding-top'>
 
                             <div class='col-md-4 text-center'>
