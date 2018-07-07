@@ -1,6 +1,6 @@
 <?php include($_SERVER['DOCUMENT_ROOT'].'/include/header.php'); ?>
 
-<div class="container padding-small">
+<div class="container padding-small phone-body-margin">
 
     
     <?php
@@ -32,11 +32,12 @@
                         <div class='col-lg-8 section-padding-left' style='margin-top: 12px'>
 
                             <div class='row section-padding-left'>
-                                <div class='col-md-12 form-group '>
-                                    <div class='col-sm-1 padding-small'>
-                                        <label class='label-position'>时间
+
+                                    <div class='col-lg-1 padding-right-zero'>
+                                        <label class='label-position iphone5-fix-margin' style='width: 60px;'>时间
                                     </div>
-                                    <div class='col-sm-9 table-center'>";
+
+                                    <div class='col-lg-11 table-center'>";
 
                                         if($avaliableDay[0] == 1){
                                             echo "<label class='label-style-time text-center avaTime-bg label-margin' id='mondayf'>星期一</label>";
@@ -85,7 +86,8 @@
                                         
                                 
                     echo            "</div>
-                                </div>           
+
+         
                             </div>
 
                             <div class='row margin-top-m section-padding-left'>
@@ -93,9 +95,9 @@
             
                                     <div class='row'>
 
-                                        <div class='col-md-12 form-group '>
-                                            <div class='col-sm-2 padding-small'><label class='label-position'>学校</label></div>
-                                            <div class='col-sm-5'>
+                                        <div class='col-md-12 form-group inner-group profile-form-style'>
+                                            <div class='col-sm-3 padding-small iphone5-fix-margin phone-fix-font'><label class='label-position'>学校</label></div>
+                                            <div class='col-sm-5 inner-textfield'>
                                                 <label class='label-style text-center padding-top' style='background-color: #F3A8B1;'>
                                                     ". $result['school'] ."
                                                 </lable>
@@ -105,9 +107,9 @@
 
                                     if($result['expectedPrice'] != '' && $result['expectedPrice'] != 0.00){ 
                         echo            "<div class='row '>
-                                            <div class='col-md-12 form-group'>
-                                                <div class='col-sm-2 padding-small'><label class='label-position'>期望价</label></div>
-                                                <div class='col-sm-5'>
+                                            <div class='col-md-12 form-group inner-group profile-form-style'>
+                                                <div class='col-sm-3 padding-small iphone5-fix-margin phone-fix-font'><label class='label-position'>期望价</label></div>
+                                                <div class='col-sm-5 inner-textfield'>
                                                     <label class='label-style text-center padding-top'>$
                                                         ". $result['expectedPrice'] ."
                                                     </lable>
@@ -117,9 +119,9 @@
                                     }
                                     if($result['phoneNumber'] != ''){ 
                         echo            "<div class='row '>
-                                            <div class='col-md-12 form-group'>
-                                                <div class='col-sm-2 padding-small'><label class='label-position'>电话</label></div>
-                                                <div class='col-sm-5'>
+                                            <div class='col-md-12 form-group inner-group profile-form-style'>
+                                                <div class='col-sm-3 padding-small iphone5-fix-margin phone-fix-font'><label class='label-position'>电话</label></div>
+                                                <div class='col-sm-5 inner-textfield'>
                                                     <label class='label-style text-center padding-top'>
                                                         ". $result['phoneNumber'] ."
                                                     </lable>
@@ -130,9 +132,9 @@
 
                                     if($result['weChatNumber'] != ''){ 
                         echo            "<div class='row '>
-                                            <div class='col-md-12 form-group'>
-                                                <div class='col-sm-2 padding-small'><label class='label-position'>微信</label></div>
-                                                <div class='col-sm-5'>
+                                            <div class='col-md-12 form-group inner-group profile-form-style'>
+                                                <div class='col-sm-3 padding-small iphone5-fix-margin phone-fix-font'><label class='label-position'>微信</label></div>
+                                                <div class='col-sm-5 inner-textfield'>
                                                     <label class='label-style text-center padding-top'>
                                                         ". $result['weChatNumber'] ."
                                                     </lable>

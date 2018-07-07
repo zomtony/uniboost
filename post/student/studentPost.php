@@ -110,7 +110,7 @@
                         <div class='col-lg-6 p-word'>
                             <div class='row myprofild-padding-top '>
                                 <div class='col-lg-12 text-center'>
-                                    <div class='text-center padding-bottom-m'>请选择你的空余时间</div>
+                                    <label class='text-center' style='display: block; margin-bottom: 18px;'>请选择你的空余时间</label>
                                     <button class='btn button-bg course-input-padding avaliabletime-margin-top margin-right-s button-style-time' id='mondayf' type='button' onclick='setValueForMonday()'>星期一</button>
                                     <input type='hidden' id='monday' name='mondayf' value='0'/>    
                                     <button class='btn button-bg course-input-padding avaliabletime-margin-top margin-right-s button-style-time' id='tuesdayf' type='button' onclick='setValueTuesday()'>星期二</button>

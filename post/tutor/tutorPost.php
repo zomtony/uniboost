@@ -86,11 +86,11 @@
                     <div class='row myprofild-padding-top '>
                         <div class='col-lg-1'></div>
                         <div class='col-lg-11 '>
-                            <div class='row'>
-                                <div class='col-sm-2 padding-small table-center'>
-                                    <label class='label-position time-text-width'>请选择你的空余时间</label>
+                            <div class='row' style='text-align: center;'>
+                                <div class='col-sm-2 padding-small table-center' style='width: 100%; margin-bottom: 12px;'>
+                                    <label class='label-position time-text-width phone-center-text'>请选择你的空余时间</label>
                                 </div>
-                                <div class='col-sm-10 table-center'>
+                                <div class='col-sm-10 table-center' style='width: 100%;'>
                                     <button class='btn button-bg course-input-padding avaliabletime-margin-top margin-right-s button-style-time' id='mondayf' type='button' onclick='setValueForMonday()'>星期一</button>
                                     <input type='hidden' id='monday' name='mondayf' value='0'/>    
                                     <button class='btn button-bg course-input-padding avaliabletime-margin-top margin-right-s button-style-time' id='tuesdayf' type='button' onclick='setValueTuesday()'>星期二</button>
@@ -115,7 +115,7 @@
                     <div class='row padding-bottom-m' style='margin-top: 20px;'>
                         <div class='col-lg-1'></div>
                         <div class='col-lg-10'>
-                            <h4>补充内容</h4>
+                            <h4 style='text-align: center;'>补充内容</h4>
                             <textarea name='contentf' class='form-control form-rounded' placeholder='补充内容' rows='5'></textarea>
                         </div>
                         <div class='col-lg-1'></div>

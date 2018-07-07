@@ -275,7 +275,7 @@ a:active {
 	height: 300px;
 }
 
-@media (max-width: 1220px){
+@media (max-width: 1250px){
 	.profile-img-size{
 		width: 220px;
 		height: 220px;
@@ -471,6 +471,8 @@ a:active {
 	margin-right: 10px;
 }
 
+
+
 .label-style-time{
 	border-radius: 14rem;
 	width:70px;
@@ -478,6 +480,9 @@ a:active {
 	/* height:35px; */ 
 	padding:5px; 
 }
+
+
+
 
 .avaTime-bg{
 	background-color: #79C625;
@@ -564,7 +569,31 @@ a:active {
 	margin-left:25px;
 	margin-right:25px;
 }
-/*********end*********/
+
+
+/* add by jeff for phone */
+
+.post-detail-margin {
+	padding-bottom: 20px;
+}
+
+@media (max-width: 780px){
+	.post-detail-margin {
+		margin-left: 16px;
+	}
+}
+
+
+@media (max-width: 1430px){
+	.label-style-time {
+		width:60px;
+		font-size: 14px;
+		margin-right: 12px;
+	}
+}
+
+
+/**************************************** end *******************/
 
 /**********comment style************/
 .comment-post-time {
@@ -718,6 +747,10 @@ a:active {
 	.inner-textfield {
 		margin-left: -45px;
 	}
+
+	.phone-fix-font {
+		font-size: 14px;
+	}
 }
 
 @media (max-width: 330px){
@@ -737,6 +770,12 @@ a:active {
 	}
 }
 
+
+@media (max-width: 1200px){
+	.phone-center-text {
+		text-align: center;
+	}
+}
 
 
 

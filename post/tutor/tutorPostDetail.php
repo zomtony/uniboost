@@ -1,6 +1,6 @@
 <?php include($_SERVER['DOCUMENT_ROOT'].'/include/header.php'); ?>
 
-<div class="container padding-small">
+<div class="container padding-small phone-body-margin">
 
     <script src="/component/starRating/js/rating.js" type="text/javascript"></script>
 
@@ -36,7 +36,7 @@
                         <div class='col-lg-8 section-padding-left' style='margin-top: 12px'>
 
                             <div class='row section-padding-left'>
-                                <div class='col-lg-1 padding-right-zero'><label class='label-position padding-small'>时间</label></div>
+                                <div class='col-lg-1 padding-right-zero'><label class='label-position padding-small iphone5-fix-margin'>时间</label></div>
                                 <div class='col-lg-11 table-center'>";
 
                                 if($avaliableDay[0] == 1){
@@ -93,18 +93,18 @@
             
                                     <div class='row'>
 
-                                        <div class='col-md-12 form-group '>
-                                            <div class='col-sm-2 padding-small'><label class='label-position'>学校</label></div>
-                                            <div class='col-sm-5' >
+                                        <div class='col-md-12 form-group inner-group profile-form-style'>
+                                            <div class='col-sm-2 padding-small iphone5-fix-margin'><label class='label-position'>学校</label></div>
+                                            <div class='col-sm-5 inner-textfield' >
                                                 <label class='label-style text-center padding-top' style='background-color: #F3A8B1;'>". $result['school'] ."</label>
                                             </div>
                                         </div>
                                     </div>";
                                     if($result['wage'] != '' && $result['wage'] != 0.00){   
                         echo           "<div class='row '>
-                                            <div class='col-md-12 form-group'>
-                                                <div class='col-sm-2 padding-small'><label class='label-position'>时薪</label></div>
-                                                <div class='col-sm-5'>
+                                            <div class='col-md-12 form-group inner-group profile-form-style'>
+                                                <div class='col-sm-2 padding-small iphone5-fix-margin'><label class='label-position'>时薪</label></div>
+                                                <div class='col-sm-5 inner-textfield'>
                                                     <label class='label-style text-center padding-top'>$". $result['wage'] ."</label>
                                                 </div>
                                             </div>
@@ -112,9 +112,9 @@
                                     }    
                                     if(trim($result['phoneNumber']) != ''){  
                         echo            "<div class='row '>
-                                            <div class='col-md-12 form-group'>
-                                                <div class='col-sm-2 padding-small'><label class='label-position'>电话</label></div>
-                                                <div class='col-sm-5'>
+                                            <div class='col-md-12 form-group inner-group profile-form-style'>
+                                                <div class='col-sm-2 padding-small iphone5-fix-margin'><label class='label-position'>电话</label></div>
+                                                <div class='col-sm-5 inner-textfield'>
                                                     <label class='label-style text-center padding-top'>". $result['phoneNumber'] ."</label>
                                                 </div>
                                             </div>
@@ -122,9 +122,9 @@
                                     }
                                     if(trim($result['weChatNumber']) != ''){  
                         echo            "<div class='row '>
-                                            <div class='col-md-12 form-group'>
-                                                <div class='col-sm-2 padding-small'><label class='label-position'>微信</label></div>
-                                                <div class='col-sm-5'>
+                                            <div class='col-md-12 form-group inner-group profile-form-style'>
+                                                <div class='col-sm-2 padding-small iphone5-fix-margin'><label class='label-position'>微信</label></div>
+                                                <div class='col-sm-5 inner-textfield'>
                                                     <label class='label-style text-center padding-top'>". $result['weChatNumber'] ."</label>
                                                 </div>
                                             </div>
@@ -134,7 +134,7 @@
  
                             if(trim($courseArray[0]) != ''){   
                     echo        "<div class='col-lg-7 padding-small text-margin-top table-center'>
-                                    <div><label class='label-position padding-small'>所教课号</label></div>
+                                    <div><label class='label-position padding-small iphone5-fix-margin'>所教课号</label></div>
                                     <div>";
 
                                     for($i = 0; $i < 3; $i++){
@@ -160,7 +160,7 @@
                         </div>
                     </div>
 
-                    <div class='row margin-top-s '>
+                    <div class='row margin-top-s  post-detail-margin'>
                         <div class='col-sm-1 padding-small'></div>
                         <div class='col-sm-11 padding-small' >
                             <div class='row'>
