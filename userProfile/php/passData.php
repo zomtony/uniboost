@@ -21,7 +21,7 @@
         imagedestroy($userHQPhotoIdb);
 
         $userLQPhotoIdb = compress($info, $image_path, 100, 100);
-        $LQPhotoIdb = 'photos_'.uniqid(mt_rand(10, 15)).'_'.time().'_60x60.' . $ext[1];
+        $LQPhotoIdb = 'photos_'.uniqid(mt_rand(10, 15)).'_'.time().'_100x100.' . $ext[1];
         imagejpeg($userLQPhotoIdb, $_SERVER['DOCUMENT_ROOT'].'/uploads/'.$LQPhotoIdb, 100);
         $contentLQPhotoIdb=addslashes(file_get_contents($_SERVER['DOCUMENT_ROOT'].'/uploads/'.$LQPhotoIdb));
         imagedestroy($userLQPhotoIdb);
