@@ -75,7 +75,7 @@
 											<div class='fSize list-element-margin-top'>";
 												for($i=0; $i<6; $i++){
 													if(isset($courseArray[$i]) && ( $courseArray[$i] != null ||$courseArray[$i] != '')){
-		echo											"<label class='label-style-course-list text-center label-margin'>" . strtoupper($courseArray[$i]) . "</label>";
+		echo											"<label class='label-style-course-list text-center label-margin text-ellipsis'>" . strtoupper($courseArray[$i]) . "</label>";
 													}		
 												}
 		echo								"</div> 

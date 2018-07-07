@@ -94,7 +94,7 @@
 							<div class='col-xs-11 name-width'>                           
 								<table>
 									<tr>
-										<td class='padding-left' style='padding-bottom: 8px; font-size: 18px; color:rgb(120,120,120);'>". $row['userName'] . "</td>
+										<td class='padding-left text-ellipsis' style='padding-bottom: 8px; font-size: 18px; color:rgb(120,120,120);'>". $row['userName'] . "</td>
 									</tr>
 									<tr>
 										<td class='padding-left'>";
@@ -118,7 +118,7 @@
 											<div class='fSize list-element-margin-top'>";
 												for($i=0; $i<6; $i++){
 													if(isset($courseArray[$i]) && ( $courseArray[$i] != null ||$courseArray[$i] != '')){
-		echo											"<label class='label-style-course-list text-center label-margin'>" . strtoupper($courseArray[$i]) . "</label>";
+		echo											"<label class='label-style-course-list text-center label-margin text-ellipsis'>" . strtoupper($courseArray[$i]) . "</label>";
 													}		
 												}
 		echo								"</div> 

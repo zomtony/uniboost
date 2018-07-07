@@ -808,3 +808,13 @@ select {
 .big-font {
 	font-size: 18px;
 }
+
+
+/*    字数超出 自动省略  */
+.text-ellipsis {
+	display: inline-block;
+	width: 120px;
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+}

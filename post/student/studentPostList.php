@@ -104,7 +104,7 @@
 							<div class='col-xs-11 name-width'>                           
 								<table>
 									<tr>
-										<td class='padding-left' style='padding-top: 2px; padding-bottom: 6px; font-size: 18px; color:rgb(120,120,120);'>". $row['userName'] . "</td>
+										<td class='padding-left text-ellipsis' style='padding-top: 2px; padding-bottom: 6px; font-size: 18px; color:rgb(120,120,120);'>". $row['userName'] . "</td>
 									</tr>
 									<tr>
 										<td class='padding-left'></td>
@@ -123,7 +123,7 @@
 									</tr>
 									<tr>
 										<td colspan='2'>
-											<div class='fSize'><label class='label-style-course-list text-center label-margin' id='expectedCourseb' >". strtoupper($row['expectedCourse']) . "</label></div> 
+											<div class='fSize'><label class='label-style-course-list text-center label-margin text-ellipsis' id='expectedCourseb' >". strtoupper($row['expectedCourse']) . "</label></div> 
 										</td>
 									</tr>
 								</table>
