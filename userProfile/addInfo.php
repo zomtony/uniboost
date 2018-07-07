@@ -51,7 +51,7 @@
                                 <div class='col-md-12 form-group inner-group flexbox-center'>
                                     <label class='col-sm-2 label-position padding-small text-center'>名字</label>                                              
                                     <div class='col-sm-5 inner-textfield'>
-                                        <input type='' name='userNamef' id='userNamef' placeholder='' class='form-control label-info-position margin-left-zero label-style1'  value='红领巾'>
+                                        <input type='' name='userNamef' id='userNamef' placeholder='' class='form-control label-info-position margin-left-zero label-style1'  value='红领巾' maxlength='20'>
                                     </div>
                                 </div>
                             </div>
@@ -60,7 +60,7 @@
                                 <div class='col-md-12 form-group inner-group flexbox-center'>
                                     <label class='col-sm-2 label-position padding-small text-center'>电话</label>                                              
                                     <div class='col-sm-5 inner-textfield'>
-                                        <input type='' name='phonef' id='phonef' placeholder='' class='form-control label-info-position margin-left-zero label-style1'  value=''>
+                                        <input type='' name='phonef' id='phonef' placeholder='' class='form-control label-info-position margin-left-zero label-style1'  value='' maxlength='20'>
                                     </div>
                                 </div>
                             </div>
@@ -68,7 +68,7 @@
                                 <div class='col-md-12 form-group inner-group flexbox-center'>
                                     <label class='col-sm-2 label-position padding-small text-center'>微信</label>                                               									
                                     <div class='col-sm-5 inner-textfield'>
-                                        <input type='' name='wechatf' id='wechatf' placeholder='' class='form-control label-info-position margin-left-zero label-style1'  value=''>
+                                        <input type='' name='wechatf' id='wechatf' placeholder='' class='form-control label-info-position margin-left-zero label-style1'  value='' maxlength='20'>
                                     </div>
                                 </div>
                             </div>                           

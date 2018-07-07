@@ -49,7 +49,7 @@
                                     <div class='col-md-12 form-group post-form-style post-form-style'>
                                         <label class='col-sm-2 label-position padding-small'>名字<font color='red'>*</font></label>
                                         <div class='col-sm-5 padding-small'>
-                                            <input type='' name='userNamef' id='userNamef' placeholder='' class='form-control label-style1 table-center'  value='' required autofocus>
+                                            <input type='' name='userNamef' id='userNamef' placeholder='' class='form-control label-style1 table-center'  value='' required autofocus maxlength='20'>
                                         </div>
                                     </div>
                                 </div>
@@ -59,7 +59,7 @@
                                         <label class='col-sm-2 label-position padding-small'>电话</label>
 
                                         <div class='col-sm-5 padding-small'>
-                                            <input type='' name='phoneNumberf' id='phoneNumberf' placeholder='' class='form-control label-style1 table-center'  value=''>
+                                            <input type='' name='phoneNumberf' id='phoneNumberf' placeholder='' class='form-control label-style1 table-center'  value='' maxlength='20'>
                                         </div>
                                     </div>
                                 </div>
@@ -67,7 +67,7 @@
                                     <div class='col-md-12 form-group post-form-style post-form-style'>
                                         <label class='col-sm-1 label-position padding-small'>微信</label>
                                         <div class='col-sm-5 padding-small'>
-                                            <input type='' name='weChatNumberf' id='weChatNumberf' placeholder='' class='form-control label-style1 table-center'  value=''>
+                                            <input type='' name='weChatNumberf' id='weChatNumberf' placeholder='' class='form-control label-style1 table-center'  value='' maxlength='20'>
                                         </div>
                                     </div>
                                 </div>";
@@ -85,7 +85,7 @@
                                 <div class='col-md-12 form-group post-form-style margin-position-top'>
                                     <label class='col-sm-1 label-position padding-small'>所需课号</label>                                              
                                     <div class='col-sm-5 padding-small'>
-                                        <input type='' name='expectedCoursef' id='expectedCoursef' placeholder='' class='form-control label-style1 table-center'  value='' required>
+                                        <input type='' name='expectedCoursef' id='expectedCoursef' placeholder='' class='form-control label-style1 table-center'  value='' required maxlength='10'>
                                     </div>
                                 </div> 
                             </div>
