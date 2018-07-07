@@ -585,6 +585,12 @@ a:active {
 	padding-top:5px;
 }
 
+@media (max-width: 850px){
+	.footer{
+		bottom: -280px;
+	}
+}
+
 .height-div{
 	height:20px;
 }

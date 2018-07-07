@@ -94,7 +94,7 @@
     echo    "<div class='row'>				
 				<div class='col-lg-12 text-center margin--position-top'>
 					<a href='/userProfile/userProfile.php?accountb=$accountb'>
-                    	<button type='button' class='btn btn-margin btn-margin userprofile-button-bg'>返回个人信息</button>
+                    	<button type='button' class='btn btn-margin btn-margin userprofile-button-bg'>返回我的档案</button>
 					</a>
                 </div>
             </div>";

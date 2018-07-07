@@ -133,7 +133,7 @@
 
                         <div class='row'>				
                             <div class='col-lg-12 text-center margin-position-top' style='margin-top: 10px; margin-bottom: 10px'>
-                                <button onclick='editMyProfile()' type='button' class='btn btn-margin btn-margin userprofile-button-bg'>返回个人信息</button>
+                                <button onclick='editMyProfile()' type='button' class='btn btn-margin btn-margin userprofile-button-bg'>取消修改</button>
                                 <input type='submit' id='btnSubmit' class='btn userprofile-button-bg' value='完成修改' onclick='cleanInput()'/>
                             </div>
                         </div>
