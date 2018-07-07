@@ -70,7 +70,7 @@
                                 <div class='row'>
                                     <div class='copy-fields hide'>";
                                         $count++;
-                    echo                "<div class='col-lg-4 course-input-padding'> <input type='text' name='courseArrayf[]' id='courseArrayf". $count ."' class='form-control form-rounded' placeholder='输入所教学校课号' maxlength='10'>
+                    echo                "<div class='col-lg-4 course-input-padding' style='min-width: 153px;'> <input type='text' name='courseArrayf[]' id='courseArrayf". $count ."' class='form-control form-rounded' placeholder='输入所教课号' maxlength='10'>
                                             
                                         </div>
                                     </div>

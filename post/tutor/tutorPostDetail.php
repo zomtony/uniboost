@@ -128,7 +128,7 @@
                     echo        "<div class='col-lg-7 padding-small table-center phone-margin'>
                                     
 
-                                    <label class=''>课程所属学校</label>
+                                    <label class=''>所教学校</label>
                                     <div>
                                         <label class='label-style text-center padding-top' style='background-color: #F3A8B1;'>". $result['school'] ."</label>
                                     </div>
