@@ -91,15 +91,7 @@
                             <div class='row margin-top-m section-padding-left'>
                                 <div class='col-lg-5 padding-small margin--position-top '>
             
-                                    <div class='row'>
-
-                                        <div class='col-md-12 form-group inner-group profile-form-style'>
-                                            <div class='col-sm-2 padding-small iphone5-fix-margin'><label class='label-position'>学校</label></div>
-                                            <div class='col-sm-5 inner-textfield' >
-                                                <label class='label-style text-center padding-top' style='background-color: #F3A8B1;'>". $result['school'] ."</label>
-                                            </div>
-                                        </div>
-                                    </div>";
+                                ";
                                     if($result['wage'] != '' && $result['wage'] != 0.00){   
                         echo           "<div class='row '>
                                             <div class='col-md-12 form-group inner-group profile-form-style'>
@@ -133,7 +125,14 @@
                         echo    "</div>";
  
                             if(trim($courseArray[0]) != ''){   
-                    echo        "<div class='col-lg-7 padding-small text-margin-top table-center'>
+                    echo        "<div class='col-lg-7 padding-small table-center phone-margin'>
+                                    
+
+                                    <label class=''>课程所属学校</label>
+                                    <div>
+                                        <label class='label-style text-center padding-top' style='background-color: #F3A8B1;'>". $result['school'] ."</label>
+                                    </div>
+
                                     <div><label class='label-position padding-small iphone5-fix-margin'>所教课号</label></div>
                                     <div>";
 

@@ -46,7 +46,7 @@
                                 <div class='col-sm-2 padding-small table-center'><label class='label-position padding-small'>学校</label></div>                                               
                                 <div class='col-sm-5 padding-small'>
                                     <select class='form-control label-style1 form-rounded-select' name='schoolf' id='chooseSchool' style='padding-top:0px;padding-bottom:0px;'>
-                                        <option value='selected'>--选择学校--</option>
+                                        <option value='selected'>课程所属学校</option>
                                         <option value='Langara'>Langara</option>
                                         <option value='UBC'>UBC</option>
                                         <option value='SFU'>SFU</option>
@@ -58,16 +58,13 @@
 
                         </div>   
                         
-                        <div class='col-lg-5 p-word text-margin-top'>
-                            <h4>个人简介</h4> 
-                            <textarea name='briefIntroductionf' class='form-control form-rounded' rows='4' > " . $result['briefIntroduction'] . " </textarea>
-
-                                    <button class='btn button-add-course-button add-more margin--position-top button-width button-margin-left form-rounded button-course margin-position-top' type='button'>
-                                        继续添加
-                                    </button>
+                        <div class='col-lg-5 p-word'>
+                    
+                                <button class='btn button-add-course-button add-more margin--position-top button-width button-margin-left form-rounded button-course margin-position-top' type='button'>
+                                    继续添加
+                                </button>
                                     
-                                    <div class='input-group control-group after-add-more  clean-input-group-display'>
-        
+                                <div class='input-group control-group after-add-more  clean-input-group-display'>
                                 </div>
 
                                 <div class='row'>
@@ -78,10 +75,16 @@
                                         </div>
                                     </div>
                                 </div>
-                        </div>
+                        
+                                <h4 style='margin-top: 22px;'>个人简介</h4> 
+                                <textarea name='briefIntroductionf' class='form-control form-rounded' rows='4' > " . $result['briefIntroduction'] . " </textarea>
 
-                        <div class='col-lg-2'></div>
+                        </div>
                     </div>
+
+
+
+
 
                     <div class='row myprofild-padding-top '>
                         <div class='col-lg-1'></div>

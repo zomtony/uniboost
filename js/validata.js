@@ -11,7 +11,7 @@ function checkTutorPostInput(){
     var school = document.getElementById('chooseSchool').value;
 
     if(school == "selected"){
-        window.alert("请选择学校");
+        window.alert("请选择课程所属学校");
         return false;
     }
 }

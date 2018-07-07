@@ -92,10 +92,10 @@
 
                             <div class='row margin-position-top'>
                                 <div class='col-md-12 form-group post-form-style margin-position-top'>
-                                    <label class='col-sm-1 label-position padding-small'>所在学校</label>                                              
+                                    <label class='col-sm-1 label-position padding-small'>选择学校</label>                                              
                                     <div class='col-sm-5 padding-small'>
                                         <select class='form-control label-style1 form-rounded-select' name='schoolf' id='chooseSchool' style='padding-top:0px;padding-bottom:0px;'>
-                                            <option value='selected'>--选择学校--</option>
+                                            <option value='selected'>课程所属学校</option>
                                             <option value='Langara'>Langara</option>
                                             <option value='UBC'>UBC</option>
                                             <option value='SFU'>SFU</option>

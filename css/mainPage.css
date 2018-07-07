@@ -291,9 +291,9 @@ a:active {
 .label-style{
 	border-radius: 25px;
 	background-color: #FAC164;
-	width:260px;
+	width:200px;
+	min-width: 160px;
 	height:30px;
-	margin-left: 6px;
 	color: white;
 }
 
@@ -317,6 +317,17 @@ a:active {
 	}
 }
 
+@media (min-width: 1201px){
+	.label-width-fix {
+		width: 50px;
+	}
+}
+
+@media (max-width: 1199px){
+	.phone-margin {
+		margin: 28px auto;
+	}
+}
 
 
 
@@ -789,4 +800,11 @@ a:active {
 select {
 	text-align: center;
 	text-align-last: center;
+}
+
+
+/* 下拉列表 font size  */
+
+.big-font {
+	font-size: 18px;
 }

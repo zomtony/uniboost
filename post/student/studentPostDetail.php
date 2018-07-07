@@ -92,23 +92,12 @@
 
                             <div class='row margin-top-m section-padding-left'>
                                 <div class='col-lg-6 padding-small margin--position-top '>
-            
-                                    <div class='row'>
-
-                                        <div class='col-md-12 form-group inner-group profile-form-style'>
-                                            <div class='col-sm-3 padding-small iphone5-fix-margin phone-fix-font'><label class='label-position'>学校</label></div>
-                                            <div class='col-sm-5 inner-textfield'>
-                                                <label class='label-style text-center padding-top' style='background-color: #F3A8B1;'>
-                                                    ". $result['school'] ."
-                                                </lable>
-                                            </div>
-                                        </div>
-                                    </div>";
+                                ";
 
                                     if($result['expectedPrice'] != '' && $result['expectedPrice'] != 0.00){ 
                         echo            "<div class='row '>
                                             <div class='col-md-12 form-group inner-group profile-form-style'>
-                                                <div class='col-sm-3 padding-small iphone5-fix-margin phone-fix-font'><label class='label-position'>期望价</label></div>
+                                                <div class='col-sm-3 padding-small iphone5-fix-margin phone-fix-font label-width-fix'><label class='label-position'>期望价</label></div>
                                                 <div class='col-sm-5 inner-textfield'>
                                                     <label class='label-style text-center padding-top'>$
                                                         ". $result['expectedPrice'] ."
@@ -120,7 +109,7 @@
                                     if($result['phoneNumber'] != ''){ 
                         echo            "<div class='row '>
                                             <div class='col-md-12 form-group inner-group profile-form-style'>
-                                                <div class='col-sm-3 padding-small iphone5-fix-margin phone-fix-font'><label class='label-position'>电话</label></div>
+                                                <div class='col-sm-3 padding-small iphone5-fix-margin phone-fix-font label-width-fix'><label class='label-position'>电话</label></div>
                                                 <div class='col-sm-5 inner-textfield'>
                                                     <label class='label-style text-center padding-top'>
                                                         ". $result['phoneNumber'] ."
@@ -133,7 +122,7 @@
                                     if($result['weChatNumber'] != ''){ 
                         echo            "<div class='row '>
                                             <div class='col-md-12 form-group inner-group profile-form-style'>
-                                                <div class='col-sm-3 padding-small iphone5-fix-margin phone-fix-font'><label class='label-position'>微信</label></div>
+                                                <div class='col-sm-3 padding-small iphone5-fix-margin phone-fix-font label-width-fix'><label class='label-position'>微信</label></div>
                                                 <div class='col-sm-5 inner-textfield'>
                                                     <label class='label-style text-center padding-top'>
                                                         ". $result['weChatNumber'] ."
@@ -146,11 +135,22 @@
                         echo    "</div>";
 
                             if($result['expectedCourse'] != ''){ 
-                    echo        "<div class='col-lg-6 padding-small margin--position-top table-center'>
-                                    <div><label class='label-position'>所需课号</label></div>
+                    echo        "<div class='col-lg-6 padding-small margin--position-top table-center phone-margin'>
+
+                                   
+                                    <label class=''>课程所属学校</label>
                                     <div>
-                                        <label class='label-style-course text-center label-margin' id='mondayf' >".$result['expectedCourse']."</label>
-                                    </div>                                     
+                                        <label class='label-style text-center padding-top' style='background-color: #F3A8B1;'>
+                                            ". $result['school'] ."
+                                        </lable>  
+                                    </div>          
+                                  
+                                   
+                                    <label class='label-position'>所需课号</label>
+                                    <div>
+                                        <label class='label-style-course text-center' id='mondayf' >".$result['expectedCourse']."</label
+                                    </div>  
+
                                 </div>";
                             }
                     echo    "</div>
