@@ -8,7 +8,7 @@
         include($_SERVER['DOCUMENT_ROOT'].'/component/starRating/rating.php'); //rating
         include($_SERVER['DOCUMENT_ROOT'].'/userProfile/php/processUserInfo.php'); 
     echo    "<div class='row text-center'>
-                <h1>完善个人资料</h1>
+                <h3>完善个人资料</h3>
             </div>
             <div class='theme-backcolor3'>
 
@@ -81,7 +81,7 @@
                     </div>
 
                     <div class='row' style='text-align:right;padding:15px;'>				
-                            <input type='submit' id='btnSubmit' class='btn userprofile-button-bg name-width' value='完成修改' onclick='cleanInput()'/>
+                            <input type='submit' id='btnSubmit' class='btn userprofile-button-bg name-width' style='background: #8CCE44;' value='完成' onclick='cleanInput()'/>
                     </div>
                 
                 </form>

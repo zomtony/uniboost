@@ -58,6 +58,13 @@ body{
 
 }
 
+@media (max-width: 1424px) { 
+	.avaliabletime-margin-top{
+		margin-top:5px;
+	}
+}
+
+
 
 @media (min-width: 767px) and (max-width: 992px ) {
 	.multi-item-carousel .carousel-inner .active.left { left: -50%; }
