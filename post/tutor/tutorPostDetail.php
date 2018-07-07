@@ -110,7 +110,7 @@
                                             </div>
                                         </div>";
                                     }    
-                                    if($result['phoneNumber'] != ''){  
+                                    if(trim($result['phoneNumber']) != ''){  
                         echo            "<div class='row '>
                                             <div class='col-md-12 form-group'>
                                                 <div class='col-sm-2 padding-small'><label class='label-position'>电话</label></div>
@@ -120,7 +120,7 @@
                                             </div>
                                         </div>";
                                     }
-                                    if($result['weChatNumber'] != ''){  
+                                    if(trim($result['weChatNumber']) != ''){  
                         echo            "<div class='row '>
                                             <div class='col-md-12 form-group'>
                                                 <div class='col-sm-2 padding-small'><label class='label-position'>微信</label></div>
@@ -132,7 +132,7 @@
                                     }
                         echo    "</div>";
  
-                            if($courseArray[0] != ''){   
+                            if(trim($courseArray[0]) != ''){   
                     echo        "<div class='col-lg-7 padding-small text-margin-top table-center'>
                                     <div><label class='label-position padding-small'>所教课号</label></div>
                                     <div>";
@@ -164,9 +164,11 @@
                         <div class='col-sm-1 padding-small'></div>
                         <div class='col-sm-11 padding-small' >
                             <div class='row'>
-                                <div class='col-xs-1 padding-small head-width intro-margin-left'>
-                                    <h4>个人简介</h4>
-                                </div>
+                                <div class='col-xs-1 padding-small head-width intro-margin-left'>";
+                            if(trim($result['briefIntroduction']) != ''){   
+                echo                "<h4>个人简介</h4>";
+                            }
+                echo            "</div>
                                 <div class='col-xs-11 padding-small margin-top-s name-width'>";
                                     $rating->showRating($ratePre, $rateValue, $rateTimes); 
                 echo            "</div>   
@@ -176,7 +178,7 @@
                                     <p>" . $result['briefIntroduction'] . "</p>
                                 </div>
                             </div>";
-                            if($result['content'] != ''){ 
+                            if(trim($result['content']) != ''){ 
                 echo            "<div class='row p-word'>
                                     <div class='col-xs-11 padding-small intro-margin-left'>
                                         <h4>内容</h4>

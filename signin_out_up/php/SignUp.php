@@ -26,7 +26,7 @@
 		$_SESSION['userLQPhotoId'] = file_get_contents($_SERVER['DOCUMENT_ROOT'].'/img/defaultLQPohotId.jpg');
 		header("Location: /userProfile/addInfo.php");
 	}else{
-		//header("Location: ../signup.php?info=啊哦，该账号已经被注测过啦，换一个试试吧");
+		header("Location: ../signup.php?info=啊哦，该账号已经被注测过啦，换一个试试吧");
 	}
 
 	$myconn->disconnect();
