@@ -68,8 +68,26 @@
 	}
 	
 	if($total == 0){
-	    echo "<div><h3>啊, 还没有相关帖子哦, 看看其他的吧</h3></div><br>";
-		$sql = "SELECT sp.studentPostId, sp.userName, sp.userAccount, sp.expectedCourse, sp.expectedPrice, sp.school, sp.date, ui.userLQPhotoId FROM Student_Post sp LEFT JOIN User_Info ui ON sp.userAccount = ui.userAccount  ORDER BY sp.studentPostId DESC {$splitPageStudent->limit}";
+		echo "<div><h3>啊, 还没有相关帖子哦, 看看其他的吧</h3></div><br>";
+		if($_SESSION['chooseSchool'] != 'selected'){
+			$school = $_SESSION['chooseSchool'];
+			$stmt = $conn->prepare("SELECT * FROM Student_Post WHERE school = '$school'"); 
+			$stmt->execute();
+			$total = $stmt->rowCount();
+			$splitPageStudent = new splitPage($total, $num);
+
+			$sql = "SELECT sp.studentPostId, sp.userName, sp.userAccount, sp.expectedCourse, sp.expectedPrice, sp.school, sp.date, ui.userLQPhotoId FROM Student_Post sp LEFT JOIN User_Info ui ON sp.userAccount = ui.userAccount WHERE school = '$school' ORDER BY sp.studentPostId DESC {$splitPageStudent->limit}";		
+
+
+		}
+		else{
+			$stmt = $conn->prepare("SELECT * FROM Student_Post"); 
+			$stmt->execute();
+			$total = $stmt->rowCount();
+			$splitPageStudent = new splitPage($total, $num);
+	
+			$sql = "SELECT sp.studentPostId, sp.userName, sp.userAccount, sp.expectedCourse, sp.expectedPrice, sp.school, sp.date, ui.userLQPhotoId FROM Student_Post sp LEFT JOIN User_Info ui ON sp.userAccount = ui.userAccount  ORDER BY sp.studentPostId DESC {$splitPageStudent->limit}";
+			}
 	}
 
 	$count = 0;

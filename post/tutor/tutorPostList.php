@@ -65,10 +65,25 @@
 	}
 	
     if($total == 0){
-	    echo "<div><h3>啊, 还没有人教这个课哦, 看看其他的吧</h3></div><br>";
-        $sql = "SELECT * FROM Tutor_Post t_post
-            LEFT JOIN User_Info u_info
-            ON t_post.userAccount = u_info.userACCOUNT ORDER BY t_post.tutorPostId DESC {$splitPage->limit}";
+		echo "<div><h3>啊, 还没有人教这个课哦, 看看其他的吧</h3></div><br>";
+		if($_SESSION['chooseSchool'] != 'selected'){
+			$school = $_SESSION['chooseSchool'];
+			$stmt = $conn->prepare("SELECT * FROM Tutor_Post WHERE school = '$school'");
+			$stmt->execute();
+			$total = $stmt->rowCount();
+			$splitPage = new splitPage($total, $num);
+			$sql = "SELECT * FROM Tutor_Post t_post
+				LEFT JOIN User_Info u_info
+				ON t_post.userAccount = u_info.userACCOUNT WHERE t_post.school = '$school' ORDER BY t_post.tutorPostId DESC {$splitPage->limit}";	
+		}else{
+			$stmt = $conn->prepare("SELECT * FROM Tutor_Post");
+			$stmt->execute();
+			$total = $stmt->rowCount();
+			$splitPage = new splitPage($total, $num);
+			$sql = "SELECT * FROM Tutor_Post t_post
+				LEFT JOIN User_Info u_info
+				ON t_post.userAccount = u_info.userACCOUNT ORDER BY t_post.tutorPostId DESC {$splitPage->limit}";
+		}
 	}
 	
 	$count = 0;
@@ -76,7 +91,7 @@
 		$courseArray = explode("|", $row['courseNumber']);
 		$postTime = $row['date'];
 		$timeAgo = $getPostTime -> timeAgo($currectTime, $postTime);
-		echo "<a href='/post/tutor/tutorPostDetail.php?tutorPost=". $row['tutorPostId'] . "'>";
+		echo 	"<a href='/post/tutor/tutorPostDetail.php?tutorPost=". $row['tutorPostId'] . "'>";
 		if($count%2 == 0){
 		echo    "<div class='row theme-backcolor2 main-pg-list-bg'>";
 		}else {
