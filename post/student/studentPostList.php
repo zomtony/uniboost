@@ -123,7 +123,7 @@
 									</tr>
 									<tr>
 										<td colspan='2'>
-											<div class='fSize'><label class='label-style-course-list text-center label-margin' id='expectedCourseb' >". $row['expectedCourse'] . "</label></div> 
+											<div class='fSize'><label class='label-style-course-list text-center label-margin' id='expectedCourseb' >". strtoupper($row['expectedCourse']) . "</label></div> 
 										</td>
 									</tr>
 								</table>
