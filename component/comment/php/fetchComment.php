@@ -29,7 +29,7 @@
     }
 
     if(isset( $_SESSION['post_time_record'])){
-        echo  $_SESSION['post_time_record'];
+        echo  "<div class='text-center'>" . $_SESSION['post_time_record'] . "</div>";
         unset($_SESSION['post_time_record']);
     }
 
