@@ -157,6 +157,11 @@
                                 }else{
                 echo                "<option value='AC'>AC</option>";
                                 }  
+                                if($_SESSION['chooseSchool'] == 'OTHERS'){
+                echo                "<option value='OTHERS' selected>其他</option>";
+                                }else{
+                echo                "<option value='OTHERS'>Ohters</option>";
+                                }  
                 echo            "</select>";
                         }else{
                 echo        "<select class='form-control maingpage-button school-choose-select' name='chooseSchool' id='chooseSchool'>

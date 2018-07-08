@@ -105,7 +105,7 @@
 					<div class='col-sm-3 padding-zero col3-width'>
 						<div class='row padding-zero'>
 							<div class='col-xs-1 Width'> 
-								<img class='Width rounded' src='data:image/jpeg;base64," . base64_encode($row['userHQPhotoId']) . "' alt=''>
+								<img class='Width rounded' src='data:image/jpeg;base64," . base64_encode($row['userLQPhotoId']) . "' alt=''>
 							</div>
 							<div class='col-xs-11 name-width'>                           
 								<table>
