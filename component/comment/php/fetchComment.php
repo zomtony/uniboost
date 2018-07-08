@@ -27,7 +27,12 @@
     echo    "<div style='padding:10px;text-align:center;'>
             <h4>暂时还没有评论哦</h4>";
     }
-    $output = '';
+
+    if(isset( $_SESSION['post_time_record'])){
+        echo  $_SESSION['post_time_record'];
+        unset($_SESSION['post_time_record']);
+    }
+
     foreach($result as $row)
     {
 		$postTime = $row['date'];

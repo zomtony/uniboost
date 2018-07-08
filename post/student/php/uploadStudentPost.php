@@ -17,7 +17,7 @@
     if($_POST['expectedPricef'] != null){
         $expectedPriceb = $_POST['expectedPricef'];
     }else{
-        $expectedPriceb = 0.00;
+        $expectedPriceb = -0.01;
     }
   
     $avaDayb = $_POST['mondayf'].$_POST['tuesdayf'].$_POST['wednesdayf'].$_POST['thursdayf'].$_POST['fridayf'].$_POST['saturdayf'].$_POST['sundayf'];

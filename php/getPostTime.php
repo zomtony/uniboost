@@ -35,5 +35,13 @@
             }
             return  floor($quotient) . $unit . "前";
         }
+
+
+        public function checkIfCanPost($currectTime, $postTime){
+            $currectTime  = strtotime($currectTime); 
+            $postTime  = strtotime($postTime); 
+       
+            return $secondsAgo = $currectTime - $postTime;
+        }
     }
 ?>

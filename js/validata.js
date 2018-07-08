@@ -15,3 +15,8 @@ function checkTutorPostInput(){
         return false;
     }
 }
+
+function checkIfLogin(){
+    window.alert("请登陆后写评论");
+    return false;
+}

@@ -15,7 +15,7 @@
     if($_POST['wagef'] != null){
         $wageb = $_POST['wagef'];
     }else{
-        $wageb = 0.00;
+        $wageb = -0.01;
     }
     $schoolb=$_POST['schoolf'];
     

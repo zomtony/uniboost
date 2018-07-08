@@ -20,7 +20,7 @@
         $avaliableDay = $result['avaliableDay'];
         $courseArray = explode("|", $result['courseNumber']);
         $_SESSION['tutorPostAccount'] = $result['userAccount'];
-        
+                
         echo    "<div id='userProfile' class='theme-backcolor3'> 
                     <div class='row table-center'>
                         <div class='col-lg-1 padding-small'></div>
@@ -92,12 +92,21 @@
                                 <div class='col-lg-5 padding-small margin--position-top '>
             
                                 ";
-                                    if($result['wage'] != '' && $result['wage'] != 0.00){   
+                                    if($result['wage'] != '' && $result['wage'] != -0.01){   
                         echo           "<div class='row '>
                                             <div class='col-md-12 form-group inner-group profile-form-style'>
                                                 <div class='col-sm-2 padding-small iphone5-fix-margin'><label class='label-position'>时薪</label></div>
                                                 <div class='col-sm-5 inner-textfield'>
                                                     <label class='label-style text-center padding-top'>$". $result['wage'] ."</label>
+                                                </div>
+                                            </div>
+                                        </div>";
+                                    }else{
+                        echo           "<div class='row '>
+                                            <div class='col-md-12 form-group inner-group profile-form-style'>
+                                                <div class='col-sm-2 padding-small iphone5-fix-margin'><label class='label-position'>时薪</label></div>
+                                                <div class='col-sm-5 inner-textfield'>
+                                                    <label class='label-style text-center padding-top'>面议</label>
                                                 </div>
                                             </div>
                                         </div>";
@@ -192,9 +201,16 @@
                 <div class='row' style='display: flex; height: 60px; align-items: center;'>
                     <div class='col-xs-1 padding-small'></div>                   
                     <div class='col-xs-5' style='padding-left:0px;'><h4 style='margin-right:0px;'>学生评论</h4></div>  
-                    <div class='col-xs-5 TimeFontAlign'> 
-                        <button class='btn userprofile-button-bg rating-button-margin button-width button-text' style='padding: 0px; margin-right:0px; margin-left:0px; height: 32px; width: 100px;' type='button' data-toggle='modal' data-target='#myModal'>写评论</button>
-                    </div>
+                    <div class='col-xs-5 TimeFontAlign'>";
+
+
+                    if(isset($_SESSION['accountb'])){
+                echo    "<button class='btn userprofile-button-bg rating-button-margin button-width button-text' style='padding: 0px; margin-right:0px; margin-left:0px; height: 32px; width: 100px;' type='button' data-toggle='modal' data-target='#myModal'>写评论</button>";
+                    }else{
+                echo    "<button class='btn userprofile-button-bg rating-button-margin button-width button-text' style='padding: 0px; margin-right:0px; margin-left:0px; height: 32px; width: 100px;' type='button' onclick='checkIfLogin()'>写评论</button>";
+                    }
+                    
+                echo    "</div>
                     <div class='col-xs-1 padding-small'></div>   
                 </div>
 

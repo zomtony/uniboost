@@ -9,7 +9,7 @@
     }
     if(isset($_POST["keyWords"])){
         $_SESSION['keyWords'] = trim($_POST["keyWords"]);
-    }
+    }        
 ?>
 
     <div class="container">       
