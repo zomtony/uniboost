@@ -37,7 +37,7 @@
                                     <div class='col-md-12 form-group post-form-style post-form-style'>
                                         <label class='col-sm-1 label-position padding-small'>微信</label>
                                         <div class='col-sm-5 padding-small'>
-                                            <input type='' name='weChatNumberf' id='weChatNumberf' placeholder='' class='form-control label-style1 table-center'  value='". $result['weChatNumber'] ."' maxlength='15'>
+                                            <input type='' name='weChatNumberf' id='weChatNumberf' placeholder='' class='form-control label-style1 table-center'  value='". $result['weChatNumber'] ."' maxlength='30'>
                                         </div>
                                     </div>
                                 </div>";
@@ -67,7 +67,7 @@
                                     <div class='col-md-12 form-group post-form-style post-form-style'>
                                         <label class='col-sm-1 label-position padding-small'>微信</label>
                                         <div class='col-sm-5 padding-small'>
-                                            <input type='' name='weChatNumberf' id='weChatNumberf' placeholder='' class='form-control label-style1 table-center'  value='' maxlength='15'>
+                                            <input type='' name='weChatNumberf' id='weChatNumberf' placeholder='' class='form-control label-style1 table-center'  value='' maxlength='30'>
                                         </div>
                                     </div>
                                 </div>";

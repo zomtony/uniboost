@@ -31,7 +31,7 @@
                             <div class='row margin-position-top padding-bottom-m post-form-style'>
                                 <div class='col-sm-2 padding-small table-center'><label class='label-position padding-small'>微信</label></div>
                                 <div class='col-sm-5 padding-small '>
-                                    <input type='' name='weChatf' id='weChatf' placeholder='' class='form-control label-style1 table-center'  value='". $result['weChatNumber'] ."' maxlength='15'>
+                                    <input type='' name='weChatf' id='weChatf' placeholder='' class='form-control label-style1 table-center'  value='". $result['weChatNumber'] ."' maxlength='30'>
                                     
                                 </div>
                             </div>
