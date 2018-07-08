@@ -97,7 +97,7 @@
                                             <div class='col-md-12 form-group inner-group profile-form-style'>
                                                 <div class='col-sm-2 padding-small iphone5-fix-margin'><label class='label-position'>时薪</label></div>
                                                 <div class='col-sm-5 inner-textfield'>
-                                                    <label class='label-style text-center padding-top'>$". $result['wage'] ."</label>
+                                                    <label class='label-style text-center padding-top'>$". round($result['wage']) ."</label>
                                                 </div>
                                             </div>
                                         </div>";
