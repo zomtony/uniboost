@@ -160,7 +160,7 @@
                                 if($_SESSION['chooseSchool'] == 'OTHERS'){
                 echo                "<option value='OTHERS' selected>其他</option>";
                                 }else{
-                echo                "<option value='OTHERS'>Ohters</option>";
+                echo                "<option value='OTHERS'>Others</option>";
                                 }  
                 echo            "</select>";
                         }else{

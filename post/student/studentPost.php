@@ -101,7 +101,7 @@
                                             <option value='SFU'>SFU</option>
                                             <option value='CC'>CC</option>
                                             <option value='AC'>AC</option>
-                                            <option value='OTHERS'>Ohters</option>
+                                            <option value='OTHERS'>Others</option>
                                         </select>
                                     </div>
                                 </div> 
