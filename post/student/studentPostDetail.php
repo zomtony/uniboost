@@ -146,7 +146,7 @@
                                     </div>          
                                   
                                    
-                                    <label class='label-position'>所需课号</label>
+                                    <label class='label-position big-text-ellipsis'>所需课号</label>
                                     <div>
                                         <label class='label-style-course text-center' id='mondayf' >".$result['expectedCourse']."</label
                                     </div>  

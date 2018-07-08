@@ -147,7 +147,7 @@
 
                                     for($i = 0; $i < 3; $i++){
                                         if(isset($courseArray[$i])&&!empty($courseArray[$i])){
-                                echo        "<label class='label-style-course text-center label-margin' id='mondayf' >".$courseArray[$i]."</label>";
+                                echo        "<label class='label-style-course text-center big-text-ellipsis label-margin' id='mondayf' >".$courseArray[$i]."</label>";
                                         }
                                     }    
 
@@ -155,7 +155,7 @@
                                     <div>";
                                     for($i = 3; $i < 6; $i++){
                                         if(isset($courseArray[$i])&&!empty($courseArray[$i])){
-                                echo        "<label class='label-style-course text-center label-margin' id='mondayf' >".$courseArray[$i]."</label>";
+                                echo        "<label class='label-style-course text-center big-text-ellipsis label-margin' id='mondayf' >".$courseArray[$i]."</label>";
                                         }
                                     }  
                                           
