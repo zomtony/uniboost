@@ -550,11 +550,22 @@ a:active {
 	font-size: 14px;
 }
 
+/* 这个没用了 */
 .td-post-time {
 	width:100%;
 	text-align: right;
 	font-size: 14px;
 }
+
+/* ******* 帖子时间跑上去 by jeff *******/
+
+.phone-post-time {
+	float: right;
+	font-size: 14px;
+	padding-top: 10px;
+	padding-right: 28px;
+}
+
 
 .button-text{
 	font-size:20px;
@@ -609,7 +620,7 @@ a:active {
 /**********comment style************/
 .comment-post-time {
 	float: right;
-	padding-right:8px;
+	padding-right:18px;
 }
 
 
