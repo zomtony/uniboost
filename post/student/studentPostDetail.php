@@ -22,13 +22,14 @@
                     <div class='row table-center' style='padding-bottom:20px;'>
                         <div class='col-lg-1 padding-small'></div>
                         <div class='col-lg-3 padding-small'>";   
-                        
-                        if($result['userAccount'] == 'Guest' || $result['userAccount'] == NULL){
-        echo                "<img class='rounded profile-img-size' src='/img/defaultHQPohotId.jpg' alt='photoId'/>";  
-                        }else{
-        echo                "<img class='rounded profile-img-size' src='data:image/jpeg;base64," . base64_encode($result['userHQPhotoId']) . "'alt='userpic'/>";    
-                        }                                                    							
+
+                            if($result['userAccount'] == 'Guest' || $result['userAccount'] == NULL){
+            echo                "<img class='rounded profile-img-size' src='/img/defaultHQPohotId.jpg' alt='photoId'/>";  
+                            }else{
+            echo                "<img class='rounded profile-img-size' src='data:image/jpeg;base64," . base64_encode($result['userHQPhotoId']) . "'alt='userpic'/>";    
+                            }                                                    							
         echo            "</div>    
+                        
                         <div class='col-lg-8 section-padding-left' style='margin-top: 12px'>
 
                             <div class='row section-padding-left'>
@@ -87,8 +88,7 @@
                                 
                     echo            "</div>
 
-         
-                            </div>
+                             </div>
 
                             <div class='row margin-top-m section-padding-left'>
                                 <div class='col-lg-6 padding-small margin--position-top '>
@@ -155,11 +155,13 @@
                             }
                     echo    "</div>
 
+
+                            </div>
                         </div>
                     </div>";
 
                 if($result['content'] != ''){
-        echo        "<div class='row'>
+        echo        "<div class='row margin-top-s  post-detail-margin'>
                         <div class='col-sm-1 padding-small'></div>
                         <div class='col-sm-11 padding-small' >                           
                             <div class='row p-word'>
