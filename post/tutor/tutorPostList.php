@@ -101,7 +101,8 @@
 		$rateValue = $row['averageRateScore'];
 		$ratePre = ($rateValue/5-4/120)*100;
 		$rateTimes = $row['rateNumber'];
-		echo 		"<div class='col-sm-3 padding-zero col3-width'>
+		echo 		"<div class='phone-post-time'>" . $timeAgo . "</div>
+					<div class='col-sm-3 padding-zero col3-width'>
 						<div class='row padding-zero'>
 							<div class='col-xs-1 Width'> 
 								<img class='Width rounded' src='data:image/jpeg;base64," . base64_encode($row['userHQPhotoId']) . "' alt=''>
@@ -126,7 +127,6 @@
 								<table>
 									<tr>
 										<td><label class='label-style-school-list text-center'>" . $row['school'] . "</label></td>
-										<td class='td-post-time'>" . $timeAgo . "</td>
 									</tr>
 									<tr>
 										<td colspan='2'>
