@@ -65,9 +65,9 @@
         }else{
             $theInterval = 300 - $theTime;
             if($theInterval > 60){
-                $_SESSION['post_time_record'] = "<label>请在". round($theInterval/60) ."分钟后在尝试</label>";
+                $_SESSION['post_time_record'] = "<label>你刚刚评论过了哦，请在". round($theInterval/60) ."分钟后再尝试</label>";
             }else{
-                $_SESSION['post_time_record'] = "<label>请在". $theInterval ."秒后在尝试</label>";
+                $_SESSION['post_time_record'] = "<label>你刚刚评论过了哦，请在". $theInterval ."秒后再尝试</label>";
             }
         }
 

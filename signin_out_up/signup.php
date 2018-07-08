@@ -26,7 +26,7 @@
 							</div>
 
 							<div class="form-group col-lg-6">
-								<label>请在输一次密码<font color="red">*</font></label>
+								<label>请再输一次密码<font color="red">*</font></label>
 								<input type="password" id="pwdf2" data-minlenth="3" placeholder="" name="pwdf2" class="form-control" required>						
 							</div>
 						</div>
