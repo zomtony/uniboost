@@ -183,7 +183,7 @@
                             </div>
                             <div class='row p-word'>
                                 <div class='col-xs-11 padding-small intro-margin-left'>
-                                    <p>" . $result['briefIntroduction'] . "</p>
+                                    <pre>" . $result['briefIntroduction'] . "</pre>
                                 </div>
                             </div>";
                             if(trim($result['content']) != ''){ 
@@ -195,7 +195,7 @@
                                 </div>";
                             }
                 echo    "</div>
-                    </div>
+                    </div> 
                 </div>
 
                 <div class='row' style='display: flex; height: 60px; align-items: center;'>
