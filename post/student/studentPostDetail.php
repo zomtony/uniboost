@@ -166,7 +166,7 @@
                         <div class='col-sm-11 padding-small' >                           
                             <div class='row p-word'>
                                 <div class='col-xs-12 padding-small'>
-                                    <h4>学生要求</h4>
+                                    <h4>补充内容</h4>
                                     <p>" . $result['content'] . "</p>
                                 </div>
                             </div>
