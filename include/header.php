@@ -79,14 +79,14 @@
                             </li>                      
                             <?php                       
                                 if(isset($_SESSION['accountb'])){
-                                    $accountb = $_SESSION['accountb'];
+                                    $acb = $_SESSION['accountb'];
                                     echo    "<li class='dropdown'>
                                                 <a class='dropdown-toggle' data-toggle='dropdown' style='margin-top: 0px;margin-bottom: 0px;'>
                                                     <img class='userPhotoId' src='data:image/jpeg;base64," . base64_encode($_SESSION['userLQPhotoId']) . "' alt='' >
                                                 </a>
                                                 <ul class='dropdown-menu'>
                                                     <li><a href='/index.php'>回到首页</a></li>
-                                                    <li><a href='/userProfile/userProfile.php?accountb=$accountb'>我的档案</a></li>
+                                                    <li><a href='/userProfile/userProfile.php?acb=$acb'>我的档案</a></li>
                                                     <li><a href='/signin_out_up/php/SignOut.php'>登出</a></li>
                                                 </ul>
                                             </li>";
