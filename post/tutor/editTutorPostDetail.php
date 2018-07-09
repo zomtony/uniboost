@@ -209,46 +209,9 @@
                             }
                 echo    "</div>
                     </div> 
-                </div>
-
-                <div class='row' style='display: flex; height: 60px; align-items: center;'>
-                    <div class='col-xs-1 padding-small'></div>                   
-                    <div class='col-xs-5' style='padding-left:0px;'><h4 style='margin-right:0px;'>学生评论</h4></div>  
-                    <div class='col-xs-5 TimeFontAlign'>";
-
-
-                    if(isset($_SESSION['accountb'])){
-                echo    "<button class='btn userprofile-button-bg rating-button-margin button-width button-text' style='padding: 0px; margin-right:0px; margin-left:0px; height: 32px; width: 100px;' type='button' data-toggle='modal' data-target='#myModal'>写评论</button>";
-                    }else{
-                echo    "<button class='btn userprofile-button-bg rating-button-margin button-width button-text' style='padding: 0px; margin-right:0px; margin-left:0px; height: 32px; width: 100px;' type='button' onclick='checkIfLogin()'>写评论</button>";
-                    }
-                    
-                echo    "</div>
-                    <div class='col-xs-1 padding-small'></div>   
-                </div>
-
-                <div class='modal fade' id='myModal' tabindex='-1' role='dialog' aria-labelledby='myModalLabel' aria-hidden='true'>
-                    <div class='modal-dialog'>
-                        <div class='modal-content'>
-                            <div class='modal-header'>
-                                <button type='button' class='close' data-dismiss='modal' aria-label='Close'><span aria-hidden='true'>×</span></button>
-                                <h4 class='modal-title' id='myModalLabel'>我的评价</h4>
-                            </div>
-                            <div class='modal-body'>";    
-                                $rating->userRating();
-                
-                echo       "</div>
-                            <div class='modal-footer'>
-                                <button type='button' class='btn btn-default' data-dismiss='modal'>取消</button>
-                                <button type='button' class='btn btn-primary' onclick='userSubmit()' data-dismiss='modal'>确定</button>
-                            </div>
-                        </div>
-                    </div>
                 </div>";
 
     ?>
-    <div class='theme-backcolor3'>
-        <?php include($_SERVER['DOCUMENT_ROOT'].'/component/comment/comment.php'); ?>
-    </div>
+
  </div>
 <?php include($_SERVER['DOCUMENT_ROOT'].'/include/footer.php');?>
