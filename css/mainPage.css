@@ -841,7 +841,7 @@ select {
 
 
 /*    字数超出 自动换行  */
-pre{
+pre {
 	white-space:pre-wrap;
 	white-space:-moz-pre-wrap;
 	white-space:-pre-wrap;
