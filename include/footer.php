@@ -6,9 +6,9 @@
 				
 				<div class="footer-contact">
 					<div style="height: 40px;">
-						<div class="col-xs-4">关于我们</div>
-						<div class="col-xs-4">联系我们</div>
-						<div class="col-xs-4">用户条款</div>
+						<div class="col-xs-4"><a href="/include/aboutus.php">关于我们</a></div>
+						<div class="col-xs-4"><a href="/include/contactus.php">联系我们</a></div>
+						<div class="col-xs-4"><a href="/include/termAndConditions.php">用户条款</a></div>
 					</div>
 
 					<div>
