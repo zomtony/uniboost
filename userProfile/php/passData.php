@@ -41,10 +41,10 @@
 
     if($count > 0 ){
         $processUserInfo->disconnect();
-        header("Location: ../userProfile.php?accountb=$accountb");
+        header("Location: ../userProfile.php");
     }else{
         $processUserInfo->disconnect();
-        header("Location: ../userProfile.php?accountb=$accountb&info=no change");
+        header("Location: ../userProfile.php?info=no change");
     } 
 
 

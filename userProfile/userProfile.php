@@ -7,7 +7,7 @@
     <?php
         include($_SERVER['DOCUMENT_ROOT'].'/component/starRating/rating.php'); //rating
         include($_SERVER['DOCUMENT_ROOT'].'/userProfile/php/processUserInfo.php'); 
-        $acb = $_GET["acb"];           
+        $acb =  $_SESSION['accountb'];           
         $processUserInfo = new processUserInfo();
         $result=$processUserInfo->getInfo($acb); 
         $processUserInfo->disconnect();
@@ -146,7 +146,7 @@
         echo    "<div class='row myprofild-padding-top' id='edit-Profile'>
                     <div class='col-md-12 form-group text-center'>					 
                         <button onclick='editMyProfile()' type='button' class='btn btn-margin userprofile-button-bg'>编辑信息</button>                            
-                        <a href='/userProfile/myPostList.php?acb=$acb'><button type='button' class='btn btn-margin userprofile-button-bg' style='margin-left: 6px'>查看帖子</button></a>
+                        <a href='/userProfile/myPostList.php'><button type='button' class='btn btn-margin userprofile-button-bg' style='margin-left: 6px'>查看帖子</button></a>
 
                     </div>
                 </div>
