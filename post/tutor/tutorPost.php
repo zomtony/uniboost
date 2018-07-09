@@ -78,7 +78,7 @@
                                 </div>
                         
                                 <h4 style='margin-top: 22px;'>个人简介</h4> 
-                                <textarea name='briefIntroductionf' class='form-control form-rounded' rows='4' > " . $result['briefIntroduction'] . " </textarea>
+                                <textarea name='briefIntroductionf' class='form-control form-rounded' rows='4' >" . $result['briefIntroduction'] . "</textarea>
 
                         </div>
                     </div>
