@@ -62,7 +62,7 @@
                         
                         <div class='col-lg-4 p-word'>
                                 <h4>个人简介</h4> 
-                                <p>" . $result['briefIntroduction'] . "</p>
+                                <pre>" . $result['briefIntroduction'] . "</pre>
                         </div>
                     </div>
                 </div>
