@@ -142,7 +142,7 @@
                                         <label class='label-style text-center padding-top' style='background-color: #F3A8B1; margin-right: 14px;'>". $result['school'] ."</label>
                                     </div>
 
-                                    <div><label class='label-position padding-small iphone5-fix-margin'>所教课号</label></div>
+                                    <label style='margin-right: 10px; margin-top: 8px;'>所教课号</label>
                                     <div>";
 
                                     for($i = 0; $i < 3; $i++){
