@@ -44,13 +44,13 @@
             }
         </style>
         <!-- Global site tag (gtag.js) - Google Analytics -->
-        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-121981828-1"></script>
-            <script>
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-122025311-1"></script>
+        <script>
             window.dataLayer = window.dataLayer || [];
             function gtag(){dataLayer.push(arguments);}
             gtag('js', new Date());
 
-            gtag('config', 'UA-121981828-1');
+            gtag('config', 'UA-122025311-1');
         </script>
     </head>
     <body>
