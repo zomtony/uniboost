@@ -183,7 +183,7 @@
                             </div>";
                         }else{
         echo            "<div class='row'>
-                            <div class='col-xs-11 padding-small margin-top-s name-width'>";
+                            <div class='col-xs-11 padding-small margin-top-s name-width phone-center-rating'>";
                                 $rating->showRating($ratePre, $rateValue, $rateTimes); 
         echo                "</div>   
                         </div>";

@@ -848,3 +848,13 @@ pre {
 	white-space:-o-pre-wrap;
 	word-wrap:break-word;
 }	
+
+
+/* 星星 手机版 没个人简介 居中 */
+@media (max-width: 1199px){
+	.phone-center-rating {
+		float: none;
+		margin: auto;
+		right: 10px;
+	}
+}
