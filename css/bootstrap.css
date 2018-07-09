@@ -1524,7 +1524,7 @@ code,
 kbd,
 pre,
 samp {
-  font-family: Menlo, Monaco, Consolas, "Courier New", monospace;
+  font-family: "Arial","Microsoft YaHei","黑体","宋体",sans-serif;
 }
 code {
   padding: 2px 4px;
