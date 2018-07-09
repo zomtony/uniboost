@@ -5,7 +5,7 @@
 	include($_SERVER['DOCUMENT_ROOT'].'/php/createConnection.php'); //database connected
 	include($_SERVER['DOCUMENT_ROOT'].'/php/getPostTime.php'); 
 	include($_SERVER['DOCUMENT_ROOT'].'/component/starRating/rating.php'); //rating
-    $acb = $_GET["acb"];  
+    $acb =  $_SESSION['accountb']; 
 	$rating = new rating();
 	$myconn = new createConnection(); //create new database connected
 	$getPostTime = new getPostTime(); //create new database connected
@@ -93,7 +93,7 @@
 
     echo    "<div class='row'>				
 				<div class='col-lg-12 text-center margin--position-top'>
-					<a href='/userProfile/userProfile.php?acb=$acb'>
+					<a href='/userProfile/userProfile.php'>
                     	<button type='button' class='btn btn-margin btn-margin userprofile-button-bg'>返回我的档案</button>
 					</a>
                 </div>
