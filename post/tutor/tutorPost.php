@@ -2,8 +2,8 @@
 
 <script src="/post/js/JavaScript.js" type="text/javascript"></script>
 
-<form name='uploadPost' action='php/uploadTutorPost.php' enctype='multipart/form-data' method='POST' class='body-margin'>
-    <div class="container theme-backcolor2">
+<form name='uploadPost' action='php/uploadTutorPost.php' enctype='multipart/form-data' method='POST' class='body-margin' onsubmit="return checkTutorPostInput()">
+    <div class="container theme-backcolor3">
         <?php
             include($_SERVER['DOCUMENT_ROOT'].'/userProfile/php/processUserInfo.php'); 
             $accountb = $_SESSION['accountb'];           
@@ -14,75 +14,87 @@
             echo    "<div class='row myprofild-padding-top'>
                         <div class='col-lg-1'></div>
                         <div class='col-lg-4'> 
-                            <div class='row margin-top-m padding-bottom-m margin-position-top'>
+                            <div class='row margin-top-m padding-bottom-m margin-position-top post-form-style' style='margin-top: 20px;'>
                                 <div class='col-sm-2 padding-small table-center'><label class='label-position'>名字</label></div>
                                 <div class='col-sm-5 padding-small'>
-                                   <div class='label-style text-center' style='margin:auto;'> ". $result['userName'] ."</div>
+                                    <input type='' name='userNamef' id='userNamef' placeholder='' class='form-control label-style1 table-center'  onclick='infoChangeName()' value='". $result['userName'] ."' readonly>
                                 </div>
                             </div>
                             
-                            <div class='row margin-position-top padding-bottom-m margin-position-top'>
+                            <div class='row margin-position-top padding-bottom-m margin-position-top post-form-style'>
                                 <div class='col-sm-2 padding-small table-center'><label class='label-position padding-small'>电话</label></div>
                                 <div class='col-sm-5 padding-small '>
-                                    <input type='' name='phoneNumberf' id='phoneNumberf' placeholder='' class='form-control label-style1 table-center'  value='". $result['phoneNumber'] ."'>
+                                    <input type='' name='phoneNumberf' id='phoneNumberf' placeholder='' class='form-control label-style1 table-center'  value='". $result['phoneNumber'] ."' maxlength='15'>
                                     
                                 </div>
                             </div>
-                            <div class='row margin-position-top padding-bottom-m'>
+                            <div class='row margin-position-top padding-bottom-m post-form-style'>
                                 <div class='col-sm-2 padding-small table-center'><label class='label-position padding-small'>微信</label></div>
                                 <div class='col-sm-5 padding-small '>
-                                    <input type='' name='weChatf' id='weChatf' placeholder='' class='form-control label-style1 table-center'  value='". $result['weChatNumber'] ."'>
+                                    <input type='' name='weChatf' id='weChatf' placeholder='' class='form-control label-style1 table-center'  value='". $result['weChatNumber'] ."' maxlength='30'>
                                     
                                 </div>
                             </div>
 
-                            <div class='row margin-position-top padding-bottom-m'>
+                            <div class='row margin-position-top padding-bottom-m post-form-style'>
                                 <div class='col-sm-2 padding-small table-center'><label class='label-position padding-small'>时薪</label></div>                                              
                                 <div class='col-sm-5 padding-small '>
-                                    <input type='' name='wagef' id='wagef' placeholder='' class='form-control label-style1 table-center'  value=''>
+                                    <input type='number' step='1' name='wagef' id='wagef' placeholder='' class='form-control label-style1 table-center'  value=''>
                                 </div>
                             </div>
-                            <div class='row margin-position-top padding-bottom-m'>
-                                <div class='col-sm-2 padding-small table-center'><label class='label-position padding-small'>学校<font color='red'>*</font>:</label></div>                                               
+                            <div class='row margin-position-top padding-bottom-m post-form-style'>
+                                <div class='col-sm-2 padding-small table-center'><label class='label-position padding-small'>学校</label></div>                                               
                                 <div class='col-sm-5 padding-small'>
-                                    <input type='' name='schoolf' id='schoolf' placeholder='' class='form-control label-style1 table-center'  value='' required>
+                                    <select class='form-control label-style1 form-rounded-select' name='schoolf' id='chooseSchool' style='padding-top:0px;padding-bottom:0px;'>
+                                        <option value='selected'>--选择所教学校--</option>
+                                        <option value='Langara'>Langara</option>
+                                        <option value='UBC'>UBC</option>
+                                        <option value='SFU'>SFU</option>
+                                        <option value='CC'>CC</option>
+                                        <option value='AC'>AC</option>
+                                        <option value='OTHERS'>Others</option>
+                                    </select>
                                 </div>
                             </div>
 
                         </div>   
                         
-                        <div class='col-lg-5 p-word text-margin-top'>
-                            <h4>个人简介</h4> 
-                            <textarea name='briefIntroductionf' class='form-control form-rounded' rows='5' value='" . $result['briefIntroduction'] . "'></textarea>
-
-                                    <button class='btn button-add-course-button add-more margin--position-top button-width button-margin-left form-rounded button-course margin-position-top' type='button'>
-                                        继续添加
-                                    </button>
-                                    <div class='input-group control-group after-add-more  clean-input-group-display'>
-        
+                        <div class='col-lg-5 p-word'>
+                    
+                                <button class='btn button-add-course-button add-more margin--position-top button-width button-margin-left form-rounded button-course margin-position-top' type='button'>
+                                    继续添加
+                                </button>
+                                    
+                                <div class='input-group control-group after-add-more  clean-input-group-display'>
                                 </div>
 
                                 <div class='row'>
                                     <div class='copy-fields hide'>";
                                         $count++;
-                    echo                "<div class='col-lg-4 course-input-padding'> <input type='text' name='courseArrayf[]' id='courseArrayf". $count ."' class='form-control form-rounded' placeholder='输入所教课号'>
+                    echo                "<div class='col-lg-4 course-input-padding' style='min-width: 153px;'> <input type='text' name='courseArrayf[]' id='courseArrayf". $count ."' class='form-control form-rounded' placeholder='输入所教课号' maxlength='10'>
                                             
                                         </div>
                                     </div>
                                 </div>
-                        </div>
+                        
+                                <h4 style='margin-top: 22px;'>个人简介</h4> 
+                                <textarea name='briefIntroductionf' class='form-control form-rounded' rows='4' > " . $result['briefIntroduction'] . " </textarea>
 
-                        <div class='col-lg-2'></div>
+                        </div>
                     </div>
+
+
+
+
 
                     <div class='row myprofild-padding-top '>
                         <div class='col-lg-1'></div>
                         <div class='col-lg-11 '>
-                            <div class='row'>
-                                <div class='col-sm-2 padding-small table-center'>
-                                    <label class='label-position time-text-width'>请选择你的空余时间:</label>
+                            <div class='row' style='text-align: center;'>
+                                <div class='col-sm-2 padding-small table-center' style='width: 100%; margin-bottom: 12px;'>
+                                    <label class='label-position time-text-width phone-center-text'>请选择你的空余时间</label>
                                 </div>
-                                <div class='col-sm-10 table-center'>
+                                <div class='col-sm-10 table-center' style='width: 100%;'>
                                     <button class='btn button-bg course-input-padding avaliabletime-margin-top margin-right-s button-style-time' id='mondayf' type='button' onclick='setValueForMonday()'>星期一</button>
                                     <input type='hidden' id='monday' name='mondayf' value='0'/>    
                                     <button class='btn button-bg course-input-padding avaliabletime-margin-top margin-right-s button-style-time' id='tuesdayf' type='button' onclick='setValueTuesday()'>星期二</button>
@@ -104,10 +116,10 @@
                     
                     
                     
-                    <div class='row padding-bottom-m'>
+                    <div class='row padding-bottom-m' style='margin-top: 20px;'>
                         <div class='col-lg-1'></div>
                         <div class='col-lg-10'>
-                            <h4>补充内容</h4>
+                            <h4 style='text-align: center;'>补充内容</h4>
                             <textarea name='contentf' class='form-control form-rounded' placeholder='补充内容' rows='5'></textarea>
                         </div>
                         <div class='col-lg-1'></div>
@@ -125,5 +137,3 @@
         </div>
     </div>
 </form>
-
-

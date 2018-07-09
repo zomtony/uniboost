@@ -1,3 +1,49 @@
+
+.hidden-slogon{
+    text-align: center;
+}
+
+@media (max-width: 767px) {
+
+	.padding-zero-logo{
+		padding:0px;
+	}
+
+	.height-div{
+		margin-top:60px;
+    }
+
+    .hidden-slogon{
+		display: none;
+    }
+    
+    .comp{
+        display:none;
+    }
+    .maingpage-button{
+        margin-left:0px;
+    }
+
+    .school-choose-select{
+        margin-top:1px;
+    }
+}
+@media (min-width: 767px) {
+    
+    .phone{
+        display:none;
+    }
+    .maingpage-button{
+        margin-left:5px;
+    }
+}
+
+@media (min-width: 767px) and (max-width: 1100px ){
+    .hidden-slogon{
+		display: none;
+    }
+}
+
 .titleFont{
     font-size: 35px;
     margin:0px;
@@ -18,6 +64,41 @@
     margin-top:24px;
     margin-left:4px;
 }
+
+.phonelogo1{
+    width:100px;
+    margin-top:18px;
+    margin-left:0px;
+    padding-right:2px;
+    
+}
+.phonelogo2{
+    width:23px;
+    margin-top:15px;
+    padding-right:2px;
+    padding-left:2px;
+}
+.phonelogo3{
+    width:100px;
+    margin-top:28px;
+    padding-left:2px;
+}
+
+.slogon{
+    margin-top:15px;
+    margin-right:10px;
+    width: 80%;
+}
+
+.userPhotoId{
+    margin-top:5px;
+    border: 2px;
+    width:40px;
+    border-radius: 100%;
+    border-style: solid;
+    border-color: #FFF3DD;
+}
+
 .navElementPosition{
     padding-top:5px;
 }
@@ -33,6 +114,12 @@
 
 .theme-backcolor1{
     background-color: #fcf9f4;
+}
+
+/* card color */
+.theme-backcolor3{
+    background-color: #FFF3DD;
+    border-radius: 20px;
 }
 
 .theme-button{
@@ -109,9 +196,17 @@
     background-color: #FF9560;
     color:#ffffff;
 }
+
 .userprofile-button-bg:hover{
     -webkit-transition-duration: 0.6s; /* Safari */
     transition-duration: 0.6s;
     background-color: #fd7a38; 
     color:#ffffff;
+}
+
+@media (max-width: 700px ) {
+	.userprofile-button-bg{
+		padding: 6px;
+		font-size: 14px;
+	}
 }

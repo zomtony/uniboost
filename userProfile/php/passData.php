@@ -4,35 +4,40 @@
     $accountb=$_SESSION['accountb'];
     $phoneb=$_POST['phonef'];
     $wechatb=$_POST['wechatf'];
+    $userNameb=$_POST['userNamef'];
     $briefIntroductionb=$_POST['briefIntroductionf'];
-    if(!empty($_FILES['file']['name'])){
-        $filename = $_FILES['file']['name'];
-        $ext = explode( ".", $filename);
 
-        $image_path = $_FILES['file']['tmp_name'];
-        $info = getimagesize($_FILES['file']['tmp_name']);
+    if(isset($_SESSION['Crop_ImgDir'])){
+
+        $image_path = $_SESSION['Crop_ImgDir'];
+        $info = getimagesize($_SESSION['Crop_ImgDir']);
+
+        $ext = explode( ".", $_SESSION['Crop_ImgName']);
         
-        $ext = strtolower(end($ext));
-
         $userHQPhotoIdb = compress($info, $image_path, 300, 300);
-        $HQPhotoIdb= 'photos_'.uniqid(mt_rand(10, 15)).'_'.time().'_300x300.'.$ext;
+        $HQPhotoIdb= 'photos_'.uniqid(mt_rand(10, 15)).'_'.time().'_300x300.' . $ext[1];
         imagejpeg($userHQPhotoIdb, $_SERVER['DOCUMENT_ROOT'].'/uploads/'.$HQPhotoIdb, 100);
         $contentHQPhotoIdb=addslashes(file_get_contents($_SERVER['DOCUMENT_ROOT'].'/uploads/'.$HQPhotoIdb));
         imagedestroy($userHQPhotoIdb);
 
-        $userLQPhotoIdb = compress($info, $image_path, 60, 60);
-        $LQPhotoIdb = 'photos_'.uniqid(mt_rand(10, 15)).'_'.time().'_60x60.'.$ext;
+        $userLQPhotoIdb = compress($info, $image_path, 100, 100);
+        $LQPhotoIdb = 'photos_'.uniqid(mt_rand(10, 15)).'_'.time().'_100x100.' . $ext[1];
         imagejpeg($userLQPhotoIdb, $_SERVER['DOCUMENT_ROOT'].'/uploads/'.$LQPhotoIdb, 100);
         $contentLQPhotoIdb=addslashes(file_get_contents($_SERVER['DOCUMENT_ROOT'].'/uploads/'.$LQPhotoIdb));
         imagedestroy($userLQPhotoIdb);
+
+        $LQPhotoIdNav = file_get_contents($_SERVER['DOCUMENT_ROOT'].'/uploads/'.$LQPhotoIdb);
+        unlink($_SERVER['DOCUMENT_ROOT'].'/uploads/'.$HQPhotoIdb); 
+        unlink($_SERVER['DOCUMENT_ROOT'].'/uploads/'.$LQPhotoIdb);    
     }else{
         $contentHQPhotoIdb='';
         $contentLQPhotoIdb='';
+        $LQPhotoIdNav='';
     }
 
     $processUserInfo = new processUserInfo();
     $count = 0;
-    $count = $processUserInfo->updataInfo($accountb, $phoneb, $wechatb, $briefIntroductionb, $contentHQPhotoIdb, $contentLQPhotoIdb); 
+    $count = $processUserInfo->updataInfo($accountb, $userNameb, $phoneb, $wechatb, $briefIntroductionb, $contentHQPhotoIdb, $contentLQPhotoIdb, $LQPhotoIdNav); 
 
     if($count > 0 ){
         $processUserInfo->disconnect();

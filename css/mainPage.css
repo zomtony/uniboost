@@ -1,19 +1,46 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900');
 
+
+html{
+	height: 100%;
+	box-sizing: border-box;
+}
+  
 body{
-	margin:auto;
+	position: relative;
+	margin: auto;
+	min-height: 100%;
 	font-family: "Arial","Microsoft YaHei","黑体","宋体",sans-serif;
+	color: #575757;
 }
 /* ----------------for index change the carousel size according the px-----------------------*/
 .carousel-control     		 { width:  4%; }
+
+@media all and (transform-3d), (-webkit-transform-3d) {
+	.multi-item-carousel .carousel-inner > .item {
+		transition: 500ms ease-in-out left;
+		transition: 500ms ease-in-out all;
+		-webkit-backface-visibility: visible;
+				backface-visibility: visible;
+		-webkit-transform: none!important;
+				transform: none!important;
+	}
+}
+
+.multi-item-carousel .carousel-inner > .item {
+	transition: 500ms ease-in-out left;
+  }
+
 .carousel-control.left,.carousel-control.right {margin:auto;background-image:none;}
+
 @media (max-width: 767px) {
 	.imgSize{
 		width: 50%;
 	}
-	.carousel-inner .active.left { left: -100%; }
-	.carousel-inner .next        { left:  100%; }
-	.carousel-inner .prev		 { left: -100%; }
+	.multi-item-carousel .carousel-inner .active.left { left: -50%; }
+	.multi-item-carousel .carousel-inner .active.right { left: 50%; }
+	.multi-item-carousel .carousel-inner .next        { left:  50%; }
+	.multi-item-carousel .carousel-inner .prev		 { left: -50%; }
 	.active > div { display:none; }
 	.active > div:first-child { display:block; }
 	.active > div:first-child + div{ display:block; }
@@ -29,45 +56,31 @@ body{
 		margin-left:10px;
 	}
 
-	.logo1{
-		width:110px;
-		margin-top:10px;
-		margin-left:0px;
-		padding-right:0px;
-		
-	}
-	.logo2{
-		width:26px;
-		margin-top:6px;
-		padding-right:0px;
-		padding-left:0px;
-	}
-	.logo3{
-		width:110px;
-		margin-top:15;
-		padding-left:0px;
-	}
+}
 
-	.padding-zero-logo{
-		padding:0px;
+@media (max-width: 1424px) { 
+	.avaliabletime-margin-top{
+		margin-top:5px;
 	}
-
 }
 
 
+
 @media (min-width: 767px) and (max-width: 992px ) {
-	.carousel-inner .active.left { left: -50%; }
-	.carousel-inner .next        { left:  50%; }
-	.carousel-inner .prev		 { left: -50%; }
+	.multi-item-carousel .carousel-inner .active.left { left: -50%; }
+	.multi-item-carousel .carousel-inner .active.right { left: 50%; }
+	.multi-item-carousel .carousel-inner .next        { left:  50%; }
+	.multi-item-carousel .carousel-inner .prev		 { left: -50%; }
 	.active > div { display:none; }
 	.active > div:first-child { display:block; }
 	.active > div:first-child + div { display:block; }
 	
 }
 @media (min-width: 992px ) {
-	.carousel-inner .active.left { left: -16.7%; }
-	.carousel-inner .next        { left:  16.7%; }
-	.carousel-inner .prev		 { left: -16.7%; }
+	.multi-item-carousel .carousel-inner .active.left { left: -16.7%; }
+	.multi-item-carousel .carousel-inner .active.right { left: 16.7%; }
+	.multi-item-carousel .carousel-inner .next        { left:  16.7%; }
+	.multi-item-carousel .carousel-inner .prev		 { left: -16.7%; }
 	.container {width:80%;}
 }
 
@@ -90,22 +103,6 @@ body{
 	padding:5px;
 	background-color:#fff;
     position: relative;
-}
-
-.carousel .item .item-footer {
-
-    position: absolute;
-    z-index: 10;
-    bottom: 0;
-    background-color: rgb(255,255,255,0.7);
-    width: 100%;
-    height:40px;
-    text-align: center;
-
-}
-
-.carousel .item .item-footer{
-    padding-top:10px;
 }
 
 /* ----------------end change the carousel size according the px-----------------------*/
@@ -181,13 +178,13 @@ a:visited {
 }
 
 a:hover {
-	background-color: #ffcc80;
-    border-color: #ffcc80;
-    text-decoration: underline;
+	background-color: transparent;
+    border-color: transparent;
+    text-decoration: none;
 }
 
 a:active {
-    text-decoration: underline;
+    text-decoration: none;
 }
 /*-- a tag link style end--*/
 
@@ -259,31 +256,80 @@ a:active {
 }
 /*--main page list end--*/
 
-/*---------------------------------------------------------- user profile-------------------------------------------------*/
+/*-----------------------------user post text field   &   user profile----------------------------------------*/
 .label-position{
 	margin-top: 5px;
 	width: 70px;
+	text-align: left;
+	padding-left: 0px;
 }
+
+@media (max-width: 330px){
+	.label-position{
+		padding-left: 25px;
+	}
+}
+
 .profile-img-size{
 	width: 300px;
 	height: 300px;
 }
+
+@media (max-width: 1250px){
+	.profile-img-size{
+		width: 220px;
+		height: 220px;
+	}
+}
+
 .my-rating-mess{
 	width:106px;
 }
+
+
+
 .label-style{
 	border-radius: 25px;
-	background-color: #ffcc80;
+	background-color: #FAC164;
 	width:200px;
+	min-width: 160px;
 	height:30px;
+	color: white;
 }
 
 .label-style1{
 	border-radius: 25px;
 	background-color: #ffffff;
-	width:200px;
+	width:180px;
 	height:30px;
+	margin-left: 8px;
 }
+
+@media (max-width: 420px){
+	.label-style1{
+		width:170px;
+	}
+}
+
+@media (max-width: 330px){
+	.label-style1{
+		width:140px;
+	}
+}
+
+@media (min-width: 1201px){
+	.label-width-fix {
+		width: 50px;
+	}
+}
+
+@media (max-width: 1199px){
+	.phone-margin {
+		margin: 28px auto;
+	}
+}
+
+
 
 #changeProfile{
 	display: none;
@@ -337,6 +383,27 @@ a:active {
 	width:90%;
 	margin:auto;
 }
+
+
+
+/* add by jeff for phone */
+
+@media (max-width: 766px){
+	.phone-body-margin { 
+		margin-left:25px;
+		margin-right:25px;
+	}
+}
+
+
+/************* edit profile layout UI **********/
+
+.flexbox-center {
+	display: flex;
+	justify-content: center;
+}
+
+
 /*---------------------------------------------------------- user profile end-------------------------------------------------*/
 
 /*--  --*/
@@ -415,19 +482,27 @@ a:active {
 	margin-right: 10px;
 }
 
+
+
 .label-style-time{
 	border-radius: 14rem;
 	width:70px;
-	height:35px;
+	/* set height is useless */
+	/* height:35px; */ 
 	padding:5px; 
 }
 
+
+
+
 .avaTime-bg{
-	background-color: #80ff91;
+	background-color: #79C625;
+	color: #ffffff;
 }
 
 .notAvaTime-bg{
-	background-color: #767777;
+	background-color: #8F8F8F;
+	color: #ffffff;
 }
 
 .label-style-course{
@@ -475,10 +550,23 @@ a:active {
 	font-size: 14px;
 }
 
+/* 这个没用了 */
 .td-post-time {
 	width:100%;
 	text-align: right;
+	font-size: 14px;
 }
+
+/* ******* 帖子时间跑上去 by jeff *******/
+
+.phone-post-time {
+	float: right;
+	font-size: 14px;
+	padding-top: 10px;
+	padding-right: 28px;
+}
+
+
 .button-text{
 	font-size:20px;
 	font-weight: bold;
@@ -501,5 +589,262 @@ a:active {
 
 .body-margin{
 	margin-left:25px;
-	margin-left:25px;
+	margin-right:25px;
 }
+
+
+/* add by jeff for phone */
+
+.post-detail-margin {
+	padding-bottom: 20px;
+}
+
+@media (max-width: 780px){
+	.post-detail-margin {
+		margin-left: 16px;
+	}
+}
+
+
+@media (max-width: 1430px){
+	.label-style-time {
+		width:60px;
+		font-size: 14px;
+		margin-right: 12px;
+	}
+}
+
+
+/**************************************** end *******************/
+
+/**********comment style************/
+.comment-post-time {
+	float: right;
+	padding-right:18px;
+}
+
+
+/**********footer style************/
+.footer{
+	text-align: center;
+	vertical-align: center;
+	background-color: #ebebe0;
+	width: 100%;
+	position: absolute;
+	bottom: -180px;
+	padding-bottom:5px;
+	padding-top:5px;
+}
+
+@media (max-width: 850px){
+	.footer{
+		bottom: -280px;
+	}
+}
+
+.height-div{
+	height:20px;
+}
+
+.footer-logo {
+	margin-bottom: 10px;
+}
+
+@media (min-width: 800px){
+    .footer-logo {
+		float: left;
+		margin-top: 10px;
+		margin-left: 25px;
+	}
+	
+	.footer-contact {
+		width: 400px;
+		margin: auto;
+		margin-top: 25px;
+	}
+}
+
+/******************************* signup and signin  **************************/
+
+.signup-container {
+	width: 350px;
+	border-radius: 20px;
+	padding: 20px;
+	margin: auto;
+	background-color: #FFF3DD;
+}
+
+@media (max-width: 450px){
+	.signup-container {
+		width: 92%;
+		border-radius: 10px;
+		padding: 20px;
+		margin: auto;
+		background-color: #FFF3DD;
+	}
+
+	.account-form-hint {
+		font-size: 12px;
+	}
+}
+
+.login-signup-button:hover {
+	background-color: #FAC164;
+	border-color: #FFAC81;
+}
+
+.account-exist {
+	font-weight: bold;
+	color: #f89f1b;
+	display: block;
+	text-decoration: none;
+}
+
+
+
+/******************************* post form style for phone  ******************************** */
+
+.post-form-style {
+	width: 280px;
+	display: flex;
+	margin: auto;
+	padding-right: 20px;
+}
+
+@media (min-width: 1210px){
+	.post-form-style {
+		width: 340px;
+		display: flex;
+		margin: auto;
+		padding-right: 0px;
+	}
+}
+
+@media (max-width: 370px){
+	.post-form-style {
+		width: 250px;
+		display: flex;
+		margin: auto;
+		padding-right: 20px;
+		position: relative;
+		right: 30px;
+	}
+}
+
+
+
+@media (max-width: 1200px){
+	.profile-form-style {
+		width: 340px;
+		display: flex;
+		/* margin: auto; */
+		padding-right: 0px;
+	}
+
+	.inner-textfield {
+		width: 200px;
+		margin-left: -30px;
+	}
+
+	.inner-group {
+		height: 50px;
+		margin: auto;
+		width: 300px;
+		float: none;
+	}
+}
+
+@media (max-width: 1200px){
+	.label-style {
+		width: 160px;
+	}
+
+	.inner-textfield {
+		width: 200px;
+		margin-left: -30px;
+	}
+}
+
+@media (max-width: 660px){
+	.inner-textfield {
+		margin-left: -45px;
+	}
+
+	.phone-fix-font {
+		font-size: 14px;
+	}
+}
+
+@media (max-width: 330px){
+	.inner-textfield {
+		margin-left: -20px;
+	}
+
+	.iphone5-fix-margin {
+		margin-left: -50px;
+	}
+
+	.profile-form-style {
+		width: 240px;
+		display: flex;
+		/* margin: auto; */
+		padding-right: 0px;
+	}
+}
+
+
+@media (max-width: 1200px){
+	.phone-center-text {
+		text-align: center;
+	}
+}
+
+
+
+
+
+
+
+
+
+/* center the text in 选择学校 button */
+select {
+	text-align: center;
+	text-align-last: center;
+}
+
+
+/* 下拉列表 font size  */
+
+.big-font {
+	font-size: 18px;
+}
+
+
+
+/*    字数超出 自动省略  */
+.text-ellipsis {
+	display: inline-block;
+	width: 120px;
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+}
+
+.big-text-ellipsis {
+	display: inline-block;
+	width: 160px;
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+}
+
+
+/*    字数超出 自动换行  */
+pre {
+	white-space:pre-wrap;
+	white-space:-moz-pre-wrap;
+	white-space:-pre-wrap;
+	white-space:-o-pre-wrap;
+	word-wrap:break-word;
+}	
