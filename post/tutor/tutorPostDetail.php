@@ -137,9 +137,9 @@
                     echo        "<div class='col-lg-7 padding-small table-center phone-margin'>
                                     
 
-                                    <label class=''>所教学校</label>
+                                    <label style='margin-right: 6px;'>所教学校</label>
                                     <div>
-                                        <label class='label-style text-center padding-top' style='background-color: #F3A8B1;'>". $result['school'] ."</label>
+                                        <label class='label-style text-center padding-top' style='background-color: #F3A8B1; margin-right: 14px;'>". $result['school'] ."</label>
                                     </div>
 
                                     <div><label class='label-position padding-small iphone5-fix-margin'>所教课号</label></div>
@@ -147,7 +147,7 @@
 
                                     for($i = 0; $i < 3; $i++){
                                         if(isset($courseArray[$i])&&!empty($courseArray[$i])){
-                                echo        "<label class='label-style-course text-center label-margin' id='mondayf' >".$courseArray[$i]."</label>";
+                                echo        "<label class='label-style-course text-center big-text-ellipsis label-margin' id='mondayf' >".$courseArray[$i]."</label>";
                                         }
                                     }    
 
@@ -155,7 +155,7 @@
                                     <div>";
                                     for($i = 3; $i < 6; $i++){
                                         if(isset($courseArray[$i])&&!empty($courseArray[$i])){
-                                echo        "<label class='label-style-course text-center label-margin' id='mondayf' >".$courseArray[$i]."</label>";
+                                echo        "<label class='label-style-course text-center big-text-ellipsis label-margin' id='mondayf' >".$courseArray[$i]."</label>";
                                         }
                                     }  
                                           

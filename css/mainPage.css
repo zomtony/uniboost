@@ -821,6 +821,7 @@ select {
 }
 
 
+
 /*    字数超出 自动省略  */
 .text-ellipsis {
 	display: inline-block;
@@ -829,3 +830,14 @@ select {
 	white-space: nowrap;
 	text-overflow: ellipsis;
 }
+
+.big-text-ellipsis {
+	display: inline-block;
+	width: 160px;
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+}
+
+
+
