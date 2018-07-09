@@ -26,7 +26,7 @@
 	$sql = "SELECT * FROM Tutor_Post t_post
 			LEFT JOIN User_Info u_info
             ON t_post.userAccount = u_info.userACCOUNT
-            WHERE t_post.userAccount='$accountb'{$mySplitPage->limit}";
+            WHERE t_post.userAccount='$accountb' ORDER BY tutorPostId DESC {$mySplitPage->limit}";
             
 	$count = 0;
 	foreach ($conn->query($sql) as $row) {
