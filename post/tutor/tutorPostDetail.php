@@ -183,7 +183,7 @@
                             </div>
                             <div class='row p-word'>
                                 <div class='col-xs-11 padding-small intro-margin-left'>
-                                    <pre>" . $result['briefIntroduction'] . "</pre>
+                                    <pre style='margin-top: 0px;'>" . $result['briefIntroduction'] . "</pre>
                                 </div>
                             </div>";
                             if(trim($result['content']) != ''){ 
