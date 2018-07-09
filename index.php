@@ -19,7 +19,7 @@
                 <section class="item active">
                     <div class="col-md-2 col-sm-6 col-xs-12 rollImagePosition imgSize">
                         <div class=img-box>
-                            <a href="/post/tutor/adTutorPostDetail.php?passId=">
+                            <a href="/post/tutor/adTutorPostDetail.php?passId=9">
                                 <img src="img/tutors/tutor1.jpg" class="img-zoom imgSize"  alt = "">
                             </a>
                         </div>
@@ -69,7 +69,7 @@
                 <section class="item">
                     <div class="col-md-2 col-sm-6 col-xs-12 rollImagePosition imgSize">
                         <div class=img-box>
-                            <a href="/post/tutor/adTutorPostDetail.php?passId=">
+                            <a href="/post/tutor/adTutorPostDetail.php?passId=1">
                                 <img src="img/tutors/tutor6.jpg" class="img-zoom" alt = "">
                             </a>
                         </div>
@@ -79,7 +79,7 @@
                 <section class="item">
                     <div class="col-md-2 col-sm-6 col-xs-12 rollImagePosition imgSize">
                         <div class=img-box>
-                            <a href="/post/tutor/adTutorPostDetail.php?passId=">
+                            <a href="/post/tutor/adTutorPostDetail.php?passId=8">
                                 <img src="img/tutors/tutor7.jpg" class="img-zoom" alt = "">
                             </a>
                         </div>
