@@ -37,7 +37,8 @@
     {
 		$postTime = $row['date'];
         $timeAgo = $getPostTime -> timeAgo($currectTime, $postTime);
-                
+        
+        if(trim($row['comment']) != '' && $row['comment'] != null){
         echo "<div  class='row btn-margin theme-backcolor1 text-margin-bottom-comment' style='margin-left: 2%; margin-right: 2%;'>
                 <table>
                     <tr>
@@ -59,6 +60,7 @@
                     </tr>
                 </table>         
             </div>";
+        }
     }
 
 echo    "</div>";
