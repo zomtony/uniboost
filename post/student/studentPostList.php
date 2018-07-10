@@ -132,7 +132,7 @@
 							</div>
 						</div>
 					</div>
-					<div class='col-sm-9 padding-zero'>
+					<div class='col-sm-5 padding-zero'>
 						<div class='row'>
 							<div class='col-xs-12 padding-top'>                  
 								<table>
