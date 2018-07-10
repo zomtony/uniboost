@@ -94,27 +94,30 @@
                                 <div class='col-lg-6 padding-small margin--position-top '>
                                 ";
 
-
                                     if($result['expectedPrice'] != '' && $result['expectedPrice'] != -0.01){   
-                        echo           "<div class='row '>
+                        echo            "<div class='row '>
                                             <div class='col-md-12 form-group inner-group profile-form-style'>
-                                                <div class='col-sm-2 padding-small iphone5-fix-margin'><label class='label-position'>期望价</label></div>
+                                                <div class='col-sm-3 padding-small iphone5-fix-margin phone-fix-font label-width-fix'><label class='label-position'>期望价</label></div>
                                                 <div class='col-sm-5 inner-textfield'>
-                                                    <label class='label-style text-center padding-top'>$". round($result['expectedPrice']) ."</label>
+                                                    <label class='label-style text-center padding-top'>$
+                                                        ". $result['expectedPrice'] ."
+                                                    </lable>
                                                 </div>
                                             </div>
                                         </div>";
                                     }else{
-                        echo           "<div class='row '>
+                        echo            "<div class='row '>
                                             <div class='col-md-12 form-group inner-group profile-form-style'>
-                                                <div class='col-sm-2 padding-small iphone5-fix-margin'><label class='label-position'>期望价</label></div>
+                                                <div class='col-sm-3 padding-small iphone5-fix-margin phone-fix-font label-width-fix'><label class='label-position'>期望价</label></div>
                                                 <div class='col-sm-5 inner-textfield'>
-                                                    <label class='label-style text-center padding-top'>面议</label>
+                                                    <label class='label-style text-center padding-top'>面议</lable>
                                                 </div>
                                             </div>
                                         </div>";
-                                    }  
+                                    }
 
+
+                                    
                                     if($result['phoneNumber'] != ''){ 
                         echo            "<div class='row '>
                                             <div class='col-md-12 form-group inner-group profile-form-style'>
