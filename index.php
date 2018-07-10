@@ -171,6 +171,7 @@
                                 <option value='SFU'>SFU</option>
                                 <option value='CC'>CC</option>
                                 <option value='AV'>AC</option>
+                                <option value='OTHERS'>Others</option>
                             </select>";         
                         }
 
