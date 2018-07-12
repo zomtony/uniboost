@@ -59,7 +59,7 @@
 		
 				$mail->isHTML(true);                                  // Set email format to HTML
 				$mail->Subject = 'woshihlj.com';
-				$mail->Body    = "Hi:<br><br>This is your new password: <b>" . $ramdowPwd . "</b>, For your account safe，please login with the new password and change to your password as soon as possible.<br><br>Please do not reply to this message; it was sent from an unmonitored email address and you will not receive a response";
+				$mail->Body    = "Hi:<br><br>This is your new password: <b>" . $ramdowPwd . "</b>, For your account safety, please login with the new password and change your password as soon as possible.<br><br>Please do not reply to this message; it was sent from an unmonitored email address and you will not receive a response";
 				//$mail->AltBody = 'This is the body in plain text for non-HTML mail clients';
 		
 				$mail->send();
