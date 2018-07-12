@@ -43,7 +43,7 @@
 				$mail->Port = 587;                                    // TCP port to connect to
 		
 				//Recipients
-				$mail->setFrom('woshihlj.com@gmail.com', 'woshihlj.com');
+				$mail->setFrom('no-replay@woshihlj.com', 'woshihlj.com');
 				//$mail->addAddress('ellen@gmail.com', 'Joe User');     // Add a recipient
 				$mail->addAddress($emailb);               // Name is optional
 				//$mail->addReplyTo('info@example.com', 'Information');
@@ -59,7 +59,7 @@
 		
 				$mail->isHTML(true);                                  // Set email format to HTML
 				$mail->Subject = 'woshihlj.com';
-				$mail->Body    = "您好:<br>这是您的新密码: " . $ramdowPwd . ", 为保证您的账号安全，请您尽快登录后修改您的密码.<br>请不要回复此邮件， 此邮件为自动发送邮件";
+				$mail->Body    = "Hi:<br><br>This is your new password: <b>" . $ramdowPwd . "</b>, For your account safe，please login with the new password and change to your password as soon as possible.<br><br>Please do not reply to this message; it was sent from an unmonitored email address and you will not receive a response";
 				//$mail->AltBody = 'This is the body in plain text for non-HTML mail clients';
 		
 				$mail->send();
@@ -80,7 +80,7 @@
 
 
 	function random_password($length) {
-		$chars = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!@#$%^&*()_-=+;:,.?";
+		$chars = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
 		$password = substr( str_shuffle( $chars ), 0, $length );
 		return $password;
 	}
