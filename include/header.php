@@ -86,6 +86,7 @@
                                                 <ul class='dropdown-menu'>
                                                     <li><a href='/index.php'>回到首页</a></li>
                                                     <li><a href='/userProfile/userProfile.php'>我的档案</a></li>
+                                                    <li><a href='/userProfile/changePwd.php'>修改密码</a></li>
                                                     <li><a href='/signin_out_up/php/SignOut.php'>登出</a></li>
                                                 </ul>
                                             </li>";
@@ -146,6 +147,7 @@
                                             <a class='big-font' href='https://goo.gl/forms/pL0jrE5sBpmq65g33' style='color:#ffffff;'>申请资料</a>
                                         </li>                                  
                                         <li><a class='big-font' href='/userProfile/userProfile.php' style='color:#ffffff;'>我的档案</a></li>
+                                        <li><a class='big-font' href='/userProfile/changePwd.php' style='color:#ffffff;'>修改密码</a></li>
                                         <li><a class='big-font' href='/signin_out_up/php/SignOut.php' style='color:#ffffff;'>登出</a></li>";
                             }else {
                                 echo    "<li><a class='big-font' href='https://goo.gl/forms/pL0jrE5sBpmq65g33' style='color:#ffffff;'>申请资料</a></li>
