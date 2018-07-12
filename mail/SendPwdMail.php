@@ -64,7 +64,7 @@
 		
 				$mail->send();
 				//echo 'Message has been sent';
-				header("Location: /index.php?info=请检查邮箱");
+				header("Location: /signin_out_up/signin.php?info=请检查邮箱,并用邮箱里的密码登陆");
 			} catch (Exception $e) {
 				header("Location: /signin_out_up/findPwd.php?info=用户名或邮箱不存在");
 				//echo 'Message could not be sent. Mailer Error: ', $mail->ErrorInfo;
