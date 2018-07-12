@@ -1,6 +1,11 @@
 <?php include($_SERVER['DOCUMENT_ROOT'].'/include/header.php'); ?>
     <div class='row signup-container'>
-
+        <?php
+            extract ($_GET);
+            if(isset($info)){
+                echo "<div class='col-xs-12'><h4 style='text-align: center; color: coral;'>" . $info . "</h4></div>";
+            }
+        ?>
 		<form action="/mail/SendPwdMail.php" method="POST" >
 			<label for="userID" class="sr-only-focusable">用户名</label>
 			<br />
