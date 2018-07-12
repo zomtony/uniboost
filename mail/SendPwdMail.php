@@ -1,4 +1,5 @@
-<?php include($_SERVER['DOCUMENT_ROOT'].'/include/header.php'); 
+<?php
+	
 	// Import PHPMailer classes into the global namespace
 	// These must be at the top of your script, not inside a function
 	use PHPMailer\PHPMailer\PHPMailer;
@@ -32,7 +33,7 @@
 			$mail = new PHPMailer(true); // Passing `true` enables exceptions
 			try {
 				//Server settings
-				$mail->SMTPDebug = 2;                                 // Enable verbose debug output
+				$mail->SMTPDebug = 0;                                 // Enable verbose debug output
 				$mail->isSMTP();                                      // Set mailer to use SMTP
 				$mail->Host = 'smtp.gmail.com';  // Specify main and backup SMTP servers
 				$mail->SMTPAuth = true;                               // Enable SMTP authentication
@@ -43,7 +44,6 @@
 		
 				//Recipients
 				$mail->setFrom('woshihlj.com@gmail.com', 'Mailer');
-				echo $emailb;
 				//$mail->addAddress('ellen@gmail.com', 'Joe User');     // Add a recipient
 				$mail->addAddress($emailb);               // Name is optional
 				//$mail->addReplyTo('info@example.com', 'Information');
@@ -64,8 +64,7 @@
 		
 				$mail->send();
 				//echo 'Message has been sent';
-				header("Location: /signin_out_up/findPwd.php?info=请检查邮箱");
-
+				header("Location: /index.php?info=请检查邮箱");
 			} catch (Exception $e) {
 				header("Location: /signin_out_up/findPwd.php?info=用户名或邮箱不存在");
 				//echo 'Message could not be sent. Mailer Error: ', $mail->ErrorInfo;
