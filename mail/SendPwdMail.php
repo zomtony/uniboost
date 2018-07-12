@@ -63,9 +63,12 @@
 				//$mail->AltBody = 'This is the body in plain text for non-HTML mail clients';
 		
 				$mail->send();
-				echo 'Message has been sent';
+				//echo 'Message has been sent';
+				header("Location: /signin_out_up/findPwd.php?info=请检查邮箱");
+
 			} catch (Exception $e) {
-				echo 'Message could not be sent. Mailer Error: ', $mail->ErrorInfo;
+				header("Location: /signin_out_up/findPwd.php?info=用户名或邮箱不存在");
+				//echo 'Message could not be sent. Mailer Error: ', $mail->ErrorInfo;
 			}
 		}else{
 			$myconn->disconnect();
