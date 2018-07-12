@@ -43,7 +43,7 @@
 				$mail->Port = 587;                                    // TCP port to connect to
 		
 				//Recipients
-				$mail->setFrom('woshihlj.com@gmail.com', '红领巾');
+				$mail->setFrom('woshihlj.com@gmail.com', 'woshihlj.com');
 				//$mail->addAddress('ellen@gmail.com', 'Joe User');     // Add a recipient
 				$mail->addAddress($emailb);               // Name is optional
 				//$mail->addReplyTo('info@example.com', 'Information');
