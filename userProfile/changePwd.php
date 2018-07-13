@@ -3,6 +3,12 @@
 ?>
 
 	<div class='row signup-container'>
+		<?php
+			extract ($_GET);
+			if(isset($info)){
+				echo "<div class='col-xs-12'><h4 style='text-align: center; color: coral;'>" . $info . "</h4></div>";
+			}
+		?>
 		<form class="form-signin" action="php/processChangePwd.php" method="POST" onsubmit="return checkSignUpInput()">
 			<label for="inputPassword" class="sr-only-focusable" style="margin-top: 5px">旧密码</label>
 			<input type="password" class="form-control" placeholder="请输入您的密码" name="oldpwdf" required>
