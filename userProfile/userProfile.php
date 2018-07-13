@@ -77,7 +77,7 @@
                         </div>   
                         
                         <div class='col-lg-4 p-word'>
-                                <h4>个人简介</h4> 
+                                <h4 style='margin-top: 20px;'>个人简介</h4> 
                                 <pre style='margin-top: 0px;'>" . $result['briefIntroduction'] . "</pre>
                         </div>
                     </div>
