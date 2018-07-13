@@ -177,9 +177,9 @@
 
                 echo    "<div class='input-group maingpage-button' style='margin-top:1px;'>";   
                         if(isset($_SESSION['keyWords'])){
-                echo        "<input type='text' class='form-control' placeholder='搜索' name='keyWords' id='keyWords' value='" . $_SESSION['keyWords'] . "'>";
+                echo        "<input type='text' class='form-control' placeholder='搜索课号 eg. CPSC111' name='keyWords' id='keyWords' value='" . $_SESSION['keyWords'] . "'>";
                         }else{
-                echo        "<input type='text' class='form-control' placeholder='搜索' name='keyWords' id='keyWords'>";
+                echo        "<input type='text' class='form-control' placeholder='搜索课号 eg. CPSC111' name='keyWords' id='keyWords'>";
                         }
                 echo        "<div class='input-group-btn'>
                                 <button class='btn theme-button site-btn' type='submit' name='submit' onclick='saveInfo()'><span class='search-button-padding text-color'>搜索</span><i class='glyphicon glyphicon-search text-color'></i></button>

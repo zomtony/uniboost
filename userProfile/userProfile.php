@@ -20,6 +20,15 @@
 
     echo    "<div class='theme-backcolor3'>
                 <div id='userProfile'>  
+                    <div class='row table-center'>
+                        <div class='col-lg-1 padding-small'></div>
+                        <div class='col-lg-3'>
+                            <h3>". $result['userAccount'] ."</h3> 
+                        </div>
+                        <div class='col-lg-8' style='text-align:right;padding:15px;'>
+                            <a href='/userProfile/changePwd.php'><input type='submit' class='btn userprofile-button-bg name-width' value='修改密码'/></a>
+                        </div>
+                    </div>
                     <div class='row myprofild-padding-top table-center'>
                         <div class='col-lg-1'></div>
                         <div class='col-lg-3'> 

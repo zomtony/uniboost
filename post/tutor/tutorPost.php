@@ -46,7 +46,7 @@
                                 <div class='col-sm-2 padding-small table-center'><label class='label-position padding-small'>学校</label></div>                                               
                                 <div class='col-sm-5 padding-small'>
                                     <select class='form-control label-style1 form-rounded-select' name='schoolf' id='chooseSchool' style='padding-top:0px;padding-bottom:0px;'>
-                                        <option value='selected'>--所教学校--</option>
+                                        <option value='selected'>--课程所属学校--</option>
                                         <option value='Langara'>Langara</option>
                                         <option value='UBC'>UBC</option>
                                         <option value='SFU'>SFU</option>
