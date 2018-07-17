@@ -10,14 +10,14 @@
     try{
         $count = $conn->exec("UPDATE User_Info SET userPassword='$newPwdb' WHERE userAccount='$accountb' AND userPassword = '$oldPwdb'");
         if($count > 0){
-            $conn->disconnect();
+            $myconn->disconnect();
             header("Location: /userProfile/userProfile.php?info=修改成功");
         }else{
-            $conn->disconnect();
+            $myconn->disconnect();
             header("Location: /userProfile/changePwd.php?info=修改失败，有可能是输错了密码哦，请再试一遍");
         }  
     } catch(PDOException $err){
-        $conn->disconnect();
+        $myconn->close();;
         header("Location: /userProfile/changePwd.php?info=修改失败，有可能是输错了密码哦，请再试一遍");
         echo $err->getMessage();		
     }	

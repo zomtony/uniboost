@@ -39,7 +39,7 @@
                 <section class="item">
                     <div class="col-md-2 col-sm-6 col-xs-12 rollImagePosition imgSize">
                         <div class=img-box>
-                            <a href="/post/tutor/adTutorPostDetail.php?passId=4">
+                            <a href="/post/tutor/adTutorPostDetail.php?passId=89">
                                 <img src="img/tutors/tutor3.jpg" class="img-zoom" alt = "">
                             </a>
                         </div>
@@ -81,6 +81,17 @@
                         <div class=img-box>
                             <a href="/post/tutor/adTutorPostDetail.php?passId=8">
                                 <img src="img/tutors/tutor7.jpg" class="img-zoom" alt = "">
+                            </a>
+                        </div>
+                    </div>
+                </section>
+
+<!-- 8 -->
+                <section class="item">
+                    <div class="col-md-2 col-sm-6 col-xs-12 rollImagePosition imgSize">
+                        <div class=img-box>
+                            <a href="/post/tutor/adTutorPostDetail.php?passId=60">
+                                <img src="img/tutors/tutor8.jpg" class="img-zoom" alt = "">
                             </a>
                         </div>
                     </div>
@@ -177,9 +188,9 @@
 
                 echo    "<div class='input-group maingpage-button' style='margin-top:1px;'>";   
                         if(isset($_SESSION['keyWords'])){
-                echo        "<input type='text' class='form-control' placeholder='搜索' name='keyWords' id='keyWords' value='" . $_SESSION['keyWords'] . "'>";
+                echo        "<input type='text' class='form-control' placeholder='搜索课号 eg. CPSC111' name='keyWords' id='keyWords' value='" . $_SESSION['keyWords'] . "'>";
                         }else{
-                echo        "<input type='text' class='form-control' placeholder='搜索' name='keyWords' id='keyWords'>";
+                echo        "<input type='text' class='form-control' placeholder='搜索课号 eg. CPSC111' name='keyWords' id='keyWords'>";
                         }
                 echo        "<div class='input-group-btn'>
                                 <button class='btn theme-button site-btn' type='submit' name='submit' onclick='saveInfo()'><span class='search-button-padding text-color'>搜索</span><i class='glyphicon glyphicon-search text-color'></i></button>

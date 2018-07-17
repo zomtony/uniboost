@@ -176,10 +176,7 @@
     transition-duration: 0.4s;
 }
 
-.button-bg:hover {
-    background-color: #79C625; 
-    color: #ffffff;
-}
+
 
 .button-course {
     -webkit-transition-duration: 0.4s; /* Safari */

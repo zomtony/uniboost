@@ -65,11 +65,19 @@
                                         <label class='label-style text-center padding-top'>". $result['userEmail'] ."</label>
                                     </div>
                                 </div>
-                        </div>
+                            </div>
+                            <div class='row '>
+                                <div class='col-sm-12' >
+                                    <div class='col-sm-3' ></div>
+                                    <div class='col-sm-5'> 
+                                        <a href='/userProfile/changePwd.php' class='label-link account-exist' style='display: inline-block'>修改密码</a>
+                                    </div>
+                                </div>
+                            </div>
                         </div>   
                         
                         <div class='col-lg-4 p-word'>
-                                <h4>个人简介</h4> 
+                                <h4 style='margin-top: 20px;'>个人简介</h4> 
                                 <pre style='margin-top: 0px;'>" . $result['briefIntroduction'] . "</pre>
                         </div>
                     </div>
