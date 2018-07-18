@@ -5,12 +5,12 @@
 	include($_SERVER['DOCUMENT_ROOT'].'/php/createConnection.php'); //database connected
 	include($_SERVER['DOCUMENT_ROOT'].'/php/getPostTime.php'); 
 	include($_SERVER['DOCUMENT_ROOT'].'/component/starRating/rating.php'); //rating
-    $accountb = $_GET["accountb"];  
+    $acb =  $_SESSION['accountb']; 
 	$rating = new rating();
 	$myconn = new createConnection(); //create new database connected
 	$getPostTime = new getPostTime(); //create new database connected
 	$conn = $myconn->connect();
-	$stmt = $conn->prepare("SELECT * FROM Tutor_Post WHERE userAccount='$accountb'"); 
+	$stmt = $conn->prepare("SELECT * FROM Tutor_Post WHERE userAccount='$acb'"); 
 	$stmt->execute();
 	$total = $stmt->rowCount();
 
@@ -26,14 +26,14 @@
 	$sql = "SELECT * FROM Tutor_Post t_post
 			LEFT JOIN User_Info u_info
             ON t_post.userAccount = u_info.userACCOUNT
-            WHERE t_post.userAccount='$accountb'{$mySplitPage->limit}";
+            WHERE t_post.userAccount='$acb' ORDER BY tutorPostId DESC {$mySplitPage->limit}";
             
 	$count = 0;
 	foreach ($conn->query($sql) as $row) {
 		$courseArray = explode("|", $row['courseNumber']);
 		$postTime = $row['date'];
 		$timeAgo = $getPostTime -> timeAgo($currectTime, $postTime);
-		echo "<a href='/post/tutor/tutorPostDetail.php?tutorPost=". $row['tutorPostId'] . "'>";
+		echo "<a href='/post/tutor/editTutorPostDetail.php?tutorPost=". $row['tutorPostId'] . "'>";
 		if($count%2 == 0){
 			echo    "<div class='row theme-backcolor2 main-pg-list-bg'>";
 		}else {
@@ -63,7 +63,7 @@
 							</div>
 						</div>
 					</div>
-					<div class='col-sm-9 padding-zero'>
+					<div class='col-sm-5 padding-zero'>
 						<div class='row'>
 							<div class='col-xs-12 padding-top'>                  
 								<table>
@@ -93,7 +93,7 @@
 
     echo    "<div class='row'>				
 				<div class='col-lg-12 text-center margin--position-top'>
-					<a href='/userProfile/userProfile.php?accountb=$accountb'>
+					<a href='/userProfile/userProfile.php'>
                     	<button type='button' class='btn btn-margin btn-margin userprofile-button-bg'>返回我的档案</button>
 					</a>
                 </div>

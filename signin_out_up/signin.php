@@ -20,6 +20,7 @@
 			
 			<div class='margin-top-s text-center'>
 				<p>没有账号? <a class="label-link account-exist" style="display: inline-block" href="signup.php"> 一键注册</a></p >
+				<p>忘记密码? <a class="label-link account-exist" style="display: inline-block" href="findPwd.php"> 找回密码</a></p >
 			</div>
 
 			<br/>

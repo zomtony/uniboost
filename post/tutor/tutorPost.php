@@ -46,7 +46,7 @@
                                 <div class='col-sm-2 padding-small table-center'><label class='label-position padding-small'>学校</label></div>                                               
                                 <div class='col-sm-5 padding-small'>
                                     <select class='form-control label-style1 form-rounded-select' name='schoolf' id='chooseSchool' style='padding-top:0px;padding-bottom:0px;'>
-                                        <option value='selected'>--选择所教学校--</option>
+                                        <option value='selected'>--课程所属学校--</option>
                                         <option value='Langara'>Langara</option>
                                         <option value='UBC'>UBC</option>
                                         <option value='SFU'>SFU</option>
@@ -71,14 +71,14 @@
                                 <div class='row'>
                                     <div class='copy-fields hide'>";
                                         $count++;
-                    echo                "<div class='col-lg-4 course-input-padding' style='min-width: 153px;'> <input type='text' name='courseArrayf[]' id='courseArrayf". $count ."' class='form-control form-rounded' placeholder='输入所教课号' maxlength='10'>
+                    echo                "<div class='col-lg-4 course-input-padding' style='min-width: 153px;'> <input type='text' name='courseArrayf[]' id='courseArrayf". $count ."' class='form-control form-rounded' placeholder='所教课号或课程' maxlength='10'>
                                             
                                         </div>
                                     </div>
                                 </div>
                         
                                 <h4 style='margin-top: 22px;'>个人简介</h4> 
-                                <textarea name='briefIntroductionf' class='form-control form-rounded' rows='4' > " . $result['briefIntroduction'] . " </textarea>
+                                <textarea name='briefIntroductionf' class='form-control form-rounded' rows='4' >" . $result['briefIntroduction'] . "</textarea>
 
                         </div>
                     </div>

@@ -5,6 +5,7 @@
     $phoneb=$_POST['phonef'];
     $wechatb=$_POST['wechatf'];
     $userNameb=$_POST['userNamef'];
+    $emailb=$_POST['emailf'];
     $briefIntroductionb=$_POST['briefIntroductionf'];
 
     if(isset($_SESSION['Crop_ImgDir'])){
@@ -37,14 +38,14 @@
 
     $processUserInfo = new processUserInfo();
     $count = 0;
-    $count = $processUserInfo->updataInfo($accountb, $userNameb, $phoneb, $wechatb, $briefIntroductionb, $contentHQPhotoIdb, $contentLQPhotoIdb, $LQPhotoIdNav); 
+    $count = $processUserInfo->updataInfo($accountb, $emailb, $userNameb, $phoneb, $wechatb, $briefIntroductionb, $contentHQPhotoIdb, $contentLQPhotoIdb, $LQPhotoIdNav); 
 
     if($count > 0 ){
         $processUserInfo->disconnect();
-        header("Location: ../userProfile.php?accountb=$accountb");
+        header("Location: ../userProfile.php");
     }else{
         $processUserInfo->disconnect();
-        header("Location: ../userProfile.php?accountb=$accountb&info=no change");
+        header("Location: ../userProfile.php?info=no change");
     } 
 
 

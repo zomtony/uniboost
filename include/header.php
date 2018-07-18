@@ -43,7 +43,15 @@
                 }
             }
         </style>
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-122025311-1"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
 
+            gtag('config', 'UA-122025311-1');
+        </script>
     </head>
     <body>
         <nav class="navbar navbar-inverse theme-backcolor">
@@ -71,14 +79,13 @@
                             </li>                      
                             <?php                       
                                 if(isset($_SESSION['accountb'])){
-                                    $accountb = $_SESSION['accountb'];
                                     echo    "<li class='dropdown'>
                                                 <a class='dropdown-toggle' data-toggle='dropdown' style='margin-top: 0px;margin-bottom: 0px;'>
                                                     <img class='userPhotoId' src='data:image/jpeg;base64," . base64_encode($_SESSION['userLQPhotoId']) . "' alt='' >
                                                 </a>
                                                 <ul class='dropdown-menu'>
                                                     <li><a href='/index.php'>回到首页</a></li>
-                                                    <li><a href='/userProfile/userProfile.php?accountb=$accountb'>我的档案</a></li>
+                                                    <li><a href='/userProfile/userProfile.php'>我的档案</a></li>
                                                     <li><a href='/signin_out_up/php/SignOut.php'>登出</a></li>
                                                 </ul>
                                             </li>";
@@ -104,9 +111,9 @@
                         if(isset($_SESSION['accountb'])){
                             $accountb = $_SESSION['accountb'];
                     echo    "<div class='dropdown'>
-                                <div class='navbar-toggle' data-toggle='collapse' data-target='#myNavbar' style='margin-top: 0px; margin-bottom: 0px;'>
+                                <button type='button' class='navbar-toggle' data-toggle='collapse' data-target='#myNavbar' style='margin-top: 0px; margin-bottom: 0px;'>
                                     <img class='userPhotoId' src='data:image/jpeg;base64," . base64_encode($_SESSION['userLQPhotoId']) . "' alt='' >
-                                </div>
+                                </button>
                             </div>";
                         }else{       
                     echo    "<div class='dropdown'>
@@ -134,12 +141,11 @@
                         <?php                       
                             
                             if(isset($_SESSION['accountb'])){
-                                $accountb = $_SESSION['accountb'];
                                 echo    "<li><a class='big-font' href='/index.php'>回到首页</a></li>
                                         <li>                                        
                                             <a class='big-font' href='https://goo.gl/forms/pL0jrE5sBpmq65g33' style='color:#ffffff;'>申请资料</a>
                                         </li>                                  
-                                        <li><a class='big-font' href='/userProfile/userProfile.php?accountb=$accountb' style='color:#ffffff;'>我的档案</a></li>
+                                        <li><a class='big-font' href='/userProfile/userProfile.php' style='color:#ffffff;'>我的档案</a></li>
                                         <li><a class='big-font' href='/signin_out_up/php/SignOut.php' style='color:#ffffff;'>登出</a></li>";
                             }else {
                                 echo    "<li><a class='big-font' href='https://goo.gl/forms/pL0jrE5sBpmq65g33' style='color:#ffffff;'>申请资料</a></li>

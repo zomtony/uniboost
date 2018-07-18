@@ -21,6 +21,8 @@
     $result = $statement->fetchAll();
     $rowCount = $statement->rowCount();
 
+    $commentCount = 0;
+
     if($rowCount > 0){
     echo    "<div style='padding:10px;'>";
     }else{
@@ -37,7 +39,9 @@
     {
 		$postTime = $row['date'];
         $timeAgo = $getPostTime -> timeAgo($currectTime, $postTime);
-                
+        
+        if(trim($row['comment']) != '' && $row['comment'] != null){
+        $commentCount++;
         echo "<div  class='row btn-margin theme-backcolor1 text-margin-bottom-comment' style='margin-left: 2%; margin-right: 2%;'>
                 <table>
                     <tr>
@@ -59,7 +63,13 @@
                     </tr>
                 </table>         
             </div>";
+        }
     }
+
+    if($commentCount == 0 && $rowCount != 0){
+        echo    "<div style='padding:10px;text-align:center;'>
+                <h4>暂时还没有评论哦</h4>";
+        }
 
 echo    "</div>";
 

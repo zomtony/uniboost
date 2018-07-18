@@ -71,7 +71,17 @@
                                         <input type='' name='wechatf' id='wechatf' placeholder='' class='form-control label-info-position margin-left-zero label-style1'  value='' maxlength='30'>
                                     </div>
                                 </div>
-                            </div>                           
+                            </div>    
+                            
+                            <div class='row'>
+                                <div class='col-md-12 form-group inner-group flexbox-center'>
+                                    <label class='col-sm-2 label-position padding-small text-center'>邮箱</label>                                               									
+                                    <div class='col-sm-5 inner-textfield'>
+                                        <input type='email' name='emailf' id='emailf' placeholder='' class='form-control label-info-position margin-left-zero label-style1'  value='' maxlength='30'>
+                                    </div>
+                                </div>
+                            </div>  
+                            
                         </div>                    
                     </div>
 

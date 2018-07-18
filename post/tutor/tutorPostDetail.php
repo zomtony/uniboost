@@ -137,12 +137,12 @@
                     echo        "<div class='col-lg-7 padding-small table-center phone-margin'>
                                     
 
-                                    <label style='margin-right: 6px;'>所教学校</label>
+                                    <label style='margin-right: 10px;'>所教学校</label>
                                     <div>
                                         <label class='label-style text-center padding-top' style='background-color: #F3A8B1; margin-right: 14px;'>". $result['school'] ."</label>
                                     </div>
 
-                                    <div><label class='label-position padding-small iphone5-fix-margin'>所教课号</label></div>
+                                    <label style='margin-right: 10px; margin-top: 8px;'>所教课号</label>
                                     <div>";
 
                                     for($i = 0; $i < 3; $i++){
@@ -170,26 +170,36 @@
 
                     <div class='row margin-top-s  post-detail-margin'>
                         <div class='col-sm-1 padding-small'></div>
-                        <div class='col-sm-11 padding-small' >
-                            <div class='row'>
-                                <div class='col-xs-1 padding-small head-width intro-margin-left'>";
-                            if(trim($result['briefIntroduction']) != ''){   
-                echo                "<h4>个人简介</h4>";
-                            }
-                echo            "</div>
+                        <div class='col-sm-11 padding-small' >";
+
+                        if(trim($result['briefIntroduction']) != ''){   
+        echo                "<div class='row'>
+                                <div class='col-xs-1 padding-small head-width intro-margin-left'>
+                                    <h4>个人简介</h4>
+                                </div>
                                 <div class='col-xs-11 padding-small margin-top-s name-width'>";
                                     $rating->showRating($ratePre, $rateValue, $rateTimes); 
-                echo            "</div>   
-                            </div>
-                            <div class='row p-word'>
+        echo                    "</div>   
+                            </div>";
+                        }else{
+        echo            "<div class='row'>
+                            <div class='col-xs-11 padding-small margin-top-s name-width phone-center-rating'>";
+                                $rating->showRating($ratePre, $rateValue, $rateTimes); 
+        echo                "</div>   
+                        </div>";
+                        }
+
+
+
+        echo                "<div class='row p-word'>
                                 <div class='col-xs-11 padding-small intro-margin-left'>
-                                    <pre>" . $result['briefIntroduction'] . "</pre>
+                                    <pre style='margin-top: 0px;'>" . $result['briefIntroduction'] . "</pre>
                                 </div>
                             </div>";
                             if(trim($result['content']) != ''){ 
                 echo            "<div class='row p-word'>
                                     <div class='col-xs-11 padding-small intro-margin-left'>
-                                        <h4>内容</h4>
+                                        <h4>补充内容</h4>
                                         <p>" . $result['content'] . "</p>
                                     </div>
                                 </div>";

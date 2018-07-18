@@ -23,8 +23,8 @@
                         <div class='col-lg-1 padding-small'></div>
                         <div class='col-lg-3 padding-small'>";   
 
-                            if($result['userAccount'] == 'Guest' || $result['userAccount'] == NULL){
-            echo                "<img class='rounded profile-img-size' src='/img/defaultHQPohotId.jpg' alt='photoId'/>";  
+                            if($result['userHQPhotoId'] == NULL){
+            echo                "<img class='rounded profile-img-size' src='/img/defaultHQPhotoId.jpg' alt='photoId'/>";  
                             }else{
             echo                "<img class='rounded profile-img-size' src='data:image/jpeg;base64," . base64_encode($result['userHQPhotoId']) . "'alt='userpic'/>";    
                             }                                                    							
@@ -94,7 +94,7 @@
                                 <div class='col-lg-6 padding-small margin--position-top '>
                                 ";
 
-                                    if($result['expectedPrice'] != '' && $result['expectedPrice'] != 0.00){ 
+                                    if($result['expectedPrice'] != '' && $result['expectedPrice'] != -0.01){   
                         echo            "<div class='row '>
                                             <div class='col-md-12 form-group inner-group profile-form-style'>
                                                 <div class='col-sm-3 padding-small iphone5-fix-margin phone-fix-font label-width-fix'><label class='label-position'>期望价</label></div>
@@ -105,7 +105,19 @@
                                                 </div>
                                             </div>
                                         </div>";
+                                    }else{
+                        echo            "<div class='row '>
+                                            <div class='col-md-12 form-group inner-group profile-form-style'>
+                                                <div class='col-sm-3 padding-small iphone5-fix-margin phone-fix-font label-width-fix'><label class='label-position'>期望价</label></div>
+                                                <div class='col-sm-5 inner-textfield'>
+                                                    <label class='label-style text-center padding-top'>面议</lable>
+                                                </div>
+                                            </div>
+                                        </div>";
                                     }
+
+
+                                    
                                     if($result['phoneNumber'] != ''){ 
                         echo            "<div class='row '>
                                             <div class='col-md-12 form-group inner-group profile-form-style'>
@@ -146,7 +158,7 @@
                                     </div>          
                                   
                                    
-                                    <label class='label-position'>所需课号</label>
+                                    <label style='margin-right: 10px; margin-top: 8px;'>所需课号</label>
                                     <div>
                                         <label class='label-style-course text-center big-text-ellipsis' id='mondayf' >".$result['expectedCourse']."</label
                                     </div>  
@@ -166,7 +178,7 @@
                         <div class='col-sm-11 padding-small' >                           
                             <div class='row p-word'>
                                 <div class='col-xs-12 padding-small'>
-                                    <h4>学生要求</h4>
+                                    <h4>补充内容</h4>
                                     <p>" . $result['content'] . "</p>
                                 </div>
                             </div>

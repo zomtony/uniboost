@@ -9,9 +9,23 @@ function checkSignUpInput(){
 
 function checkTutorPostInput(){
     var school = document.getElementById('chooseSchool').value;
-
+    
     if(school == "selected"){
         window.alert("请选择课程所属学校");
+        return false;
+    }
+}
+
+function checkStudentPostInput(){
+    var school = document.getElementById('chooseSchool').value;
+    var weChatNumber = document.getElementById('weChatNumberf').value;
+    var phoneNumber = document.getElementById('phoneNumberf').value;
+    if(school == "selected"){
+        window.alert("请选择课程所属学校");
+        return false;
+    }
+    if((weChatNumber == "" || weChatNumber == null) && (phoneNumber == "" || phoneNumber == null)){
+        window.alert("请输入至少一种你的联系方式，方便老师联系你");
         return false;
     }
 }

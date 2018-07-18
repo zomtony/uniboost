@@ -7,9 +7,9 @@
     <?php
         include($_SERVER['DOCUMENT_ROOT'].'/component/starRating/rating.php'); //rating
         include($_SERVER['DOCUMENT_ROOT'].'/userProfile/php/processUserInfo.php'); 
-        $accountb = $_GET["accountb"];           
+        $acb =  $_SESSION['accountb'];           
         $processUserInfo = new processUserInfo();
-        $result=$processUserInfo->getInfo($accountb); 
+        $result=$processUserInfo->getInfo($acb); 
         $processUserInfo->disconnect();
 
         $rating = new rating();
@@ -57,12 +57,28 @@
                                     </div>
                                 </div>
                             </div>
-                            
+                            <div class='row '>
+                                <div class='col-md-12 form-group profile-form-style inner-group'>
+                                    <div class='col-sm-1' ></div>
+                                    <div class='col-sm-2 padding-small iphone5-fix-margin'><label class='label-position'>邮箱</label></div>
+                                    <div class='col-sm-5 inner-textfield' >
+                                        <label class='label-style text-center padding-top'>". $result['userEmail'] ."</label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class='row '>
+                                <div class='col-sm-12' >
+                                    <div class='col-sm-3' ></div>
+                                    <div class='col-sm-5'> 
+                                        <a href='/userProfile/changePwd.php' class='label-link account-exist' style='display: inline-block'>修改密码</a>
+                                    </div>
+                                </div>
+                            </div>
                         </div>   
                         
                         <div class='col-lg-4 p-word'>
-                                <h4>个人简介</h4> 
-                                <pre>" . $result['briefIntroduction'] . "</pre>
+                                <h4 style='margin-top: 20px;'>个人简介</h4> 
+                                <pre style='margin-top: 0px;'>" . $result['briefIntroduction'] . "</pre>
                         </div>
                     </div>
                 </div>
@@ -121,7 +137,17 @@
                                             <input type='' name='wechatf' id='wechatf' placeholder='' class='form-control label-info-position margin-left-zero label-style1'  value='" . $result['weChatNumber'] . "' maxlength='30'>
                                         </div>
                                     </div>
-                                </div>                           
+                                </div>    
+                                
+                                <div class='row'>
+                                    <div class='col-md-12 form-group inner-group flexbox-center'>
+                                        <label class='col-sm-2 label-position padding-small text-center'>邮箱</label>                                               									
+                                        <div class='col-sm-5 inner-textfield'>
+                                            <input type='email' name='emailf' id='emailf' placeholder='' class='form-control label-info-position margin-left-zero label-style1'  value='" . $result['userEmail'] . "' maxlength='30'>
+                                        </div>
+                                    </div>
+                                </div>
+
                             </div> 
                             
                         </div>
@@ -146,7 +172,7 @@
         echo    "<div class='row myprofild-padding-top' id='edit-Profile'>
                     <div class='col-md-12 form-group text-center'>					 
                         <button onclick='editMyProfile()' type='button' class='btn btn-margin userprofile-button-bg'>编辑信息</button>                            
-                        <a href='/userProfile/myPostList.php?accountb=$accountb'><button type='button' class='btn btn-margin userprofile-button-bg' style='margin-left: 6px'>查看帖子</button></a>
+                        <a href='/userProfile/myPostList.php'><button type='button' class='btn btn-margin userprofile-button-bg' style='margin-left: 6px'>查看帖子</button></a>
 
                     </div>
                 </div>

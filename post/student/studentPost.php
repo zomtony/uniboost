@@ -2,7 +2,7 @@
 
 <script src="/post/js/JavaScript.js" type="text/javascript"></script>
 
-<form name='uploadPost' action='php/uploadStudentPost.php' enctype='multipart/form-data' method='POST' class='body-margin' onsubmit="return checkTutorPostInput()">
+<form name='uploadPost' action='php/uploadStudentPost.php' enctype='multipart/form-data' method='POST' class='body-margin' onsubmit="return checkStudentPostInput()">
     <div class="container padding-smaill  padding-bottom-m theme-backcolor3">
         <?php
             if(isset($_SESSION['accountb'])){
