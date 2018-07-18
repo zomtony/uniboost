@@ -10,7 +10,8 @@
     if(isset($_POST["keyWords"])){
         $_SESSION['keyWords'] = trim($_POST["keyWords"]);
     }        
-?>
+?> 
+<!--test-->
 
     <div class="container">       
         <div class="carousel slide multi-item-carousel" data-ride="carousel" data-type="multi" data-interval="3000" id="myCarousel">
