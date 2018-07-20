@@ -102,7 +102,7 @@
 		$ratePre = ($rateValue/5-4/120)*100;
 		$rateTimes = $row['rateNumber'];
 		if($row['wage'] != '' && $row['wage'] != -0.01){ 
-	echo 		"<div class='phone-post-time'>$" . $row['wage'] . "</div>";
+	echo 		"<div class='phone-post-time'>$" . round($row['wage']) . "</div>";
 		}else{
 	echo 		"<div class='phone-post-time'>面议</div>";
 		}
