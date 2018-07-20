@@ -30,7 +30,7 @@
 		$courseArray = explode("|", $row['courseNumber']);
 		$postTime = $row['date'];
 		$timeAgo = $getPostTime -> timeAgo($currectTime, $postTime);
-		echo "<a href='/post/tutor/editTutorPostDetail.php?tutorPost=". $row['tutorPostId'] . "'>";
+		echo "<a href='/post/tutor/tutorPostDetail.php?tutorPost=". $row['tutorPostId'] . "'>";
 		if($count%2 == 0){
 			echo    "<div class='row theme-backcolor2 main-pg-list-bg' style='margin-left:2%;margin-right:2%;'>";
 		}else {

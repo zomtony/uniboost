@@ -8,7 +8,7 @@
     <?php
         include($_SERVER['DOCUMENT_ROOT'].'/component/starRating/rating.php'); //rating
         include($_SERVER['DOCUMENT_ROOT'].'/post/tutor/php/getTutorPostInfo.php'); 
-        $userIdb = $_GET["passId"];          
+        $userIdb = $_GET["passId"];
         $tutorAdPostInfo = new tutorPostInfo();
         $result=$tutorAdPostInfo->getAdPostInfo($userIdb); 
         $tutorAdPostInfo->disconnect();
@@ -196,9 +196,12 @@
                             }
                 echo    "</div>
                     </div> 
-                </div>
+                </div>";
+    echo    "<div class='theme-backcolor2 margin-top-m' style='padding:10px; border-radius: 20px;'>";              
+                include($_SERVER['DOCUMENT_ROOT'].'/post/tutor/adTutorPostHistory.php');
+    echo    "</div>";                    
 
-                <div class='row' style='display: flex; height: 60px; align-items: center;'>
+    echo        "<div class='row' style='display: flex; height: 60px; align-items: center;'>
                     <div class='col-xs-1 padding-small'></div>                   
                     <div class='col-xs-5' style='padding-left:0px;'><h4 style='margin-right:0px;'>学生评论</h4></div>  
                     <div class='col-xs-5 TimeFontAlign'>";

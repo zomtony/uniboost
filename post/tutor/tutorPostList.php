@@ -101,8 +101,12 @@
 		$rateValue = $row['averageRateScore'];
 		$ratePre = ($rateValue/5-4/120)*100;
 		$rateTimes = $row['rateNumber'];
-		echo 		"<div class='phone-post-time'>" . $timeAgo . "</div>
-					<div class='col-sm-3 padding-zero col3-width'>
+		if($row['wage'] != '' && $row['wage'] != -0.01){ 
+	echo 		"<div class='phone-post-time'>$" . $row['wage'] . "</div>";
+		}else{
+	echo 		"<div class='phone-post-time'>面议</div>";
+		}
+	echo			"<div class='col-sm-3 padding-zero col3-width'>
 						<div class='row padding-zero'>
 							<div class='col-xs-1 Width'> 
 								<img class='Width rounded' src='data:image/jpeg;base64," . base64_encode($row['userLQPhotoId']) . "' alt=''>
