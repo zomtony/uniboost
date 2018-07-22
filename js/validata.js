@@ -8,8 +8,14 @@ function checkSignUpInput(){
 }
 
 function checkTutorPostInput(){
+    var userName = document.getElementById('userNamef').value;
     var school = document.getElementById('chooseSchool').value;
     
+    if(userName.trim() == ""){
+        window.alert("请在我的档案处补全信息，名字为必填项");
+        return false;
+    }
+
     if(school == "selected"){
         window.alert("请选择课程所属学校");
         return false;
