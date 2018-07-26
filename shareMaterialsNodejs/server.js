@@ -1,5 +1,3 @@
-server.listen(8080);
-
 var mysql = require('mysql');
 
 var connection = mysql.createConnection({
@@ -12,7 +10,7 @@ var connection = mysql.createConnection({
 connection.connect(function(err) {
   if (err) throw err;
   console.log("Connected!");
- // connection.end();
+  // connection.end();
 });
 
 
@@ -23,8 +21,7 @@ var bodyParser = require('body-parser');
 server.use(bodyParser.json()); // support json encoded bodies
 server.use(bodyParser.urlencoded({ extended: true })); // support encoded bodies
 
-
-server.use('/', function (req, res){
+server.use('/shareMaterialsNodejs/apply', function (req, res){
     var groupNickNameb = req.body.groupNickNamef;
     var gmailb = req.body.gmailf;
     var schoolb = req.body.schoolf;
@@ -90,14 +87,24 @@ server.use('/', function (req, res){
             });
 
         }
-      });
+    });
 
-    /*
-    var sql = "INSERT INTO customers (name, address) VALUES ('Company Inc', 'Highway 37')";
-    con.query(sql, function (err, result) {
-        if (err) throw err;
-        console.log("1 record inserted");
-    });*/
-
- //   res.end();
 });
+
+
+server.use('/shareMaterialsNodejs/admin', function (req, res){
+    var HLJAccountb = req.body.HLJAccountf;
+    var HLJpwdb = req.body.HLJpwdf;
+
+    if(HLJAccountb == 'hlj' && HLJpwdb == 'hlj12'){
+        
+        connection.query("SELECT * FROM RecordShareMateria re LEFT JOIN ApplyMateriaDetail ap ON re.userGmail = ap.userGmail WHERE ap.applyStatus = 0", function (err, resultSelect, fields) {
+            console.log(resultSelect);
+        });
+    }else{
+        console.log('log f');
+    }
+});
+
+
+server.listen(8080);
