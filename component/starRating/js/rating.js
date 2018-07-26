@@ -3,9 +3,9 @@ var dataComment;
 
 $(document).ready(function(){ 
 
-    $('.btn-1').addClass('rate-btn-hover');
+  //  $('.btn-1').addClass('rate-btn-hover');
 
-    dataRate = 'ratef=1';
+    dataRate = 'ratef=0';
 
     $('.rate-btn').hover(function(){
       $('.rate-btn').removeClass('rate-btn-hover');
@@ -23,7 +23,6 @@ $(document).ready(function(){
           $('.btn-'+i).addClass('rate-btn-active');
         };
     });
-    
   });
 
   function userSubmit(){
