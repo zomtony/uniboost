@@ -13,12 +13,12 @@ connection.connect(function(err) {
   // connection.end();
 });
 
-
+const ejs = require('ejs');
 const express = require('express');
 server = express();
+server.set("view engine", "ejs");
 
 var bodyParser = require('body-parser');
-server.use(bodyParser.json()); // support json encoded bodies
 server.use(bodyParser.urlencoded({ extended: true })); // support encoded bodies
 
 server.use('/shareMaterialsNodejs/apply', function (req, res){
@@ -97,14 +97,24 @@ server.use('/shareMaterialsNodejs/admin', function (req, res){
     var HLJpwdb = req.body.HLJpwdf;
 
     if(HLJAccountb == 'hlj' && HLJpwdb == 'hlj12'){
-        
-        connection.query("SELECT * FROM RecordShareMateria re LEFT JOIN ApplyMateriaDetail ap ON re.userGmail = ap.userGmail WHERE ap.applyStatus = 0", function (err, resultSelect, fields) {
-            console.log(resultSelect);
+
+        connection.query("SELECT re.userGmail, re.groupNickName, re.addToGroup, re.applyTimes, re.shareTimies, ap.school, ap.applyCourseNumber, ap.applyStatus FROM RecordShareMateria re LEFT JOIN ApplyMateriaDetail ap ON re.userGmail = ap.userGmail WHERE ap.applyStatus = 0", function (err, resultSelect, fields) {
+            ejs.renderFile('./view/userInfo.ejs', {resultSelect:resultSelect}, function(err, data){
+                //data = resultSelect;
+                res.end(data);
+            });
         });
+
     }else{
         console.log('log f');
     }
 });
 
+server.use('/shareMaterialsNodejs/view', function (req, res){
+    console.log("test");
+});
+
 
 server.listen(8080);
+
+
