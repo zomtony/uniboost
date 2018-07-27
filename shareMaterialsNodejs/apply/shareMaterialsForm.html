@@ -40,6 +40,14 @@
                     float: none;
                 }
             }
+
+            .shareMaterial-container {
+                width: 550px;
+                border-radius: 20px;
+                padding: 20px;
+                margin: auto;
+                background-color: #FFF3DD;
+            }
         </style>
         <!-- Global site tag (gtag.js) - Google Analytics -->
         <script async src="https://www.googletagmanager.com/gtag/js?id=UA-122025311-1"></script>
@@ -49,9 +57,18 @@
             gtag('js', new Date());
 
             gtag('config', 'UA-122025311-1');
+
+
+            function checkShareMaterialInput(){
+                var schoolf = document.getElementById("schoolf").value;
+                if(schoolf == "selected"){
+                    window.alert("清选择您的学校");
+                    return false;
+                }   
+            }
         </script>
     </head>
-    <body>
+    <body style="min-width: 600px;">
         <nav class="navbar navbar-inverse theme-backcolor">
             <div class="container comp" style="padding-right: 2px;">   
                 <div class="container-fluid" style="margin: 0px 0px 0px -8px">                   
@@ -71,6 +88,7 @@
                                         </td>
                                         <td>
                                             <a class='big-font' href='../../index.php'><button type='button' class='btn btn-float theme-button resource-button-color text-color text-margin-top'>返回红领巾</button></a>
+                                            <a class='big-font' href='../admin/adminLogin.html'><button type='button' class='btn btn-float theme-button resource-button-color text-color text-margin-top'>管理员登陆</button></a>            				
                                         </td>
                                     </tr>
                                 </table>      
@@ -107,27 +125,89 @@
                                 </tr>
                             </table>      
                         </li>                      
-                            <li><a class='big-font' href='../../index.php'>返回红领巾</a></li>              				
+                            <li><a class='big-font' href='../../index.php'>返回红领巾</a></li>   
+                            <li><a class='big-font' href='../admin/adminLogin.html'>管理员登陆</a></li>             				
                         </ul>
                     </div>
                 </div>
             </div>
 
         </nav>
-    
-        <form action="http://localhost:8080/shareMaterialsNodejs/apply" method="post">
-            群昵称:<input type="text" name="groupNickNamef" /><br><br>
-            Gmail:<input type="text" name="gmailf" /><br><br>
-            学校:<input type="text" name="schoolf" /><br><br>
-            申请课号:<input type="text" name="applyCourseNumberf" /><br><br>
-            为了群和资源库的壮大，你是否愿意分享你的资源并拉你的好友进群呢～ *
-            :<select class='form-control' name='addToGroupf' id='addToGroupf'>
-                <option value='1'>愿意</option>
-                <option value='0'>不愿意</option>
-            </select>"
+        <div class='shareMaterial-container'>
+            <h1>大温高校学习资源群</h1>
+            <p>目前申请资料还是用 Google Form， 希望大家申请资料的同时也可以分享一些你的学习资料，谢谢啦～<br>  
+                分享到： sharingiscaringoneworld@gmail.com
+            </p>
+        
+            <div class="text-center">
+                <h4>申请资料先加资源狗，拉你到资源共享群</h4>
+                <img src='./img/IMG_0980.JPG' alt = "Code">
+            </div>
+            <form action="http://localhost:8080/shareMaterialsNodejs/apply" method="post" onsubmit="return checkShareMaterialInput()">
+                <div class="row margin-top-m">
+                    <div class="col-sm-3 eliminatePadding text-center" style="margin-top: 8px;">
+                        <label for="groupNickNamef" class="sr-only-focusable">群昵称:</label>
+                    </div>
+                    <div class="col-sm-7 eliminatePadding">
+                        <input type="" id="groupNickNamef" class="form-control" placeholder="eg. UBC - Finance - Jason" name="groupNickNamef" required autofocus>
+                    </div>
+                </div>    
 
-            <input type="submit" value="submie" />
-        </form>
+                <div class="row margin-top-m">
+                    <div class="col-sm-3 eliminatePadding text-center" style="margin-top: 8px;">
+                        <label for="gmailf" class="sr-only-focusable">Gmail:</label>
+                    </div>
+                    <div class="col-sm-7 eliminatePadding">
+                        <input type="" id="gmailf" class="form-control" placeholder="一定要填Gmail哦" name="gmailf" required>
+                    </div>
+                </div>    
 
+                <div class="row margin-top-m">
+                    <div class="col-sm-3 eliminatePadding text-center" style="margin-top: 8px;">
+                        <label for="schoolf" class="sr-only-focusable">学校:</label>
+                    </div>
+                    <div class="col-sm-7 eliminatePadding">
+                        <select class='form-control' name='schoolf' id='schoolf' style='padding-top:0px;padding-bottom:0px;'>
+                                <option value='selected'>--choose--</option>
+                                <option value='Langara'>Langara</option>
+                                <option value='UBC'>UBC</option>
+                                <option value='SFU'>SFU</option>
+                                <option value='CC'>CC</option>
+                                <option value='AC'>AC</option>
+                        </select>
+                    </div>
+                </div>    
+
+                <div class="row margin-top-m">
+                    <div class="col-sm-3 eliminatePadding text-center" style="margin-top: 8px;">
+                        <label for="applyCourseNumberf" class="sr-only-focusable">申请课号:</label>
+                    </div>
+                    <div class="col-sm-7 eliminatePadding">
+                        <input type="" id="applyCourseNumberf" class="form-control" placeholder="请输入您的课程号码" name="applyCourseNumberf" required>
+                    </div>
+                </div>   
+                <div style="margin-left: 30px;margin-right: 30px;">
+                    <p style="font-size: 13px;">格式 eg. MATH112, ECON209 注: 资源库现有课目群主会发图到朋友圈里的，现有课目的资料都是群里同学分享的， 感谢你们~</p><br>
+                </div>
+
+                <div style="margin-left: 20px;margin-right: 20px;">
+                    <p>为了群和资源库的壮大，你是否愿意分享你的资源并拉你的好友进群呢～ *:</p>
+                    <p style="font-size: 13px;">如果群满的话，直接加群主好友，她会拉你的小伙伴进其他群滴～</p>
+                </div>
+                <div class="row">
+                    <div class="col-sm-1"></div>
+                    <div class="col-sm-9 eliminatePadding">
+                        <select class='form-control' name='addToGroupf' id='addToGroupf' style='padding-top:0px;padding-bottom:0px;'>
+                            <option value='1'>愿意</option>
+                            <option value='0'>不愿意</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="row text-center margin-top-m">
+                    <input type="submit" value="submie" class='btn button-upload-post-button'/>
+                </div>
+            </form>
+        </div>
     </body>
 </html>
