@@ -98,7 +98,7 @@ server.use('/shareMaterialsNodejs/admin', function (req, res){
 
     if(HLJAccountb == 'hlj' && HLJpwdb == 'hlj12'){
 
-        connection.query("SELECT re.userGmail, re.groupNickName, re.addToGroup, re.applyTimes, re.shareTimies, ap.school, ap.applyCourseNumber, ap.applyStatus FROM RecordShareMateria re LEFT JOIN ApplyMateriaDetail ap ON re.userGmail = ap.userGmail WHERE ap.applyStatus = 0", function (err, resultSelect, fields) {
+        connection.query("SELECT re.userGmail, re.groupNickName, re.addToGroup, re.applyTimes, re.shareTimies, ap.MateriaDetailID, ap.school, ap.applyCourseNumber, ap.applyStatus FROM RecordShareMateria re LEFT JOIN ApplyMateriaDetail ap ON re.userGmail = ap.userGmail WHERE ap.applyStatus = 0", function (err, resultSelect, fields) {
             ejs.renderFile('./view/userInfo.ejs', {resultSelect:resultSelect}, function(err, data){
                 //data = resultSelect;
                 res.end(data);
@@ -111,7 +111,14 @@ server.use('/shareMaterialsNodejs/admin', function (req, res){
 });
 
 server.use('/shareMaterialsNodejs/view', function (req, res){
-    console.log("test");
+    var MateriaDetailIDb = req.body.MateriaDetailIDf;
+
+    var sql = "UPDATE ApplyMateriaDetail SET applyStatus = 1 WHERE MateriaDetailID = " + mysql.escape(MateriaDetailIDb);
+    connection.query(sql, function (err, result) {
+      if (err) throw err;
+      console.log(result.affectedRows + " record(s) updated");
+    });
+
 });
 
 

@@ -53,10 +53,11 @@
 
             gtag('config', 'UA-122025311-1');
 
-            function changeSendStatus(){
-                var btnSubmitSendStatus = document.getElementById("btnSubmitSendStatus");
+            function changeSendStatus(i){
+                var id = "submitButton" + i;
+                var btnSubmitSendStatus = document.getElementById(id);
                 btnSubmitSendStatus.value="已发送";
-                btnSubmitSendStatus.style.background = "#cc7a00";
+                btnSubmitSendStatus.style.background = "#cc7a00";            
             }
                 
         </script>
@@ -140,7 +141,7 @@
                 <form action="http://localhost:8080/shareMaterialsNodejs/view" method="post">
 
                     <tr style="border: 1px solid black;text-align:center;">
-                        <td><input type="hidden" name="gamilf" value= <%= resultSelect[i].userGmail %> ></td> 
+                        <td><input type="hidden" name="MateriaDetailIDf" value= <%= resultSelect[i].MateriaDetailID %> ></td> 
                     </tr>
                     <tr style="border: 1px solid black;text-align:center;"> 
                         <td style="border: 1px solid black;text-align:center;"><%= resultSelect[i].userGmail %></td>
@@ -157,11 +158,11 @@
                         <td style="border: 1px solid black;text-align:center;"><%= resultSelect[i].shareTimies %></td>
                         <td style="border: 1px solid black;text-align:center;"><%= resultSelect[i].school %></td>
                         <td style="border: 1px solid black;text-align:center;"><%= resultSelect[i].applyCourseNumber %></td>
-                        <td style="border: 1px solid black;text-align:center;"><input type='submit' id='btnSubmitSendStatus' class='btn button-upload-post-button' value='未发送' onclick="changeSendStatus()"/></td>
+                        <td style="border: 1px solid black;text-align:center;"><input type='submit' id='submitButton<%= i %>' class='btn button-upload-post-button' value='未发送' onclick="changeSendStatus(<%= i %>)"/></td>
                     </tr>
                 </form>
                 <% } %>
-            </table>
         </div>
     </body>
+            </table>
 </html>
