@@ -63,6 +63,7 @@
                     echo $info->getMessage();		
                 }   
             }
+            $myconn->disconnect();
         }else{
             $theInterval = 300 - $theTime;
             if($theInterval > 60){
@@ -104,6 +105,7 @@
                 echo $info->getMessage();		
             }   
         }
+        $myconn->disconnect();
     }
 
 ?>
