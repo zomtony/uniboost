@@ -53,10 +53,8 @@
 
             gtag('config', 'UA-122025311-1');
 
-            function changeSendStatus(i){
-                var id = "submitButton" + i;
-                var btnSubmitSendStatus = document.getElementById(id);
-                btnSubmitSendStatus.value="已发送";
+            function changeSendStatus(){
+                var btnSubmitSendStatus = document.getElementById("submitButton");
                 btnSubmitSendStatus.style.background = "#cc7a00";            
             }
                 
@@ -142,41 +140,39 @@
                 <tr style="border: 1px solid black;text-align:center;">
                     <th style="border: 1px solid black;width:23%;text-align:center;">邮箱</th>
                     <th style="border: 1px solid black;width:23%;text-align:center;">群昵称</th> 
-                    <th style="border: 1px solid black;width:10%;text-align:center;">是否入群</th>
-                    <th style="border: 1px solid black;width:5%;text-align:center;">申请次数</th>
-                    <th style="border: 1px solid black;width:5%;text-align:center;">分享次数</th> 
                     <th style="border: 1px solid black;width:10%;text-align:center;">学校</th>
                     <th style="border: 1px solid black;width:15%;text-align:center;">课号</th>
-                    <th style="border: 1px solid black;width:5%;text-align:center;">是否发送</th> 
+                    <th style="border: 1px solid black;width:5%;text-align:center;">申请次数</th>
+                    <th style="border: 1px solid black;width:5%;text-align:center;">分享次数</th> 
+                    <th style="border: 1px solid black;width:5%;text-align:center;"></th>  
                 </tr>
                 <% for(var i=0; i < resultSelect.length; i++){ %>  
                 <form action="http://www.ubestbuy.cn:8080/shareMaterialsNodejs/view" method="post">
 
                     <tr style="border: 1px solid black;text-align:center;">
-                        <td><input type="hidden" name="MateriaDetailIDf" value= <%= resultSelect[i].MateriaDetailID %> ></td> 
+                        <td><input type="hidden" name="userGmailShareSubf" value= <%= resultSelect[i].userGmail %> ></td> 
                     </tr>
                     <tr style="border: 1px solid black;text-align:center;"> 
                         <td style="border: 1px solid black;text-align:center;"><%= resultSelect[i].userGmail %></td>
                         <td style="border: 1px solid black;text-align:center;"><%= resultSelect[i].groupNickName %></td>
-
-
-                        <% if(resultSelect[i].addToGroup == 1) {%>
-                            <td style="border: 1px solid black;text-align:center;">拉我入群</td>
-                        <% } %>
-                        <% if(resultSelect[i].addToGroup != 1) {%>
-                            <td style="border: 1px solid black;text-align:center;">不要拉我入群</td>
-                        <% } %>
-                        <td style="border: 1px solid black;text-align:center;"><%= resultSelect[i].applyTimes %></td>
-                        <td style="border: 1px solid black;text-align:center;"><%= resultSelect[i].shareTimies %></td>
                         <td style="border: 1px solid black;text-align:center;"><%= resultSelect[i].school %></td>
                         <td style="border: 1px solid black;text-align:center;"><%= resultSelect[i].applyCourseNumber %></td>
-                        <td style="border: 1px solid black;text-align:center;"><input type='submit' id='submitButton<%= i %>' class='btn button-upload-post-button' value='未发送' onclick="changeSendStatus(<%= i %>)"/></td>
+                        <td style="border: 1px solid black;text-align:center;"><%= resultSelect[i].applyTimes %></td>
+                        <td style="border: 1px solid black;text-align:center;"><input type="" value="<%= resultSelect[i].shareTimies %>" name="shareTimeSubf"></td>
+                        <td style="border: 1px solid black;text-align:center;"><input type='submit' id='submitButton' class='btn button-upload-post-button' value='确定' onclick="changeSendStatus()"/></td>
                     </tr>
                 </form>
                 <% } %>
 
             </table>
 
+            <form action="http://www.ubestbuy.cn:8080/shareMaterialsNodejs/admin" method="post">
+                <div class="text-center">
+                    <input type="hidden" id="HLJAccountf" class="form-control" value="hlj" name="HLJAccountf">
+                    <input type="hidden" class="form-control" value="hlj12" name="HLJpwdf" required>
+                    <button class='btn theme-button site-btn' type='submit' name='serachInfoButton' onclick='saveInfo()'>返回用户信息表</button>
+                </div>
+            </form>
         </div>
     </body>
 </html>

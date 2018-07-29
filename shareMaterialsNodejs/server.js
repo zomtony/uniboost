@@ -1,16 +1,16 @@
 var mysql = require('mysql');
 
-var connection = mysql.createConnection({
+var connection = mysql.createPool({
   host: "45.78.25.200",
   user: "zhimadeveloper",
   password: "zhimadeveloper12",
   database: "zhimadeveloper"
 });
 
-connection.connect(function(err) {
+connection.getConnection(function(err) {
   if (err) throw err;
   console.log("Connected!");
-  // connection.end();
+  //connection.end();
 });
 
 const ejs = require('ejs');
@@ -50,9 +50,11 @@ server.use('/shareMaterialsNodejs/apply', function (req, res){
                     if (err) throw err;
                     if(resultInsertRecord.affectedRows > 0){
                         console.log("resultInsertDetail s");
-                        res.send('s');
+                        res.redirect('http://www.woshihlj.com');
                     }else{
                         console.log("resultInsertDetail f");
+                        res.redirect('http://www.ubestbuy.com');
+
                     }
                 });
 
@@ -77,10 +79,11 @@ server.use('/shareMaterialsNodejs/apply', function (req, res){
                 connection.query(sql, [valuesApplyDetail], function (err, resultInsertDetail) {
                     if (err) throw err;
                     if(resultInsertDetail.affectedRows > 0){
-                        console.log("resultInsertDetail s");
-                        res.send('s');
+                       // console.log("resultInsertDetail s");
+                        res.redirect('http://www.woshihlj.com');
                     }else{
                         console.log("resultInsertDetail f");
+                        res.redirect('http://www.ubestbuy.com');
                     }
                 });
               }
@@ -112,13 +115,35 @@ server.use('/shareMaterialsNodejs/admin', function (req, res){
 
 server.use('/shareMaterialsNodejs/view', function (req, res){
     var MateriaDetailIDb = req.body.MateriaDetailIDf;
+    var keyWordsEmailb = req.body.keyWordsEmailf;
+    var shareTimeSubb = req.body.shareTimeSubf;
+    var userGmailShareSubb = req.body.userGmailShareSubf;
 
-    var sql = "UPDATE ApplyMateriaDetail SET applyStatus = 1 WHERE MateriaDetailID = " + mysql.escape(MateriaDetailIDb);
-    connection.query(sql, function (err, result) {
-      if (err) throw err;
-      console.log(result.affectedRows + " record(s) updated");
-    });
+    if(keyWordsEmailb == '' || keyWordsEmailb == null){
+        if(shareTimeSubb == '' || shareTimeSubb == null){
+            var sql = "UPDATE ApplyMateriaDetail SET applyStatus = 1 WHERE MateriaDetailID = " + mysql.escape(MateriaDetailIDb);
+            connection.query(sql, function (err, result) {
+                if (err) throw err;
+                console.log(result.affectedRows + " record(s) updated");
+            });
+        }else{
+            var sql = "UPDATE RecordShareMateria SET shareTimies =" + mysql.escape(shareTimeSubb) + " WHERE userGmail = " + mysql.escape(userGmailShareSubb);
+            connection.query(sql, function (err, result) {
+                if (err) throw err;
+                console.log(result.affectedRows + " record(s) updated");
+            });
+        }
+    }else{
+        connection.query("SELECT * FROM RecordShareMateria WHERE userGmail = " + mysql.escape(keyWordsEmailb), function (err, resultSelect, fields) {
+            ejs.renderFile('./view/updateShareTImes.ejs', {resultSelect:resultSelect}, function(err, data){
+                //data = resultSelect;
+                res.end(data);
+            });
+        });
+    }
 
+
+    
 });
 
 

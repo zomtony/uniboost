@@ -72,7 +72,7 @@
                                             <img class='slogon' src='/img/slogon.png' alt = "slogon">
                                         </td>
                                         <td>
-                                            <a href='https://goo.gl/forms/pL0jrE5sBpmq65g33' ><button type='button' class='btn btn-float theme-button resource-button-color text-color text-margin-top'>申请资料</button></a>
+                                            <a href='/shareMaterialsNodejs/apply/shareMaterialsForm.html' ><button type='button' class='btn btn-float theme-button resource-button-color text-color text-margin-top'>申请资料</button></a>
                                         </td>
                                     </tr>
                                 </table>      
@@ -143,12 +143,12 @@
                             if(isset($_SESSION['accountb'])){
                                 echo    "<li><a class='big-font' href='/index.php'>回到首页</a></li>
                                         <li>                                        
-                                            <a class='big-font' href='https://goo.gl/forms/pL0jrE5sBpmq65g33' style='color:#ffffff;'>申请资料</a>
+                                            <a class='big-font' href='/shareMaterialsNodejs/apply/shareMaterialsForm.html' style='color:#ffffff;'>申请资料</a>
                                         </li>                                  
                                         <li><a class='big-font' href='/userProfile/userProfile.php' style='color:#ffffff;'>我的档案</a></li>
                                         <li><a class='big-font' href='/signin_out_up/php/SignOut.php' style='color:#ffffff;'>登出</a></li>";
                             }else {
-                                echo    "<li><a class='big-font' href='https://goo.gl/forms/pL0jrE5sBpmq65g33' style='color:#ffffff;'>申请资料</a></li>
+                                echo    "<li><a class='big-font' href='/shareMaterialsNodejs/apply/shareMaterialsForm.html' style='color:#ffffff;'>申请资料</a></li>
                                         <li><a class='big-font' href='/signin_out_up/signin.php' style='color:#ffffff;'>登陆</a></li>
                                         <li><a class='big-font' href='/signin_out_up/signup.php' style='color:#ffffff;'>注册</a></li>";
                             }
