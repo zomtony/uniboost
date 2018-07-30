@@ -161,7 +161,7 @@
                         <td style="border: 1px solid black;text-align:center;"><%= resultSelect[i].shareTimies %></td>
                         <td style="border: 1px solid black;text-align:center;"><%= resultSelect[i].school %></td>
                         <td style="border: 1px solid black;text-align:center;"><%= resultSelect[i].applyCourseNumber %></td>
-                        <td style="border: 1px solid black;text-align:center;"><input type='submit' id='submitButton<%= i %>' class='btn button-upload-post-button' value='未发送' onclick="changeSendStatus(<%= i %>)"/></td>
+                        <td style="border: 1px solid black;text-align:center;"><input type='submit' id='submitButton<%= i %>' class='btn button-upload-post-button' value='未发送' onclick='changeSendStatus("<%= i %>")'/></td>
                     </tr>
                 </form>
                 <% } %>
