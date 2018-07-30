@@ -65,9 +65,9 @@
             <div class="container comp" style="padding-right: 2px;">   
                 <div class="container-fluid" style="margin: 0px 0px 0px -8px">                   
                     <div class="navbar-header padding-zero-logo" style='margin:0px;'>
-                        <a class="navbar-brand titleFont padding-zero-logo" href="/index.php"><img class='logo1 logo-color' src='https://www.woshihlj.com/img/logo1.png' alt = "我是红领巾"></a>
-                        <a class="navbar-brand titleFont padding-zero-logo" href="/index.php"><img class='logo2 logo-color1' src='https://www.woshihlj.com/img/logo2.png' alt = "我是红领巾"></a>
-                        <a class="navbar-brand titleFont padding-zero-logo" href="/index.php"><img class='logo3 logo-color' src='https://www.woshihlj.com/img/logo3.png' alt = "我是红领巾"></a>
+                        <a class="navbar-brand titleFont padding-zero-logo" href="https://www.woshihlj.com"><img class='logo1 logo-color' src='https://www.woshihlj.com/img/logo1.png' alt = "我是红领巾"></a>
+                        <a class="navbar-brand titleFont padding-zero-logo" href="https://www.woshihlj.com"><img class='logo2 logo-color1' src='https://www.woshihlj.com/img/logo2.png' alt = "我是红领巾"></a>
+                        <a class="navbar-brand titleFont padding-zero-logo" href="https://www.woshihlj.com"><img class='logo3 logo-color' src='https://www.woshihlj.com/img/logo3.png' alt = "我是红领巾"></a>
                     </div>
                     <div>
         
@@ -92,9 +92,9 @@
             <div class="container phone" style="padding-right: 0px; padding-left: 0px; margin-left: 10px;">   
                 <div class="container-fluid" style="padding: 0">                   
                     <div class="navbar-header padding-zero-logo" style='margin:0px;'>                          
-                        <a class="navbar-brand titleFont padding-zero-logo" href="../../index.php"><img class='phonelogo1 logo-color' src='https://www.woshihlj.com/img/logo1.png' alt = "我是红领巾"></a>
-                        <a class="navbar-brand titleFont padding-zero-logo" href="../../index.php"><img class='phonelogo2 logo-color1' src='https://www.woshihlj.com/img/logo2.png' alt = "我是红领巾"></a>
-                        <a class="navbar-brand titleFont padding-zero-logo" href="../../index.php"><img class='phonelogo3 logo-color' src='https://www.woshihlj.com/img/logo3.png' alt = "我是红领巾"></a>
+                        <a class="navbar-brand titleFont padding-zero-logo" href="https://www.woshihlj.com"><img class='phonelogo1 logo-color' src='https://www.woshihlj.com/img/logo1.png' alt = "我是红领巾"></a>
+                        <a class="navbar-brand titleFont padding-zero-logo" href="https://www.woshihlj.com"><img class='phonelogo2 logo-color1' src='https://www.woshihlj.com/img/logo2.png' alt = "我是红领巾"></a>
+                        <a class="navbar-brand titleFont padding-zero-logo" href="https://www.woshihlj.com"><img class='phonelogo3 logo-color' src='https://www.woshihlj.com/img/logo3.png' alt = "我是红领巾"></a>
                                            
                             <div class='dropdown'>
                                 <button type='button' class='navbar-toggle' data-toggle='collapse' data-target='#myNavbar'>
@@ -116,7 +116,7 @@
                                 </tr>
                             </table>      
                         </li>                      
-                            <li><a class='big-font' href='../../index.php'>返回红领巾</a></li>              				
+                            <li><a class='big-font' href='https://www.woshihlj.com'>返回红领巾</a></li>              				
                         </ul>
                     </div>
                 </div>
@@ -125,7 +125,7 @@
         </nav>
 
 
-        <form action="http://www.ubestbuy.cn:8080/shareMaterialsNodejs/view" method="post">
+        <form action="http://www.woshihlj.com:8080/shareMaterialsNodejs/view" method="post">
             <div class="row text-center margin-top-m text-margin-bottom-comment">
                 <div class="col-sm-2"></div>
                 <div class="col-sm-4"><input type='text' class='form-control' placeholder='搜索根据邮箱' name='keyWordsEmailf' id='keyWordsEmailf' value=''></div>
@@ -140,14 +140,12 @@
                 <tr style="border: 1px solid black;text-align:center;">
                     <th style="border: 1px solid black;width:23%;text-align:center;">邮箱</th>
                     <th style="border: 1px solid black;width:23%;text-align:center;">群昵称</th> 
-                    <th style="border: 1px solid black;width:10%;text-align:center;">学校</th>
-                    <th style="border: 1px solid black;width:15%;text-align:center;">课号</th>
                     <th style="border: 1px solid black;width:5%;text-align:center;">申请次数</th>
                     <th style="border: 1px solid black;width:5%;text-align:center;">分享次数</th> 
                     <th style="border: 1px solid black;width:5%;text-align:center;"></th>  
                 </tr>
                 <% for(var i=0; i < resultSelect.length; i++){ %>  
-                <form action="http://www.ubestbuy.cn:8080/shareMaterialsNodejs/view" method="post">
+                <form action="http://www.woshihlj.com:8080/shareMaterialsNodejs/view" method="post">
 
                     <tr style="border: 1px solid black;text-align:center;">
                         <td><input type="hidden" name="userGmailShareSubf" value= <%= resultSelect[i].userGmail %> ></td> 
@@ -155,8 +153,6 @@
                     <tr style="border: 1px solid black;text-align:center;"> 
                         <td style="border: 1px solid black;text-align:center;"><%= resultSelect[i].userGmail %></td>
                         <td style="border: 1px solid black;text-align:center;"><%= resultSelect[i].groupNickName %></td>
-                        <td style="border: 1px solid black;text-align:center;"><%= resultSelect[i].school %></td>
-                        <td style="border: 1px solid black;text-align:center;"><%= resultSelect[i].applyCourseNumber %></td>
                         <td style="border: 1px solid black;text-align:center;"><%= resultSelect[i].applyTimes %></td>
                         <td style="border: 1px solid black;text-align:center;"><input type="" value="<%= resultSelect[i].shareTimies %>" name="shareTimeSubf"></td>
                         <td style="border: 1px solid black;text-align:center;"><input type='submit' id='submitButton' class='btn button-upload-post-button' value='确定' onclick="changeSendStatus()"/></td>
@@ -166,7 +162,7 @@
 
             </table>
 
-            <form action="http://www.ubestbuy.cn:8080/shareMaterialsNodejs/admin" method="post">
+            <form action="http://www.woshihlj.com:8080/shareMaterialsNodejs/admin" method="post">
                 <div class="text-center">
                     <input type="hidden" id="HLJAccountf" class="form-control" value="hlj" name="HLJAccountf">
                     <input type="hidden" class="form-control" value="hlj12" name="HLJpwdf" required>

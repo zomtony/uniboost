@@ -1,10 +1,10 @@
 var mysql = require('mysql');
 
 var connection = mysql.createPool({
-  host: "45.78.25.200",
-  user: "zhimadeveloper",
-  password: "zhimadeveloper12",
-  database: "zhimadeveloper"
+  host: "178.128.12.124",
+  user: "zhimacollege",
+  password: "Uniboost12",
+  database: "zhimacollege"
 });
 
 connection.getConnection(function(err) {
@@ -22,20 +22,19 @@ var bodyParser = require('body-parser');
 server.use(bodyParser.urlencoded({ extended: true })); // support encoded bodies
 
 server.use('/shareMaterialsNodejs/apply', function (req, res){
-    var groupNickNameb = req.body.groupNickNamef;
-    var gmailb = req.body.gmailf;
+    var groupNickNameb = req.body.groupNickNamef.trim();
+    var gmailb = req.body.gmailf.trim();
     var schoolb = req.body.schoolf;
-    var applyCourseNumberb = req.body.applyCourseNumberf;
-    var addToGroupb = req.body.addToGroupf;
+    var applyCourseNumberb = req.body.applyCourseNumberf.trim();
 
     connection.query("SELECT * FROM RecordShareMateria WHERE userGmail = " + mysql.escape(gmailb), function (err, resultSelect, fields) {
         if (err) throw err;
         if(resultSelect == '' ){
 
-            var sql = "INSERT INTO RecordShareMateria (userGmail, groupNickName, addToGroup, applyTimes, shareTimies) VALUES ?";
+            var sql = "INSERT INTO RecordShareMateria (userGmail, groupNickName, applyTimes, shareTimies) VALUES ?";
             // 0 - did not send the materia yet, 1 - already sent the materia
             var valuesRecord = [
-              [gmailb, groupNickNameb, addToGroupb, 1, 0],
+              [gmailb, groupNickNameb, 1, 0],
             ];
             connection.query(sql, [valuesRecord], function (err, resultInsertRecord) {
 
@@ -49,11 +48,11 @@ server.use('/shareMaterialsNodejs/apply', function (req, res){
                 connection.query(sql, [valuesApplyDetail], function (err, resultInsertDetail) {
                     if (err) throw err;
                     if(resultInsertRecord.affectedRows > 0){
-                        console.log("resultInsertDetail s");
-                        res.redirect('http://www.woshihlj.com');
+                       // console.log("resultInsertDetail s");
+                        res.redirect('http://www.woshihlj.com/shareMaterialsNodejs/apply/resultS.html');
                     }else{
-                        console.log("resultInsertDetail f");
-                        res.redirect('http://www.ubestbuy.com');
+                       // console.log("resultInsertDetail f");
+                        res.redirect('http://www.woshihlj.com/shareMaterialsNodejs/apply/resultF.html');
 
                     }
                 });
@@ -67,7 +66,7 @@ server.use('/shareMaterialsNodejs/apply', function (req, res){
         }else{
             var applyTimes = resultSelect[0].applyTimes + 1;
 
-            var sql = "UPDATE RecordShareMateria SET addToGroup = " + mysql.escape(addToGroupb) + " , applyTimes =" +  mysql.escape(applyTimes) + " WHERE userGmail = " + mysql.escape(gmailb);
+            var sql = "UPDATE RecordShareMateria SET applyTimes =" +  mysql.escape(applyTimes) + " WHERE userGmail = " + mysql.escape(gmailb);
             connection.query(sql, function (err, resultUpdateRecord) {
               if (err) throw err;
               if(resultUpdateRecord.affectedRows > 0){
@@ -80,10 +79,10 @@ server.use('/shareMaterialsNodejs/apply', function (req, res){
                     if (err) throw err;
                     if(resultInsertDetail.affectedRows > 0){
                        // console.log("resultInsertDetail s");
-                        res.redirect('http://www.woshihlj.com');
+                        res.redirect('https://www.woshihlj.com/shareMaterialsNodejs/apply/resultS.html');
                     }else{
-                        console.log("resultInsertDetail f");
-                        res.redirect('http://www.ubestbuy.com');
+                      //  console.log("resultInsertDetail f");
+                        res.redirect('https://www.woshihlj.com/shareMaterialsNodejs/apply/resultF.html');
                     }
                 });
               }
@@ -101,7 +100,7 @@ server.use('/shareMaterialsNodejs/admin', function (req, res){
 
     if(HLJAccountb == 'hlj' && HLJpwdb == 'hlj12'){
 
-        connection.query("SELECT re.userGmail, re.groupNickName, re.addToGroup, re.applyTimes, re.shareTimies, ap.MateriaDetailID, ap.school, ap.applyCourseNumber, ap.applyStatus FROM RecordShareMateria re LEFT JOIN ApplyMateriaDetail ap ON re.userGmail = ap.userGmail WHERE ap.applyStatus = 0", function (err, resultSelect, fields) {
+        connection.query("SELECT re.userGmail, re.groupNickName, re.applyTimes, re.shareTimies, ap.MateriaDetailID, ap.school, ap.applyCourseNumber, ap.applyStatus FROM RecordShareMateria re LEFT JOIN ApplyMateriaDetail ap ON re.userGmail = ap.userGmail WHERE ap.applyStatus = 0", function (err, resultSelect, fields) {
             ejs.renderFile('./view/userInfo.ejs', {resultSelect:resultSelect}, function(err, data){
                 //data = resultSelect;
                 res.end(data);
@@ -115,11 +114,11 @@ server.use('/shareMaterialsNodejs/admin', function (req, res){
 
 server.use('/shareMaterialsNodejs/view', function (req, res){
     var MateriaDetailIDb = req.body.MateriaDetailIDf;
-    var keyWordsEmailb = req.body.keyWordsEmailf;
+
     var shareTimeSubb = req.body.shareTimeSubf;
     var userGmailShareSubb = req.body.userGmailShareSubf;
 
-    if(keyWordsEmailb == '' || keyWordsEmailb == null){
+    if(req.body.keyWordsEmailf == '' || req.body.keyWordsEmailf == null){
         if(shareTimeSubb == '' || shareTimeSubb == null){
             var sql = "UPDATE ApplyMateriaDetail SET applyStatus = 1 WHERE MateriaDetailID = " + mysql.escape(MateriaDetailIDb);
             connection.query(sql, function (err, result) {
@@ -134,6 +133,7 @@ server.use('/shareMaterialsNodejs/view', function (req, res){
             });
         }
     }else{
+        var keyWordsEmailb = req.body.keyWordsEmailf.trim();
         connection.query("SELECT * FROM RecordShareMateria WHERE userGmail = " + mysql.escape(keyWordsEmailb), function (err, resultSelect, fields) {
             ejs.renderFile('./view/updateShareTImes.ejs', {resultSelect:resultSelect}, function(err, data){
                 //data = resultSelect;
@@ -141,12 +141,6 @@ server.use('/shareMaterialsNodejs/view', function (req, res){
             });
         });
     }
-
-
-    
 });
 
-
 server.listen(8080);
-
-

@@ -13,7 +13,7 @@
         <script src="https://www.woshihlj.com/js/jquery-2.1.3.min.js" type="text/javascript"></script>
         <script src="https://www.woshihlj.com/js/bootstrap.min.js" type="text/javascript"></script>
         <script src="https://www.woshihlj.com/js/JavaScript.js" type="text/javascript"></script>
-        <script src="https://www.woshihlj.com/js/validata.js" type="text/javascript"></script>    
+        <script src="https://www.woshihlj.com/js/validata.js" type="text/javascript"></script>         
         <style>
             .resource-button-color {
                 background-color: #93BDEE
@@ -39,6 +39,22 @@
                     text-align: center;
                     float: none;
                 }
+                .shareMaterial-container {
+                    width: 100%;
+                    border-radius: 20px;
+                    padding: 20px;
+                    margin: auto;
+                    background-color: #FFF3DD;
+                }
+            }
+            @media (min-width: 460px) {
+                .shareMaterial-container {
+                    width: 550px;
+                    border-radius: 20px;
+                    padding: 20px;
+                    margin: auto;
+                    background-color: #FFF3DD;
+                }
             }
         </style>
         <!-- Global site tag (gtag.js) - Google Analytics -->
@@ -49,6 +65,15 @@
             gtag('js', new Date());
 
             gtag('config', 'UA-122025311-1');
+
+
+            function checkShareMaterialInput(){
+                var schoolf = document.getElementById("schoolf").value;
+                if(schoolf == "selected"){
+                    window.alert("清选择您的学校");
+                    return false;
+                }   
+            }
         </script>
     </head>
     <body>
@@ -115,19 +140,13 @@
 
         </nav>
 
-        <div class='row signup-container'>
-            <form action="http://www.woshihlj.com:8080/shareMaterialsNodejs/admin" method="post">
-                <h1 class="h3 mb-3 font-weight-normal" style="text-align: center;">HLJ管理员登陆</h1>
-                <label for="userID" class="sr-only-focusable">用户名</label>
-                <br />
-                <input type="" id="HLJAccountf" class="form-control" placeholder="请输入您的账号" name="HLJAccountf" required autofocus>
-                <br />
-                <label for="inputPassword" class="sr-only-focusable">密码</label>
-                <input type="password" class="form-control" placeholder="请输入您的密码" name="HLJpwdf" required>
-
-                <button class="btn btn-lg btn-primary btn-block login-signup-button" type="submit" style="width: 100px; margin: 20px auto 20px auto; padding: 4px">登陆</button> 
-                
-            </form>
+        <div class='shareMaterial-container'>
+            <div class="freebirdFormviewerViewResponseConfirmContentContainer">
+                <h1>申请失败，请再试一次</h1>
+                <div class="freebirdFormviewerViewResponsePageTitle freebirdCustomFont">大温高校学习资源群</div>
+                <div>《常见问题》<p>1.<br>Q: 学习资源怎么查看和申请？<br>A: 资源库现有的课目会发在群主朋友圈的图片里。请看好现有的课再填写这个form，申请资料。</p><p>2.<br>Q: 资料没收到咋办呢？<br>A: 可能这门课还没有人分享，也可能是你没有用Gmail, 或者你申请科目和次数过多，那么你要分享下你的资料喽～</p><p>3.<br>Q: 我有学习或转学方面的问题？<br>A: 任何学习和转学方面的问题，直接问在群里的 UBC, SFU, Langara 的学长学姐，他们的群昵称有注明自己的学校和专业，有问题他们会尽量帮你解答的。比如@UBC Finance-Frank @SFU CS - Franky </p><p>4.<br>Q: 我如何分享资料呢？<br>A: 首先非常感谢你可以分享资料~，帮助以后上这门课的童鞋。<br>分享资料用Google drive分享或者发Gmail好了，有木有上过的课的笔记，电子书，测验练习，什么资料都行，分享一下喽~。<br>分享到：<br><a href="mailto:sharingiscaringoneworld@gmail.com">sharingiscaringoneworld@gmail.com</a></p><p>5.<br>Q: 有些课没有咋办？<br>A: 目前有些课的资料还没有，需要你们申请过资料的童鞋也能分享下你的资料，这样资源库才能不断更新啊</p><p>6.<br>Q: 群一群二群三.....有啥区别？<br>A: 没有太大区别~<br>一群UBC的学长学姐比较多<br>二群SFU的学长学姐比较多<br>但资源库是一样的，所有学校都会有滴<br>群越多，分享资料的小伙伴就越多<br>咱们人多力量大，分享的资料就能更全面</p><p>_________________________________________</p><p>最后说一句：<br>童鞋们~，资源库里的资料也是之前咱们同学分享出来的，希望在申请资料的时候，也能分享一些自己已经上过的课，资源库里有些课的资料还不是很全面，需要不断更新<br>分享资料用Google drive分享或者发Gmail好了，有木有上过的课的笔记，电子书，测验练习，什么资料都行，分享一下喽~。<br>分享到：<br><a href="mailto:sharingiscaringoneworld@gmail.com">sharingiscaringoneworld@gmail.com</a></p><p></p><p></p><p></p><p></p><p></p><p></p><p></p></div>
+                <div></div
+            </div>
         </div>
     </body>
 </html>
