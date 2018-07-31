@@ -12,7 +12,8 @@ connection.getConnection(function(err) {
   console.log("Connected!");
   //connection.end();
 });
-
+var fs = require('fs');
+var https = require('https');
 const ejs = require('ejs');
 const express = require('express');
 server = express();
@@ -49,10 +50,10 @@ server.use('/shareMaterialsNodejs/apply', function (req, res){
                     if (err) throw err;
                     if(resultInsertRecord.affectedRows > 0){
                        // console.log("resultInsertDetail s");
-                        res.redirect('http://www.woshihlj.com/shareMaterialsNodejs/apply/resultS.html');
+                        res.redirect('https://www.woshihlj.com/shareMaterialsNodejs/apply/resultS.html');
                     }else{
                        // console.log("resultInsertDetail f");
-                        res.redirect('http://www.woshihlj.com/shareMaterialsNodejs/apply/resultF.html');
+                        res.redirect('https://www.woshihlj.com/shareMaterialsNodejs/apply/resultF.html');
 
                     }
                 });
@@ -143,4 +144,14 @@ server.use('/shareMaterialsNodejs/view', function (req, res){
     }
 });
 
-server.listen(8080);
+//server.listen(8080);
+
+
+https.createServer({
+    key: fs.readFileSync('/etc/letsencrypt/live/woshihlj.com/privkey.pem'),
+    cert: fs.readFileSync('/etc/letsencrypt/live/woshihlj.com/cert.pem'),
+    ca: fs.readFileSync('/etc/letsencrypt/live/woshihlj.com/chain.pem') 
+  }, server)
+  .listen(8080, function () {
+    console.log('')
+  });
