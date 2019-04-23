@@ -1,10 +1,10 @@
 <?php
 	class createConnection {
-		public $servername = "178.128.12.124";
-		public $port = "3306";
-		public $username = "zhimacollege";
-		public $password = "Uniboost12";
-		public $dbname = "zhimacollege";
+		public $servername = "*****";
+		public $port = "*****";
+		public $username = "*****";
+		public $password = "*****";
+		public $dbname = "*****";
 		public $conn;
 		// Check connection
 		function connect(){
