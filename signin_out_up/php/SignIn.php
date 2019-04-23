@@ -1,4 +1,4 @@
-
+// remove encryption for sign up
 <?php
  
  	session_start();
