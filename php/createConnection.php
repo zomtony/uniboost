@@ -1,3 +1,4 @@
+//remove connection string
 <?php
 	class createConnection {
 		public $servername = "*****";
