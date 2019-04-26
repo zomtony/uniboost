@@ -16,11 +16,12 @@
 	$result = $stmt->rowCount();
 	$row = $stmt->fetch();
 	if($result > 0 ){
+		$myconn->disconnect();
 		$_SESSION['accountb'] = $accountb;
 		$_SESSION['userLQPhotoId'] = $row['userLQPhotoId'];
 		header("Location: ../../index.php");
 	}else{
+		$myconn->disconnect();
 		header("Location: ../signin.php?info=用户名或者密码错误");
 	}
-	$myconn->disconnect();
 ?>

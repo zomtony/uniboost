@@ -1,10 +1,11 @@
 <?php
 	class createConnection {
-		public $servername = "45.78.25.200";
-		public $port = "3306";
-		public $username = "zhimadeveloper";
-		public $password = "zhimadeveloper12";
-		public $dbname = "zhimadeveloper";
+		
+		public $servername = "(your server ip)"  //eg: 45.78.25.200;
+		public $port = "(your server port)";  //eg 3306
+		public $username = "****";
+		public $password = "****";
+		public $dbname = "****";
 		public $conn;
 		// Check connection
 		function connect(){
