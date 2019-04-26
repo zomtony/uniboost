@@ -1,10 +1,13 @@
+//remove connection string
 <?php
 	class createConnection {
+
 		public $servername = "******";
 		public $port = "******";
 		public $username = "******";
 		public $password = "******";
 		public $dbname = "******";
+
 		public $conn;
 		// Check connection
 		function connect(){

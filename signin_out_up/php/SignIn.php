@@ -1,4 +1,4 @@
-
+// remove encryption for sign in
 <?php
  
  	session_start();
@@ -25,3 +25,4 @@
 		header("Location: ../signin.php?info=用户名或者密码错误");
 	}
 ?>
+

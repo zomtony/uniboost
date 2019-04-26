@@ -10,7 +10,7 @@
 	$count = 0;
 	$accountb = $_POST["accountf"];
 	$pwdb = $_POST["pwdf1"];
-	//$pwd = MD5($pwd);	
+	// remove encryption for sign up
 	// Check connection
 	include($_SERVER['DOCUMENT_ROOT'].'/php/createConnection.php'); //database connected
 	$myconn = new createConnection();
