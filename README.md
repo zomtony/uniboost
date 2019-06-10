@@ -1,2 +1,2 @@
 # uniboost - woshihlj.com
-A website let tutor and student post their info using PHP, jquery, bootstrap, ajax and MySql
+A website (using PHP, jquery, bootstrap, ajax and MySql) let tutor and student post their info.
